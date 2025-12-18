@@ -2,7 +2,7 @@
  * @Author: WangQiushuo 185886867@qq.com
  * @Date: 2025-12-18 20:09:29
  * @LastEditors: WangQiushuo 185886867@qq.com
- * @LastEditTime: 2025-12-18 20:33:02
+ * @LastEditTime: 2025-12-18 22:50:47
  * @FilePath: \NewsPilot\programe.md
  * @Description: 
  * 
@@ -107,3 +107,15 @@ your_news_analysis_system/
 │   └── ...
 │
 └── logs/                           # 日志目录（应在.gitignore中忽略）
+
+src/core/：这是系统的心脏，存放所有领域模型（如 NewsArticle, UserProfile）。修改这里的数据结构（schemas.py）会影响整个系统。未来无论UI或API如何变，核心业务逻辑都基于此。
+
+按模块分包 (data_acquisition/, intelligence/等)：每个之前讨论的功能模块对应一个清晰的包。这符合“高内聚、低耦合”原则。例如，要更换新闻源，只需修改 fetchers/ 目录下的文件。
+
+intelligence/query_service.py：这是之前讨论的统一查询服务的实现位置，也是未来缓存优化的核心。所有智能体都通过它获取数据，这里是性能和扩展性的关键控制点。
+
+config/prompts/：将提示词外部化为YAML/JSON文件。这意味着优化提示词无需改动代码，甚至可以开发一个后台界面动态管理提示词。
+
+storage/ 与 tasks/：将数据访问和异步任务抽象成独立层。未来更换数据库（如从PostgreSQL到MySQL）或任务队列（从Celery到Kafka）时，影响范围会被隔离在这两个目录内。
+
+api/ 目录预留：虽然初期可能用脚本或Streamlit触发，但预留API层能为未来提供Web界面、移动端或第三方集成打下基础。
