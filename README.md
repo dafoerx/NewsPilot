@@ -1,0 +1,129 @@
+# 📰 个性化新闻分析系统
+
+一个基于大语言模型（LLM）的智能系统，旨在自动抓取、分析每日新闻，并结合动态更新的个人画像，为用户提供**个性化、可执行的洞察与建议**。
+
+## ✨ 核心特性
+
+*   **智能新闻管道**：自动从多渠道（RSS、API）抓取新闻，进行清洗、去重、标准化存储。
+*   **动态用户画像**：系统持续学习您的背景、兴趣与决策，构建并维护一个专属的长期记忆档案。
+*   **深度关联分析**：利用RAG技术，不仅分析当日新闻，更能关联历史信息，洞察事件的发展脉络与内在联系。
+*   **个性化建议引擎**：综合最新新闻与您的个人画像，通过精心设计的提示词，由大模型生成切实可行的机会分析与行动建议。
+*   **模块化与可扩展**：清晰的分层架构，各模块解耦，便于独立开发、测试与功能扩展。
+
+## 🏗️ 系统架构
+
+本系统采用分层设计，主要模块如下：
+
+```
+用户交互层
+    ├── 反馈模块 (更新画像)
+    └── 建议/提问模块 (获取洞察)
+            |
+    智能核心层 (Intelligence/)
+    ├── 统一查询服务 (Query Service) - 数据组装与缓存核心
+    ├── 建议生成智能体 (Suggestion Agent)
+    └── 针对性提问智能体 (Questioning Agent)
+            |
+    数据处理层
+    ├── 用户画像模块 (User Profile/) - 管理与更新长期记忆
+    └── 新闻处理流水线
+        ├── 新闻抓取 (Data Acquisition/) - 多源获取与去重
+        └── 新闻整理 (Data Processing/) - 事实提取、关联分析与知识图谱更新
+            |
+    数据存储层 (Storage/)
+    ├── 关系型数据库 (PostgreSQL) - 存储结构化数据
+    ├── 向量数据库 (pgvector/Qdrant) - 支持语义检索
+    └── 缓存 (Redis) - 提升性能
+```
+
+## 📂 项目结构
+
+```
+your_news_analysis_system/
+├── src/
+│   ├── core/           # 核心数据模型与抽象
+│   ├── data_acquisition/   # 新闻抓取模块
+│   ├── data_processing/    # 新闻整理模块（事实提取、关联分析）
+│   ├── user_profile/       # 用户画像与记忆管理
+│   ├── intelligence/       # 智能体与统一查询服务
+│   ├── storage/           # 数据库与存储抽象
+│   ├── tasks/             # 异步任务
+│   └── api/               # Web API层
+├── config/                # 配置文件与提示词模板
+├── tests/                 # 测试套件
+└── scripts/               # 实用脚本
+```
+
+## 🚀 快速开始
+
+### 前提条件
+*   Python 3.9+
+*   PostgreSQL (建议13+) 并安装 `pgvector` 扩展
+*   Redis (用于缓存和任务队列)
+*   大模型API密钥（如 DeepSeek, OpenAI）
+
+### 安装步骤
+
+1.  **克隆仓库**
+    ```bash
+    git clone <repository-url>
+    cd your_news_analysis_system
+    ```
+
+2.  **设置环境变量**
+    ```bash
+    cp .env.example .env
+    # 编辑 .env 文件，填入您的数据库连接、API密钥等配置
+    ```
+
+3.  **安装依赖**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **初始化数据库**
+    ```bash
+    python scripts/init_database.py
+    ```
+
+5.  **运行系统**
+    *   **启动后台任务Worker** (用于新闻抓取等异步任务):
+        ```bash
+        celery -A src.tasks.celery_app worker --loglevel=info
+        ```
+    *   **启动定时任务调度** (可选，用于每日定时触发):
+        ```bash
+        celery -A src.tasks.celery_app beat --loglevel=info
+        ```
+    *   **启动API服务** (如需HTTP接口):
+        ```bash
+        uvicorn src.api.app:app --reload --host 0.0.0.0 --port 8000
+        ```
+    *   **或直接运行主流程脚本**:
+        ```bash
+        python scripts/run_daily_pipeline.py
+        ```
+
+## 🛠️ 配置
+
+主要配置文件位于 `config/settings.py`。您可以通过环境变量或直接修改该文件来调整：
+*   **数据源**：在 `config/settings.py` 中配置新闻源的RSS URL或API。
+*   **大模型**：在 `.env` 中设置 `DEEPSEEK_API_KEY` 或 `OPENAI_API_KEY`，并在 `src/intelligence/llm_client.py` 中选择使用的模型。
+*   **提示词**：所有与大模型交互的提示词模板都在 `config/prompts/` 目录下，可直接修改YAML文件以优化系统行为。
+
+## 📈 开发路线
+
+1.  **阶段一 (MVP)**: 实现单数据源抓取 -> 基础新闻摘要 -> 结合静态画像生成建议。
+2.  **阶段二 (增强)**: 引入多数据源、动态用户画像、长期记忆、关联分析。
+3.  **阶段三 (产品化)**: 添加Web界面、高级缓存、监控告警、成本优化。
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request。对于重大更改，请先开 Issue 讨论您想改变的内容。
+
+## 📄 许可
+
+本项目采用 [MIT 许可证](LICENSE)。
+
+---
+**开始构建您专属的智能新闻分析助手吧！** 如有问题，请查阅代码注释或提交Issue。
