@@ -1,0 +1,6 @@
+{
+  "l0_decay_rate": 0.995,
+  "l1_importance_threshold": 0.5,
+  "l2_window_days": 3,
+  "l3_trigger_rarity": 0.1
+}

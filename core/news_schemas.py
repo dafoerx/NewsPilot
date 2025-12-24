@@ -139,7 +139,7 @@ class NewsItemRawSchema(BaseModel):
     
     attachments: List[Attachment] = Field(default_factory=list, description="新闻中的图片、视频等附件列表。")
     
-    SupportingDocument_id: Optional[str] = Field(None, 
+    SupportingDocument_id: list[str] = Field(None, 
         description="指向 SupportingDocumentSchema 的链接ID。 如果新闻提及官方报告，该ID指向文档存储系统中的文件。")
     
     # --- LLM 评估与去重元数据  ---
