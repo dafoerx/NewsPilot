@@ -1,29 +1,33 @@
-'''
-Author: WangQiushuo 185886867@qq.com
-Date: 2025-12-19 22:27:00
-LastEditors: WangQiushuo 185886867@qq.com
-LastEditTime: 2025-12-19 22:27:08
-FilePath: \NewsPilot\src\data_acquisition\fetchers\base_fetcher.py
-Description: 
+#
+# Author: WangQiushuo 185886867@qq.com
+# Date: 2025-12-19 22:27:00
+# LastEditors: WangQiushuo 185886867@qq.com
+# LastEditTime: 2026-01-07 23:20:33
+# FilePath: \NewsPilot\src\data_acquisition\fetchers\base_fetcher.py
+# Description: 
+# 
+# Copyright (c) 2026 by , All Rights Reserved. 
 
-Copyright (c) 2025 by , All Rights Reserved. 
-'''
 from abc import ABC, abstractmethod
 from typing import List, Dict, Any, Optional
 
-# 假设 NewsItemRawSchema 已经在 core/schemas/news.py 中定义
-from core.news_schemas import NewsItemRawSchema
+from core.news_schemas import NewsItemRawSchema, Attachment
 
 class BaseFetcher(ABC):
     """
     所有新闻抓取器的抽象基类。
     """
-    
-    # 唯一标识该抓取器的名称
-    SOURCE_NAME: str = abstractmethod(property) 
-    
-    # 抓取器的类型 (API, Web Scraper, RSS)
-    SOURCE_TYPE: str = abstractmethod(property) 
+    @property
+    @abstractmethod
+    def SOURCE_NAME(self) -> str:
+        """抓取器名称，必须由子类实现"""
+        pass
+
+    @property
+    @abstractmethod
+    def SOURCE_TYPE(self) -> str:
+        """抓取器类型 (API, Web Scraper, RSS)"""
+        pass
     
     @abstractmethod
     async def fetch_raw_data(self) -> List[Dict[str, Any]]:

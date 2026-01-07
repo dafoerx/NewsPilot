@@ -3,4 +3,7 @@
 data/
 
 #密钥文件
-src/data_acquisition/fetchers/keys.json
+config/keys.py
+
+*.pyc
+__pycache__/

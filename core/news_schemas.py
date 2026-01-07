@@ -1,24 +1,17 @@
-'''
-Author: WangQiushuo 185886867@qq.com
-Date: 2025-12-18 21:15:42
-LastEditors: WangQiushuo 185886867@qq.com
-LastEditTime: 2025-12-18 22:43:54
-FilePath: \NewsPilot\src\schemas.py
-Description: 
-
-数据格式定义文件。  
-NewsItemRefinedSchema、NewsItemRawSchema、SupportingDocumentSchema等数据结构的定义。 -- 2025-12-18
-
-Copyright (c) 2025 by WangQiushuo, All Rights Reserved. 
-'''
+#
+# Author: WangQiushuo 185886867@qq.com
+# Date: 2025-12-18 21:15:42
+# LastEditors: WangQiushuo 185886867@qq.com
+# LastEditTime: 2026-01-07 22:54:13
+# FilePath: \NewsPilot\core\news_schemas.py
+# Description: 
+# 
+# Copyright (c) 2026 by , All Rights Reserved. 
 from pydantic import BaseModel, Field, HttpUrl, field_validator
-from datetime import datetime
-from typing import List, Optional
 from enum import Enum
+from typing import List, Optional, Dict, Any
 
 from datetime import datetime
-from typing import List, Optional, Dict, Any
-from pydantic import BaseModel, Field
 
 class Attachment(BaseModel):
     """
@@ -139,7 +132,7 @@ class NewsItemRawSchema(BaseModel):
     
     attachments: List[Attachment] = Field(default_factory=list, description="新闻中的图片、视频等附件列表。")
     
-    SupportingDocument_id: list[str] = Field(None, 
+    supportingDocument_id: list[str] = Field(None, 
         description="指向 SupportingDocumentSchema 的链接ID。 如果新闻提及官方报告，该ID指向文档存储系统中的文件。")
     
     # --- LLM 评估与去重元数据  ---
