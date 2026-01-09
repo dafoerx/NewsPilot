@@ -15,6 +15,10 @@ class Summarizer:
             factory = LLMClientFactory()
             self._client = factory.get_client(model_name)
 
+    async def close(self):
+        if hasattr(self, '_client') and self._client:
+            await self._client.close()
+
     async def llm_summarize_async(self, news_item: NewsItemRawSchema) -> NewsItemRefinedSchema:
         system_prompt = SUMMARY_PROMPT_CN["SYSTEM_PROMPT"]
         user_prompt = SUMMARY_PROMPT_CN["USER_PROMPT_TEMPLATE"].format(

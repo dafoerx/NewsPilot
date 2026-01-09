@@ -43,17 +43,20 @@ class NewsProcessingPipeline:
         1. 生成摘要
         2. 翻译标题、摘要、正文
         """
-        
-        # Step 1: 异步翻译
-        translated_items = await self.translator.translate_batch(
-            news_list,
-            target_language=self.target_language
-        )
-        print(translated_items[0])
-        # Step 2: 异步生成摘要
-        summarized_items = await self.summarizer.summarize_batch(translated_items)
+        try:
+            # Step 1: 异步翻译
+            translated_items = await self.translator.translate_batch(
+                news_list,
+                target_language=self.target_language
+            )
+            print(translated_items[0])
+            # Step 2: 异步生成摘要
+            summarized_items = await self.summarizer.summarize_batch(translated_items)
 
-        return summarized_items
+            return summarized_items
+        finally:
+            await self.translator.close()
+            await self.summarizer.close()
 
     def run(self, news_list: List[NewsItemRawSchema]) -> List[NewsItemRefinedSchema]:
         """

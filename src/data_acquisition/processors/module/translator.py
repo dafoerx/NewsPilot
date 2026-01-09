@@ -28,6 +28,10 @@ class Translator:
             factory = LLMClientFactory()
             self._client = factory.get_client(model_name)
 
+    async def close(self):
+        if hasattr(self, '_client') and self._client:
+            await self._client.close()
+
     async def llm_translate_async(self, news_item: NewsItemRawSchema, target_language: str = "zh") -> NewsItemRefinedSchema:
         """
         异步翻译单条新闻的标题、摘要、正文
@@ -65,7 +69,6 @@ class Translator:
             translate_text(abstract_prompt),
             translate_text(body_prompt),
         )
-        print(type(news_item.published_at))
         # 构建返回结果
         refined_item = NewsItemRawSchema(
             unique_id=news_item.unique_id,
