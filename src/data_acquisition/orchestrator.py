@@ -29,7 +29,7 @@ class NewsAcquisitionService:
         #     # ReutersFetcher(...)
         # ]
         self.fetchers = [
-            NewsAPIFetcher(api_key=keys.newsapi),
+            NewsAPIFetcher(api_key=keys.newsapi_api),
             # ReutersFetcher(...)
         ]
 

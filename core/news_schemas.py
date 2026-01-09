@@ -43,7 +43,7 @@ class NewsItemRefinedSchema(BaseModel):
     # --- 时间信息 ---
 
     published_at: datetime = Field(..., description="新闻的发布时间（UTC/带时区）。")
-    fetched_at: datetime = Field(default_factory=datetime.now(), description="系统抓取并存入数据库的时间（UTC）。")
+    fetched_at: datetime = Field(default_factory=datetime.now, description="系统抓取并存入数据库的时间（UTC）。")
 
     # --- 内容主体 ---
 
@@ -79,7 +79,7 @@ class SupportingDocumentSchema(BaseModel):
     # --- 时间信息 ---
 
     published_at: datetime = Field(..., description="支持性文档的发布时间（UTC/带时区）。")
-    fetched_at: datetime = Field(default_factory=datetime.now(), description="系统抓取并存入数据库的时间（UTC）。")
+    fetched_at: datetime = Field(default_factory=datetime.now, description="系统抓取并存入数据库的时间（UTC）。")
 
     # --- 内容主体 ---
 
@@ -115,7 +115,7 @@ class NewsItemRawSchema(BaseModel):
     # --- 时间信息 ---
     
     published_at: datetime = Field(..., description="新闻的发布时间（UTC/带时区）。")
-    fetched_at: datetime = Field(default_factory=datetime.now(), description="系统抓取并存入数据库的时间（UTC）。")
+    fetched_at: datetime = Field(default_factory=datetime.now, description="系统抓取并存入数据库的时间（UTC）。")
 
     # --- 内容主体 ---
     
