@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-09 21:38:09
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-10 00:50:27
+# LastEditTime: 2026-01-10 16:29:56
 # FilePath: \NewsPilot\src\data_acquisition\processors\pipeline.py
 # Description: 
 # 
@@ -27,13 +27,17 @@ class NewsProcessingPipeline:
 
     def __init__(
         self,
-        summarizer_model: str = "deepseek",
+        translotor_flag: bool = True,
+        summarizer_flag: bool = True,
         translator_model: str = "deepseek",
-        target_language: str = "zh"
+        target_language: str = "zh",
+        summarizer_model: str = "deepseek",
     ):
         self.translator = Translator(model_name=translator_model)
         self.summarizer = Summarizer(model_name=summarizer_model)
         self.target_language = target_language
+        self.translotor_flag = translotor_flag
+        self.summarizer_flag = summarizer_flag
 
     async def process_async(
         self, news_list: List[NewsItemRawSchema]
@@ -44,14 +48,15 @@ class NewsProcessingPipeline:
         2. 翻译标题、摘要、正文
         """
         try:
-            # Step 1: 异步翻译
-            translated_items = await self.translator.translate_batch(
-                news_list,
-                target_language=self.target_language
-            )
-            print(translated_items[0])
-            # Step 2: 异步生成摘要
-            summarized_items = await self.summarizer.summarize_batch(translated_items)
+            if self.translotor_flag == True:
+                # 异步翻译
+                translated_items = await self.translator.translate_batch(
+                    news_list,
+                    target_language=self.target_language
+                )
+            if self.summarizer_flag == True:
+                # 异步生成摘要
+                summarized_items = await self.summarizer.summarize_batch(translated_items)
 
             return summarized_items
         finally:

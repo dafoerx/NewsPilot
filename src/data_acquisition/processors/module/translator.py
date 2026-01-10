@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-09 23:37:21
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-10 00:55:10
+# LastEditTime: 2026-01-10 22:47:18
 # FilePath: \NewsPilot\src\data_acquisition\processors\module\translator.py
 # Description: 
 # 
@@ -13,7 +13,7 @@ from src.module.init_client import LLMClientFactory
 from config.prompts import TRANSLATION_PROMPT_CN
 
 import asyncio
-from typing import List
+from typing import List, Tuple
 
 class Translator:
     """
@@ -32,7 +32,7 @@ class Translator:
         if hasattr(self, '_client') and self._client:
             await self._client.close()
 
-    async def llm_translate_async(self, news_item: NewsItemRawSchema, target_language: str = "zh") -> NewsItemRefinedSchema:
+    async def llm_translate_async(self, news_item: NewsItemRawSchema, target_language: str = "zh") -> NewsItemRawSchema:
         """
         异步翻译单条新闻的标题、摘要、正文
         """
@@ -52,23 +52,21 @@ class Translator:
             target_language=target_language
         )
 
-        # 调用 LLM 异步接口
-        async def translate_text(prompt: str) -> str:
-            response = await self._client.chat.completions.create(
-                model=self._get_model_name(self.model_name),
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": prompt},
-                ],
-                stream=False
+        if self.model_name == 'deepseek':
+            translated_title, translated_abstract, translated_body = await self.deepseek_translate(
+                system_prompt,
+                title_prompt,
+                abstract_prompt,
+                body_prompt,
+                model_id = "deepseek-chat"
             )
-            return response.choices[0].message.content
+        elif self.model_name == 'gemini':
+            raise NotImplementedError("Gemini 翻译尚未实现")
+        elif self.model_name == 'gpt':
+            raise NotImplementedError("GPT 翻译尚未实现")
+        else:
+            raise ValueError(f"Unsupported translation model: {self.model_name}")
 
-        translated_title, translated_abstract, translated_body = await asyncio.gather(
-            translate_text(title_prompt),
-            translate_text(abstract_prompt),
-            translate_text(body_prompt),
-        )
         # 构建返回结果
         refined_item = NewsItemRawSchema(
             unique_id=news_item.unique_id,
@@ -98,14 +96,23 @@ class Translator:
 
         tasks = [safe_translate(item) for item in news_list]
         return await asyncio.gather(*tasks)
+    
+    async def deepseek_translate(self, system_prompt: str, title_prompt: str, abstract_prompt: str, body_prompt: str, model_id: str) -> Tuple[str, str, str]:
+        # 调用 LLM 异步接口
+        async def translate_text(prompt: str) -> str:
+            response = await self._client.chat.completions.create(
+                model=model_id,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": prompt},
+                ],
+                stream=False
+            )
+            return response.choices[0].message.content
 
-    def _get_model_name(self, model_name: str = "deepseek") -> str:
-        """
-        根据传入的模型名称，返回实际使用的模型名称
-        """
-        model_map = {
-            "deepseek": "deepseek-chat",
-            "gpt-4": "gpt-4",
-            "gpt-3.5-turbo": "gpt-3.5-turbo",
-        }
-        return model_map.get(model_name, model_name)
+        translated_title, translated_abstract, translated_body = await asyncio.gather(
+            translate_text(title_prompt),
+            translate_text(abstract_prompt),
+            translate_text(body_prompt),
+        )
+        return translated_title, translated_abstract, translated_body

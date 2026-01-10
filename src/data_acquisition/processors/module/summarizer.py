@@ -26,16 +26,9 @@ class Summarizer:
             abstract=news_item.abstract,
             body=news_item.body
         )
-        model = self._get_model_name(self.model_name)
-        response = await self._client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ],
-            stream=False
-        )
-        abstract = response.choices[0].message.content
+        if self.model_name == 'deepseek':
+            model_id = "deepseek-chat"
+            abstract = await self.deepseek_summarize(system_prompt, user_prompt, model_id=model_id)
 
         refined_item = NewsItemRefinedSchema(
             unique_id=news_item.unique_id,
@@ -63,10 +56,19 @@ class Summarizer:
         tasks = [safe_summarize(item) for item in news_list]
         return await asyncio.gather(*tasks)
 
-    def _get_model_name(self, model_name: str="deepseek") -> str:
-        model_map = {
-            "deepseek": "deepseek-chat",
-            "gpt-4": "gpt-4",
-            "gpt-3.5-turbo": "gpt-3.5-turbo",
-        }
-        return model_map.get(model_name, model_name)
+    async def deepseek_summarize(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        model_id: str = "deepseek-chat"
+    ) -> str:
+        response = await self._client.chat.completions.create(
+            model=model_id,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt}
+            ],
+            temperature=0.3
+        )
+        summary = response.choices[0].message.content
+        return summary

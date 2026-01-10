@@ -2,13 +2,14 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-09 22:52:52
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-10 00:39:58
+# LastEditTime: 2026-01-10 23:24:35
 # FilePath: \NewsPilot\src\module\init_client.py
 # Description: 
 # 
 # Copyright (c) 2026 by , All Rights Reserved. 
 
-from openai import AsyncOpenAI
+from openai import AsyncOpenAI, api_key
+from google import genai
 from config import keys
 
 class LLMClientFactory:
@@ -18,9 +19,9 @@ class LLMClientFactory:
 
     def __init__(self):
         self.client_init = {
-            "gpt-4": self._init_gpt4,
-            "gpt-3.5-turbo": self._init_gpt35,
+            "gpt": self._init_gpt,
             "deepseek": self._init_deepseek,
+            "gemini": self._init_gemini,
         }
 
     def get_client(self, model_name: str) ->AsyncOpenAI:
@@ -32,9 +33,11 @@ class LLMClientFactory:
         return self.client_init[model_name]()
 
     # ----------------- 初始化不同模型 -----------------
-    def _init_gpt4(self) -> AsyncOpenAI:
-        return AsyncOpenAI(api_key=keys.openai_api, model="gpt-4")
-    def _init_gpt35(self) -> AsyncOpenAI:
-        return AsyncOpenAI(api_key=keys.openai_api, model="gpt-3.5-turbo")      
+    def _init_gpt(self) -> AsyncOpenAI:
+        return AsyncOpenAI(api_key=keys.openai_api)
+    
     def _init_deepseek(self) ->AsyncOpenAI:
         return AsyncOpenAI(api_key=keys.deepseek_api, base_url="https://api.deepseek.com")
+    
+    def _init_gemini(self) -> genai.Client:
+        return genai.Client(api_key=keys.gemini_api)
