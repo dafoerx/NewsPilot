@@ -74,10 +74,10 @@ class InsightGenerator:
             contents=full_prompt,
             config=GenerateContentConfig(
                 thinking_config=ThinkingConfig(thinking_level="high"),
-                tools=[
-                    {"url_context": {}}, 
-                    {"google_search": {}}
-                ],
+                # tools=[
+                #     {"url_context": {}}, 
+                #     {"google_search": {}}
+                # ],
                 temperature=0.7,
                 max_output_tokens=10000000
             ),

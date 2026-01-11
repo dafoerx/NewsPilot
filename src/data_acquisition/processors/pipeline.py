@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-09 21:38:09
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-10 16:29:56
+# LastEditTime: 2026-01-11 22:53:24
 # FilePath: \NewsPilot\src\data_acquisition\processors\pipeline.py
 # Description: 
 # 
@@ -41,12 +41,13 @@ class NewsProcessingPipeline:
 
     async def process_async(
         self, news_list: List[NewsItemRawSchema]
-    ) -> List[NewsItemRefinedSchema]:
+    ) -> dict:
         """
         异步批量处理新闻：
         1. 生成摘要
         2. 翻译标题、摘要、正文
         """
+        translated_items, summarized_items = None, None
         try:
             if self.translotor_flag == True:
                 # 异步翻译
@@ -57,13 +58,17 @@ class NewsProcessingPipeline:
             if self.summarizer_flag == True:
                 # 异步生成摘要
                 summarized_items = await self.summarizer.summarize_batch(translated_items)
-
-            return summarized_items
+        
+            pipeline_result = {
+                "translated_items": translated_items,
+                "summarized_items": summarized_items
+            }
+            return pipeline_result
         finally:
             await self.translator.close()
             await self.summarizer.close()
 
-    def run(self, news_list: List[NewsItemRawSchema]) -> List[NewsItemRefinedSchema]:
+    def run(self, news_list: List[NewsItemRawSchema]) -> dict:
         """
         同步接口（外部调用），内部使用 asyncio.run
         """
@@ -90,7 +95,8 @@ if __name__ == "__main__":
 
     news_items = [NewsItemRawSchema(**normalize_news_item(item)) for item in news_data]
     pipeline = NewsProcessingPipeline()
-    refined_items = pipeline.run(news_items[:10])  # 仅处理前10条以加快测试速度
+    result = pipeline.run(news_items[:10])  # 仅处理前10条以加快测试速度
+    refined_items = result["summarized_items"]
     print(f"Processed total {len(refined_items)} news items.")
     print(refined_items[0])
     with open(Path(save_path), "w", encoding="utf-8") as f:

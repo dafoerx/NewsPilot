@@ -1,0 +1,2054 @@
+[
+  {
+    "unique_id": "d6074dd2-80b9-4b6c-b8d9-466d350cb2dd",
+    "source_id": "",
+    "source_channel": "The Washington Post",
+    "source_url": "https://www.washingtonpost.com/food/2026/01/10/how-to-cook-brussels-sprouts/",
+    "NewsItemRaw_id": "d6074dd2-80b9-4b6c-b8d9-466d350cb2dd",
+    "published_at": "2026-01-10 16:32:22+00:00",
+    "fetched_at": "2026-01-11 23:54:01.394912",
+    "title": "烹饪抱子甘蓝的最佳方法，包括烤制和炖煮——《华盛顿邮报》",
+    "abstract": "《华盛顿邮报》的一篇文章介绍了烹饪抱子甘蓝的多种方法，包括烤制和炖煮。文章指出，这种蔬菜口感朴实且略带苦味。其目的是为读者提供如何通过不同烹饪方式提升抱子甘蓝风味的实用信息。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "the-washington-post",
+          "name": "The Washington Post"
+        },
+        "author": "Aaron Hutcherson",
+        "title": "The best ways to cook Brussels sprouts, including roasted and braised - The Washington Post",
+        "description": "Steaming, braising, roasting and more ways to make the most of the diminutive green vegetable.",
+        "url": "https://www.washingtonpost.com/food/2026/01/10/how-to-cook-brussels-sprouts/",
+        "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/CCJYYOBFHEI6ZCBRUMPHWPPBRA.jpg&w=1440",
+        "publishedAt": "2026-01-10T16:32:22Z",
+        "content": "Earthy and slightly bitter, Brussels sprouts resemble miniature cabbages. If your first thought at the mention of the vegetable is, Eww, gross! I imagine its only because the last time you tried them… [+382 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "332e79dd-3397-49f5-a5c0-b0131ab0d171",
+    "source_id": "",
+    "source_channel": "CBS News",
+    "source_url": "https://www.cbsnews.com/news/lung-cancer-misdiagnosis-rare-disease-igg4-rd/",
+    "NewsItemRaw_id": "332e79dd-3397-49f5-a5c0-b0131ab0d171",
+    "published_at": "2026-01-10 13:00:07+00:00",
+    "fetched_at": "2026-01-11 23:54:02.385024",
+    "title": "医生以为这位三个孩子的父亲得了癌症。一句随口建议却引出了一个意想不到的诊断结果。——CBS新闻",
+    "abstract": "一位名叫安迪·普罗文彻的患者在2020年6月发生自行车事故后，持续遭受不明原因的疲惫症状困扰长达一年。在多次就医后，一位医师助理提出他可能患有一种罕见疾病。随后的检查证实，普罗文彻的症状并非最初怀疑的癌症，而是由一种罕见的肾上腺肿瘤引起的。这一诊断使他最终获得了正确的治疗。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "cbs-news",
+          "name": "CBS News"
+        },
+        "author": "Kerry  Breen",
+        "title": "Doctors thought a dad of 3 had cancer. An offhand suggestion led to an unexpected diagnosis. - CBS News",
+        "description": "Andy Provencher spent a year searching for the cause of his exhausting symptoms before a physician's assistant suggested a rare illness.",
+        "url": "https://www.cbsnews.com/news/lung-cancer-misdiagnosis-rare-disease-igg4-rd/",
+        "urlToImage": "https://assets3.cbsnewsstatic.com/hub/i/r/2026/01/08/c8f06d9c-2752-4391-a6e3-02cbd7e823c0/thumbnail/1200x630/cbf4403a0f0606c2138f29e062940cd5/screenshot-2026-01-08-at-2-13-24-pm.png",
+        "publishedAt": "2026-01-10T13:00:07Z",
+        "content": "When Andy Provencher crashed his mountain bike and tumbled over the handlebars, he thought his wife's reaction would be his biggest problem. \r\nIt was June 2020, when COVID-19 was soaring nationwide. … [+6128 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "de4b4f42-9575-4c4e-911b-c152447a0cfa",
+    "source_id": "",
+    "source_channel": "CNBC",
+    "source_url": "https://www.cnbc.com/2026/01/10/trump-calls-for-one-year-cap-on-credit-card-interest-rates-at-10percent.html",
+    "NewsItemRaw_id": "de4b4f42-9575-4c4e-911b-c152447a0cfa",
+    "published_at": "2026-01-10 11:55:52+00:00",
+    "fetched_at": "2026-01-11 23:54:01.151702",
+    "title": "特朗普呼吁将信用卡利率上限设定为10%，为期一年 - CNBC",
+    "abstract": "美国总统唐纳德·特朗普于周五表示，他呼吁自1月20日起将信用卡利率上限设定为10%，为期一年。他未提供该计划将如何实现或如何使信用卡公司遵守的具体细节。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "CNBC"
+        },
+        "author": "Reuters",
+        "title": "Trump calls for one-year cap on credit card interest rates at 10% - CNBC",
+        "description": "U.S. President Donald Trump did not provide details on how his plan would come to fruition or how he planned to make credit card companies comply.",
+        "url": "https://www.cnbc.com/2026/01/10/trump-calls-for-one-year-cap-on-credit-card-interest-rates-at-10percent.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108122709-1743163582643-gettyimages-2206634607-PERSONAL_CONSUMPTION_EXPENDITURES.jpeg?v=1768046087&w=1920&h=1080",
+        "publishedAt": "2026-01-10T11:55:52Z",
+        "content": "U.S. President Donald Trump said on Friday he was calling for a one-year cap on credit card interest rates at 10% starting on Jan. 20, but he did not provide details on how his plan would come to fru… [+3296 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "c11e306d-294a-48de-b380-b404b98a2a28",
+    "source_id": "",
+    "source_channel": "Axios",
+    "source_url": "https://www.axios.com/2026/01/10/gen-z-jobs-side-hustle",
+    "NewsItemRaw_id": "c11e306d-294a-48de-b380-b404b98a2a28",
+    "published_at": "2026-01-10 10:46:23+00:00",
+    "fetched_at": "2026-01-11 23:54:00.997024",
+    "title": "Z世代并非在躺平，他们正在搞副业 - Axios",
+    "abstract": "超过一半的Z世代正在从事额外工作。Glassdoor首席执行官指出，这一群体渴望工作并取得成功，但对通过传统职业路径实现目标感到失望。经济不确定性是推动这一趋势的因素之一。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "axios",
+          "name": "Axios"
+        },
+        "author": "Sami Sparber",
+        "title": "Gen Z isn't quiet quitting. They're side hustling - Axios",
+        "description": "Over half of Gen Z is taking on extra work as economic uncertainty grows.",
+        "url": "https://www.axios.com/2026/01/10/gen-z-jobs-side-hustle",
+        "urlToImage": "https://images.axios.com/fJOL2lE-wYpeuh8jKSX9F5Vk0h0=/0x0:1920x1080/1366x768/2025/11/20/1763677184512.jpeg",
+        "publishedAt": "2026-01-10T10:46:23Z",
+        "content": "The big picture: Younger people \"want to work [and] find success, but many of them just feel disillusioned with the opportunities to get there through the traditional career ladder,\" Glassdoor chief … [+1815 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "a56e1155-7a5d-4ceb-93a2-8b1a66be86fd",
+    "source_id": "",
+    "source_channel": "CNN",
+    "source_url": "https://www.cnn.com/2026/01/10/tech/ces-ai-tech-las-vegas",
+    "NewsItemRaw_id": "a56e1155-7a5d-4ceb-93a2-8b1a66be86fd",
+    "published_at": "2026-01-10 08:00:59+00:00",
+    "fetched_at": "2026-01-11 23:54:02.685951",
+    "title": "在全球最大科技展上，对AI泡沫的担忧无处可寻——CNN",
+    "abstract": "在拉斯维加斯举行的年度消费电子展（CES）上，人工智能技术再次成为展会主导。尽管市场存在对AI泡沫的担忧，但英伟达、三星和亚马逊等科技巨头在会上展示了其AI产品。这些公司阐述了人工智能未来在人们生活与工作中将扮演的角色。展会上，包括人形机器人在内的各类AI设备成为焦点。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "cnn",
+          "name": "CNN"
+        },
+        "author": "Lisa Eadicicco",
+        "title": "Fears of an AI bubble were nowhere to be found at the world’s biggest tech show - CNN",
+        "description": "AI once again dominated CES, where companies from around the world gathered to flaunt new technologies. It’s where tech giants like Nvidia, Samsung, and Amazon made their case for the role AI will play in how people live and work, despite concerns of an AI bu…",
+        "url": "https://www.cnn.com/2026/01/10/tech/ces-ai-tech-las-vegas",
+        "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/ap26008308955904.jpg?c=16x9&q=w_800,c_fill",
+        "publishedAt": "2026-01-10T08:00:59Z",
+        "content": "Robots took over the floor at the biggest technology show of the year: I watched a towering humanoid robot march forward, spin its head and wave at an excited crowd. Then I almost bumped into a four-… [+5505 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "910e9c17-b1d9-4569-a3d9-0e1c47b6161c",
+    "source_id": "",
+    "source_channel": "Financial Times",
+    "source_url": "https://www.ft.com/content/59491879-2d53-49f9-9823-7318f361d64c",
+    "NewsItemRaw_id": "910e9c17-b1d9-4569-a3d9-0e1c47b6161c",
+    "published_at": "2026-01-10 04:00:01+00:00",
+    "fetched_at": "2026-01-11 23:54:04.254942",
+    "title": "委内瑞拉能偿还债务吗？ - 金融时报",
+    "abstract": "《金融时报》报道，委内瑞拉总统尼古拉斯·马杜罗的下台，可能为该国进行大规模且复杂的债务重组创造条件。报道未提供具体时间表。文章核心关注点在于该国未来偿还债务的能力与前景。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Financial Times"
+        },
+        "author": "Joseph Cotterill",
+        "title": "Can Venezuela settle its debts? - Financial Times",
+        "description": "Nicolás Maduro’s removal has opened the door to a huge and complex debt workout",
+        "url": "https://www.ft.com/content/59491879-2d53-49f9-9823-7318f361d64c",
+        "urlToImage": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6d3df9ba-7611-4a7f-bf38-76517dc938a2.jpg?source=next-barrier-page",
+        "publishedAt": "2026-01-10T04:00:01Z",
+        "content": "was $409now $149 for your first year\r\nDelivery Monday - Saturday, including FT Weekend and FT Digital Edition: all the content of the FT newspaper on any device. Savings based on annual price.\r\n<ul><… [+221 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "7e56f7bc-ac7e-41d6-a971-0aac22b407ee",
+    "source_id": "",
+    "source_channel": "BBC News",
+    "source_url": "https://www.bbc.com/news/articles/czdq1z73pv9o",
+    "NewsItemRaw_id": "7e56f7bc-ac7e-41d6-a971-0aac22b407ee",
+    "published_at": "2026-01-10 03:13:16+00:00",
+    "fetched_at": "2026-01-11 23:54:04.211548",
+    "title": "“缺货”：奢侈品零售商萨克斯百货出了什么问题？ - BBC",
+    "abstract": "拥有萨克斯第五大道精品百货店和内曼·马库斯百货的Saks Global预计将很快申请破产保护。这一消息引发了外界对该零售商未来运营的疑问。报道指出，其门店存在商品缺货的情况。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "BBC News"
+        },
+        "author": null,
+        "title": "'Out of stock': What went wrong at luxury retailer Saks? - BBC",
+        "description": "Saks Global, which owns Saks Fifth Avenue and Neiman Marcus, is expected to imminently file for bankruptcy protection, leaving questions about the retailer's future.",
+        "url": "https://www.bbc.com/news/articles/czdq1z73pv9o",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/4011/live/df9e98d0-eb1c-11f0-a935-e16fc33d91b4.jpg",
+        "publishedAt": "2026-01-10T03:13:16Z",
+        "content": "Danielle KayeBusiness reporter\r\nShoppers leave a Saks Fifth Avenue store on December 30, 2025 in Chicago, Illinois.\r\nOn a recent January morning, tourists admired the rows of Balenciaga and Burberry … [+6905 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "babe7a41-1848-4a50-b989-bde23e898b24",
+    "source_id": "",
+    "source_channel": "NPR",
+    "source_url": "https://www.npr.org/2026/01/09/nx-s1-5672643/market-ai-what-is-a-bubble",
+    "NewsItemRaw_id": "babe7a41-1848-4a50-b989-bde23e898b24",
+    "published_at": "2026-01-10 02:03:46+00:00",
+    "fetched_at": "2026-01-11 23:54:04.368533",
+    "title": "那么，我们是否身处人工智能泡沫之中？以下是一些值得关注的线索。：Planet Money - NPR",
+    "abstract": "一些经济学家正在探讨当前是否存在人工智能泡沫。这一讨论的背景是股市屡创新高，相关市场估值巨大。识别泡沫通常具有挑战性，但研究者表示他们可能发现了一些值得关注的线索。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "NPR"
+        },
+        "author": "",
+        "title": "So are we in an AI bubble? Here are clues to look for. : Planet Money - NPR",
+        "description": "Are we in an AI bubble? That’s the $35 trillion dollar question right now as the stock market soars higher and higher. The problem is that bubbles are famously hard to spot. But some economists say they may have found some telltale clues.On our latest: How do…",
+        "url": "https://www.npr.org/2026/01/09/nx-s1-5672643/market-ai-what-is-a-bubble",
+        "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/3377x1900+0+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F99%2Fba%2Fa4ba75af4668a75c620a8e6a1fb4%2Fbd8ef4b5-3fac-4612-9855-e6cf8eeee075.jpg",
+        "publishedAt": "2026-01-10T02:03:46Z",
+        "content": "Are we in an AI bubble? That's the $35 trillion dollar question right now as the stock market soars higher and higher. The problem is that bubbles are famously hard to spot. But some economists say t… [+885 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "2e3d04ec-6f6d-4628-9592-3a9bea956434",
+    "source_id": "",
+    "source_channel": "The Texas Tribune",
+    "source_url": "http://www.texastribune.org/2026/01/09/texas-hemp-thc-cannabis-licensing-fee-marijuana-increase/",
+    "NewsItemRaw_id": "2e3d04ec-6f6d-4628-9592-3a9bea956434",
+    "published_at": "2026-01-10 00:39:00+00:00",
+    "fetched_at": "2026-01-11 23:54:05.842970",
+    "title": "德克萨斯州拟对销售大麻衍生THC的零售商征收13000%的许可费涨幅——《德克萨斯论坛报》",
+    "abstract": "德克萨斯州卫生官员提议大幅提高销售大麻衍生THC产品的零售商和制造商的年度许可费。根据提议，零售商年费将从150美元增至20,000美元，制造商年费将从250美元增至25,000美元。大麻倡导者警告称，这一涨幅可能导致小企业倒闭。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "The Texas Tribune"
+        },
+        "author": "Stephen Simpson",
+        "title": "Texas proposes 13,000% licensing fee hike on retailers who sell hemp-derived THC - The Texas Tribune",
+        "description": "Hemp advocates say raising annual licensing fees for retailers from $150 to $20,000 and for manufacturers from $250 to $25,000 would shutter small businesses.",
+        "url": "http://www.texastribune.org/2026/01/09/texas-hemp-thc-cannabis-licensing-fee-marijuana-increase/",
+        "urlToImage": "https://www.texastribune.org/wp-content/uploads/2026/01/0729-Rural-THC-AM-14.jpg",
+        "publishedAt": "2026-01-10T00:39:00Z",
+        "content": "Sign up for The Brief, The Texas Tribunes daily newsletter that keeps readers up to speed on the most essential Texas news.\r\nTexas state health officials have proposed raising licensing fees by as mu… [+7931 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "8a39baf4-9b34-43a5-8cb3-c513887edc5b",
+    "source_id": "",
+    "source_channel": "Federal News Network",
+    "source_url": "https://federalnewsnetwork.com/contracting/2026/01/trump-order-targeting-defense-contractor-pay-stock-buybacks-is-full-of-ambiguity/",
+    "NewsItemRaw_id": "8a39baf4-9b34-43a5-8cb3-c513887edc5b",
+    "published_at": "2026-01-09 23:54:06+00:00",
+    "fetched_at": "2026-01-11 23:54:05.699354",
+    "title": "特朗普针对国防承包商薪酬和股票回购的行政命令“充满模糊性” - 联邦新闻网络",
+    "abstract": "美国总统唐纳德·特朗普于周三签署了一项行政命令，对国防承包商的高管薪酬和股票回购实施新的限制。此举旨在推动政府加快采购流程。分析人士指出，该命令在具体执行标准方面存在模糊性。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Federal News Network"
+        },
+        "author": "Anastasia Obis",
+        "title": "Trump order targeting defense contractor pay, stock buybacks is ‘full of ambiguity’ - Federal News Network",
+        "description": "\"It is going to be very interesting to determine how they measure whether a company is performing,\" Stan Soloway said.",
+        "url": "https://federalnewsnetwork.com/contracting/2026/01/trump-order-targeting-defense-contractor-pay-stock-buybacks-is-full-of-ambiguity/",
+        "urlToImage": "https://federalnewsnetwork.com/wp-content/uploads/2025/11/Pentagon_Kelly_44187-scaled.jpg",
+        "publishedAt": "2026-01-09T23:54:06Z",
+        "content": "President Donald Trump took aim at defense contractors Wednesday, announcing new restrictions on executive pay and stock buybacks as part of the administrations push to speed procurement and revitali… [+10889 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "6d15d620-7355-42b1-8599-e7b107d33367",
+    "source_id": "",
+    "source_channel": "ABC News",
+    "source_url": "https://abcnews.go.com/Technology/wireStory/meta-signs-nuclear-power-deals-support-ai-data-129055340",
+    "NewsItemRaw_id": "6d15d620-7355-42b1-8599-e7b107d33367",
+    "published_at": "2026-01-09 23:43:07+00:00",
+    "fetched_at": "2026-01-11 23:54:06.980809",
+    "title": "Meta签署三份核电协议以支持其人工智能数据中心 - abcnews.go.com",
+    "abstract": "Meta已与三家公司签署核能电力协议。此举旨在为其人工智能数据中心获取稳定的电力供应。该协议是Meta为其AI业务持续寻求能源来源的一部分。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "abc-news",
+          "name": "ABC News"
+        },
+        "author": "MICHELLE CHAPMAN AP business writer",
+        "title": "Meta signs three nuclear power deals to help support its AI data centers - abcnews.go.com",
+        "description": "Facebook parent Meta has reached nuclear power deals with three companies as it continues to look for electricity sources for its artificial intelligence data centers",
+        "url": "https://abcnews.go.com/Technology/wireStory/meta-signs-nuclear-power-deals-support-ai-data-129055340",
+        "urlToImage": "https://i.abcnewsfe.com/a/6ff8ff18-97aa-4b62-8c68-a1fa1fdc98df/wirestory_0eb051a9a11d96f7ce200e186ad13476_16x9.jpg?w=1600",
+        "publishedAt": "2026-01-09T23:43:07Z",
+        "content": "Facebook parent Meta has reached nuclear power deals with three companies as it continues to look for electricity sources for its artificial intelligence data centers.\r\nMeta struck agreements with Te… [+1615 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "027a01f0-31ea-4c58-8506-28cd3eb9447e",
+    "source_id": "",
+    "source_channel": "CBS News",
+    "source_url": "https://www.cbsnews.com/boston/news/market-basket-grocery-store-ranking-supermarket/",
+    "NewsItemRaw_id": "027a01f0-31ea-4c58-8506-28cd3eb9447e",
+    "published_at": "2026-01-09 23:27:35+00:00",
+    "fetched_at": "2026-01-11 23:54:06.974423",
+    "title": "根据最新排名，Market Basket为何成为全美第二佳杂货连锁店 - CBS新闻",
+    "abstract": "根据最新排名，Market Basket连续第二年被评为美国第二大杂货连锁店。该超市总部位于马萨诸塞州特克斯伯里，主要在新英格兰地区运营。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "cbs-news",
+          "name": "CBS News"
+        },
+        "author": "Neal  Riley",
+        "title": "Why Market Basket is the second-best grocery store chain in the country, according to a new ranking - CBS News",
+        "description": "Market Basket is America's No. 2 grocery store chain for a second year in a row, a new ranking finds.",
+        "url": "https://www.cbsnews.com/boston/news/market-basket-grocery-store-ranking-supermarket/",
+        "urlToImage": "https://assets3.cbsnewsstatic.com/hub/i/r/2025/07/23/497c36e8-15a9-4fc1-863a-86c0ab0b993a/thumbnail/1200x630/64d9443bae2a99690f07f5b964ed3867/marketbasket-copy.jpg",
+        "publishedAt": "2026-01-09T23:27:35Z",
+        "content": "Market Basket is America's No. 2 grocery store chain for a second year in a row, a new ranking finds.\r\nThe Tewksbury, Massachusetts-headquartered supermarket with nearly 100 stores in New England is … [+1755 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "53edc3c6-0202-4f95-8218-82c8ca577fe8",
+    "source_id": "",
+    "source_channel": "Exxonmobil.com",
+    "source_url": "https://corporate.exxonmobil.com/news/news-releases/2026/our-perspective-regarding-the-situation-in-venezuela",
+    "NewsItemRaw_id": "53edc3c6-0202-4f95-8218-82c8ca577fe8",
+    "published_at": "2026-01-09 22:49:50+00:00",
+    "fetched_at": "2026-01-11 23:54:07.559737",
+    "title": "我们与特朗普总统分享的关于委内瑞拉局势的看法——埃克森美孚公司",
+    "abstract": "埃克森美孚公司董事长兼首席执行官达伦·伍兹与其他行业高管于今日出席了美国总统特朗普主持的白宫会议。会议议题是讨论委内瑞拉石油和天然气行业的未来。伍兹在会议上发表了讲话，感谢总统的邀请并提供了行业观点。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Exxonmobil.com"
+        },
+        "author": null,
+        "title": "Our perspective regarding the situation in Venezuela as shared with President Trump - Exxon Mobil Corporation",
+        "description": "ExxonMobil Chairman and CEO Darren Woods, alongside other industry executives, attended a meeting hosted by President Donald Trump today to discuss the future of the oil and gas industry in Venezuela.",
+        "url": "https://corporate.exxonmobil.com/news/news-releases/2026/our-perspective-regarding-the-situation-in-venezuela",
+        "urlToImage": "https://corporate.exxonmobil.com/-/media/global/icons/logos/em-default-img-2880-1620.png",
+        "publishedAt": "2026-01-09T22:49:50Z",
+        "content": "Darren delivered the following remarks at the White House:\r\nThank you, Mr. President, I appreciate the invitation and the opportunity for the entire industry to show up and provide perspective.\r\nFran… [+3953 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "362c9c65-12c3-4ebb-a457-8898c538d336",
+    "source_id": "",
+    "source_channel": "WRAL.com",
+    "source_url": "https://www.wral.com/news/nccapitol/johnson-factory-jobs-coming-wilson-pharmaceutical-plant-jan-2026/",
+    "NewsItemRaw_id": "362c9c65-12c3-4ebb-a457-8898c538d336",
+    "published_at": "2026-01-09 21:36:13+00:00",
+    "fetched_at": "2026-01-11 23:54:09.233072",
+    "title": "斯泰因称：威尔逊市新制药厂将新增500个就业岗位 - WRAL",
+    "abstract": "北卡罗来纳州州长约翰·斯坦于周五宣布，制药公司强生将在其位于威尔逊市的现有工厂进行一项数十亿美元的扩建。该扩建项目预计将为当地创造约500个新的制造业工作岗位。此举是强生公司近期在北卡罗来纳州持续投资的一部分。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "WRAL.com"
+        },
+        "author": "Will Doran, WRAL state government reporter",
+        "title": "500 more jobs coming to Wilson in new pharmaceutical plant, Stein says - WRAL",
+        "description": "Pharmaceutical giant Johnson & Johnson has been heavily investing in North Carolina , spending billions on its Wilson factory as well as a Holly Springs lab announced in August.",
+        "url": "https://www.wral.com/news/nccapitol/johnson-factory-jobs-coming-wilson-pharmaceutical-plant-jan-2026/",
+        "urlToImage": "https://images.wral.com/954da6de-b5b6-504e-99f1-62cb6947209a?w=1200&h=630",
+        "publishedAt": "2026-01-09T21:36:13Z",
+        "content": "Hundreds of new manufacturing jobs are coming to Wilson, Gov. John Stein announced Friday, as Johnson &amp; Johnson has decided to build a multibillion-dollar expansion on their existing operations i… [+1748 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "bf9f85d0-872f-4233-b0bd-d05944f96805",
+    "source_id": "",
+    "source_channel": "Financial Times",
+    "source_url": "https://www.ft.com/content/36b941b6-923d-4894-84e8-736625a1dc22",
+    "NewsItemRaw_id": "bf9f85d0-872f-4233-b0bd-d05944f96805",
+    "published_at": "2026-01-09 21:30:30+00:00",
+    "fetched_at": "2026-01-11 23:54:08.517004",
+    "title": "OpenAI与软银将向能源及数据中心供应商投资10亿美元 - 金融时报",
+    "abstract": "OpenAI与软银将向能源及数据中心供应商投资10亿美元。SB Energy已签订合同，为OpenAI的Stargate基础设施项目建造一个数据中心。该投资旨在支持OpenAI的人工智能发展需求。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Financial Times"
+        },
+        "author": "Rafe Rosner-Uddin",
+        "title": "OpenAI and SoftBank to invest $1bn in energy and data centre supplier - Financial Times",
+        "description": "SB Energy has a contract to build a data centre for the ChatGPT maker’s Stargate infrastructure project",
+        "url": "https://www.ft.com/content/36b941b6-923d-4894-84e8-736625a1dc22",
+        "urlToImage": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fef340966-2627-4652-9143-5114e60f0a4e.jpg?source=next-barrier-page",
+        "publishedAt": "2026-01-09T21:30:30Z",
+        "content": "was $409now $149 for your first year\r\nDelivery Monday - Saturday, including FT Weekend and FT Digital Edition: all the content of the FT newspaper on any device. Savings based on annual price.\r\n<ul><… [+221 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "896fa3f7-6c0c-4ecd-a1c0-8189cf5aca1d",
+    "source_id": "",
+    "source_channel": "Smart-union.org",
+    "source_url": "https://www.smart-union.org/smart-td-and-fra-condemn-csx-abandoning-operation-redblock/",
+    "NewsItemRaw_id": "896fa3f7-6c0c-4ecd-a1c0-8189cf5aca1d",
+    "published_at": "2026-01-09 21:10:04+00:00",
+    "fetched_at": "2026-01-11 23:54:09.693992",
+    "title": "CSX 结束 REDBLOCK 运营 - SMART 工会",
+    "abstract": "CSX公司于周三宣布，将解散其运营超过四十年的“红色封锁行动”安全与药物滥用预防项目。该项目由工会运营，旨在保障列车运行安全。CSX的决定结束了这一全国公认的项目。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Smart-union.org"
+        },
+        "author": "dbanks",
+        "title": "CSX ENDS OPERATION REDBLOCK - SMART Union",
+        "description": "On Wednesday, CSX Announced that it's dismantling Operation RedBlock, ending a nationally recognized, union-run safety and substance abuse prevention program that for more than four decades saved lives and kept trains moving safely. Read on to see why rail la…",
+        "url": "https://www.smart-union.org/smart-td-and-fra-condemn-csx-abandoning-operation-redblock/",
+        "urlToImage": "https://www.smart-union.org/wp-content/uploads/2026/01/Troubled-CSX-Cuts-Redblock-h.jpg",
+        "publishedAt": "2026-01-09T21:10:04Z",
+        "content": "A Shameful Retreat From 41 Years of Leadership, Compassion, and Proven Safety\r\nThis week marks a deeply sad and consequential moment for rail labor, rail management, and the freight rail industry as … [+7992 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "6d81d8d2-b423-41f7-8371-f0d9c514cdf5",
+    "source_id": "",
+    "source_channel": "Yahoo Entertainment",
+    "source_url": "https://finance.yahoo.com/news/dollar-defies-trump-turmoil-rising-211004190.html",
+    "NewsItemRaw_id": "6d81d8d2-b423-41f7-8371-f0d9c514cdf5",
+    "published_at": "2026-01-09 21:08:39+00:00",
+    "fetched_at": "2026-01-11 23:54:10.973938",
+    "title": "美元无视特朗普风波，随市场聚焦美联储政策路径而上涨 - 雅虎财经",
+    "abstract": "美元在新年伊始出现上涨，市场关注焦点从美国前总统特朗普引发的地缘政治风波，转向了美联储未来的货币政策路径。交易员此前曾押注美元将因美联储降息而走低，但美国经济展现出的韧性改变了市场预期。目前，市场正在重新评估美联储的利率政策前景，这成为驱动美元走势的主要因素。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Yahoo Entertainment"
+        },
+        "author": "Carter Johnson and Anya Andrianova",
+        "title": "Dollar Defies Trump Turmoil, Rising With Focus on the Fed’s Path - Yahoo Finance",
+        "description": "Traders ratcheted up their bets against the US currency heading into the new year, wagering it would be dragged down again as the Federal Reserve cuts...",
+        "url": "https://finance.yahoo.com/news/dollar-defies-trump-turmoil-rising-211004190.html",
+        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/lyl4E8JA8UtCfArdjZxu8w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/bloomberg_holding_pen_162/a5e6dc37bcb91eb9ccbfd27490808f62",
+        "publishedAt": "2026-01-09T21:08:39Z",
+        "content": "Bloomberg\r\n(Bloomberg) -- When it comes to the dollar, the surprising resilience of the US economy is overpowering the geopolitical turmoil unleashed by President Donald Trump.\r\nTraders ratcheted up … [+5379 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "cbe695bf-8f03-4aab-99e4-a4e932c11660",
+    "source_id": "",
+    "source_channel": "Space.com",
+    "source_url": "https://www.space.com/live/astronaut-medical-evacuation-on-iss-jan-10-2026",
+    "NewsItemRaw_id": "cbe695bf-8f03-4aab-99e4-a4e932c11660",
+    "published_at": "2026-01-10 12:50:46+00:00",
+    "fetched_at": "2026-01-11 23:54:10.958796",
+    "title": "国际空间站宇航员医疗撤离最新消息：SpaceX为“龙”飞船搭载Crew-11乘组返回地球做准备 - 太空",
+    "abstract": "SpaceX已准备好其在国际空间站上的“龙”飞船，用于执行Crew-11乘组的医疗撤离任务。此次撤离涉及四名宇航员，计划于2026年1月10日返回地球。该行动旨在应对国际空间站上出现的医疗状况。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Space.com"
+        },
+        "author": "Mike Wall",
+        "title": "ISS astronaut medical evacuation latest news: SpaceX readies Dragon spacecraft for Crew-11 return to Earth - Space",
+        "description": "Saturday, Jan. 10, 2026: Updates on NASA's astronaut medical evacuation from the International Space Station.",
+        "url": "https://www.space.com/live/astronaut-medical-evacuation-on-iss-jan-10-2026",
+        "urlToImage": "https://cdn.mos.cms.futurecdn.net/JkZn36tq8gbrcZgF77gcrb-720-80.jpg",
+        "publishedAt": "2026-01-10T12:50:46Z",
+        "content": "2026-01-10T12:48:22.143ZSpaceX prepares for Crew-11 medical evacuation\r\n(Image credit: NASA)\r\nSpaceX says it's Dragon spacecraft at the International Space Station is ready to return its four Crew-11… [+12378 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "b9363f3b-e397-4e3b-b0ed-f101a469748b",
+    "source_id": "",
+    "source_channel": "Indiandefencereview.com",
+    "source_url": "https://indiandefencereview.com/15-year-old-quantum-physics-phd-use-ai-to-create-superhumans/",
+    "NewsItemRaw_id": "b9363f3b-e397-4e3b-b0ed-f101a469748b",
+    "published_at": "2026-01-10 12:05:00+00:00",
+    "fetched_at": "2026-01-11 23:54:11.005731",
+    "title": "他8岁高中毕业，15岁获得量子物理学博士学位，如今希望打造AI强化的\"超级人类\" - 印度国防评论",
+    "abstract": "一名15岁的印度少年获得了量子物理学博士学位。他目前正致力于人工智能与人类生物学相结合的研究。其目标是利用这些技术来增强人类能力。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Indiandefencereview.com"
+        },
+        "author": null,
+        "title": "He Finished High School at Age 8, Earned a PhD in Quantum Physics at 15, Now Wants to Build AI-Enhanced \"Superhumans\" - Indian Defence Review",
+        "description": "A teenage prodigy just earned a PhD in quantum physics, at 15. Now, he's diving into AI and human biology with one goal in mind: to reengineer life itself.",
+        "url": "https://indiandefencereview.com/15-year-old-quantum-physics-phd-use-ai-to-create-superhumans/",
+        "urlToImage": "https://indiandefencereview.com/wp-content/uploads/2026/01/this-15-year-old-physicist-now-wants-to-engineer-human-enhancement.jpg",
+        "publishedAt": "2026-01-10T12:05:00Z",
+        "content": "A 15-year-old doctoral graduate is not, in itself, a scientific development. It is a human milestone, occasionally publicised, often exceptional, but separate from the processes of research and disco… [+5467 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "b1d41aeb-ec5c-480f-bf61-4f03377faab7",
+    "source_id": "",
+    "source_channel": "The Daily Galaxy --Great Discoveries Channel",
+    "source_url": "https://dailygalaxy.com/2026/01/earth-receives-10-second-signal-from-supernova-13-billion-years-ago/",
+    "NewsItemRaw_id": "b1d41aeb-ec5c-480f-bf61-4f03377faab7",
+    "published_at": "2026-01-10 11:45:00+00:00",
+    "fetched_at": "2026-01-11 23:54:12.821890",
+    "title": "人类刚刚收到来自130亿光年外的10秒信号 - 每日银河",
+    "abstract": "科学家探测到一道来自约130亿光年外的短暂而强大的宇宙闪光。该信号由新卫星发现，并经过詹姆斯·韦伯太空望远镜的确认。这一记录性的发现迫使专家重新评估对早期宇宙的现有认知。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "The Daily Galaxy --Great Discoveries Channel"
+        },
+        "author": "Arezki Amiri",
+        "title": "Humanity Just Received a 10-Second Signal From 13 Billion Light Years Away - The Daily Galaxy",
+        "description": "A mysterious 10-second flash from deep space has shattered records and stunned scientists. Detected by a new satellite and confirmed by the James Webb Telescope, this ancient explosion is forcing experts to rethink what they thought they knew about the early …",
+        "url": "https://dailygalaxy.com/2026/01/earth-receives-10-second-signal-from-supernova-13-billion-years-ago/",
+        "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2026/01/Humanity-just-caught-a-10-second-burst-from-deep-space-scaled.jpg",
+        "publishedAt": "2026-01-10T11:45:00Z",
+        "content": "A brilliant cosmic flash, brief yet immensely powerful, travelled over 13 billion years before reaching Earth. It passed through a universe that was still young, turbulent and dark, long before galax… [+5402 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "e32c8bdd-2c69-400b-bbae-8ddcc4facd8b",
+    "source_id": "",
+    "source_channel": "Astronomy Magazine",
+    "source_url": "https://www.astronomy.com/observing/the-sky-today-saturday-january-10-2026/",
+    "NewsItemRaw_id": "e32c8bdd-2c69-400b-bbae-8ddcc4facd8b",
+    "published_at": "2026-01-10 09:00:13+00:00",
+    "fetched_at": "2026-01-11 23:54:13.063034",
+    "title": "今日天空：1月10日星期六，木星冲日 - 《天文学》杂志",
+    "abstract": "根据《天文学》杂志报道，木星将于1月10日星期六发生冲日天象。届时，木星、地球和太阳将几乎排列成一条直线。这一现象使得木星整夜可见，并达到其一年中最亮、视直径最大的状态。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Astronomy Magazine"
+        },
+        "author": "Astronomy Magazine",
+        "title": "The Sky Today on Saturday, January 10: Jupiter reaches opposition - Astronomy Magazine",
+        "description": null,
+        "url": "https://www.astronomy.com/observing/the-sky-today-saturday-january-10-2026/",
+        "urlToImage": null,
+        "publishedAt": "2026-01-10T09:00:13Z",
+        "content": null
+      }
+    }
+  },
+  {
+    "unique_id": "4596a482-e690-42d2-9187-598bd3766449",
+    "source_id": "",
+    "source_channel": "Science Daily",
+    "source_url": "https://www.sciencedaily.com/releases/2026/01/260109235153.htm",
+    "NewsItemRaw_id": "4596a482-e690-42d2-9187-598bd3766449",
+    "published_at": "2026-01-10 05:10:17+00:00",
+    "fetched_at": "2026-01-11 23:54:14.430482",
+    "title": "参宿四有一颗隐藏的伴星，哈勃望远镜刚刚捕捉到了它的尾迹 - ScienceDaily",
+    "abstract": "天文学家通过分析哈勃太空望远镜及地面天文台近八年的观测数据，发现参宿四存在一颗小型伴星。这颗伴星在参宿四的广阔大气层中划出了一道可见的尾迹。这一发现为解释参宿四的某些奇特行为提供了直接证据。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Science Daily"
+        },
+        "author": null,
+        "title": "Betelgeuse has a hidden companion and Hubble just caught its wake - ScienceDaily",
+        "description": "Astronomers have uncovered the long-hidden cause behind Betelgeuse’s strange behavior: a small companion star carving a visible wake through the giant’s vast atmosphere. Using nearly eight years of observations from NASA’s Hubble Space Telescope and ground-ba…",
+        "url": "https://www.sciencedaily.com/releases/2026/01/260109235153.htm",
+        "urlToImage": "https://www.sciencedaily.com/images/1920/betelgeuse-and-wake-of-its-companion-star.webp",
+        "publishedAt": "2026-01-10T05:10:17Z",
+        "content": "Astronomers analyzing fresh observations from NASA's Hubble Space Telescope and several ground-based observatories have uncovered clear signs that a recently identified companion star is shaping the … [+5539 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "5f3f327e-2660-470e-911d-9f66cc95e0f7",
+    "source_id": "",
+    "source_channel": "Earth.com",
+    "source_url": "https://www.earth.com/news/55-miles-up-a-never-before-seen-event-revealed-by-iss-sensors-pr25/",
+    "NewsItemRaw_id": "5f3f327e-2660-470e-911d-9f66cc95e0f7",
+    "published_at": "2026-01-09 23:02:39+00:00",
+    "fetched_at": "2026-01-11 23:54:14.100910",
+    "title": "国际空间站传感器揭示前所未见事件：距地55英里高空——Earth.com",
+    "abstract": "美国宇航局（NASA）的AWE任务在国际空间站上探测到了大气波动。这一事件发生在飓风“海伦”袭击佛罗里达州期间。探测数据显示，这场极端风暴的影响延伸到了距地约55英里的高层大气。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Earth.com"
+        },
+        "author": null,
+        "title": "55 miles up, a never-before-seen event revealed by International Space Station sensors - Earth.com",
+        "description": "As Hurricane Helene battered Florida, NASA’s AWE mission detected atmospheric waves, hinting that extreme storms influence upper air layers.",
+        "url": "https://www.earth.com/news/55-miles-up-a-never-before-seen-event-revealed-by-iss-sensors-pr25/",
+        "urlToImage": "https://cff2.earth.com/uploads/2024/12/07145630/iss-tool_Atmospheric-Waves-Experiment-awe_hurricane-helene_1m.jpg",
+        "publishedAt": "2026-01-09T23:02:39Z",
+        "content": "Hurricane named Helene smashed the Florida coast, bringing devastating rain and fierce winds. The havoc caused by that powerful event did not stop at ground level, however.\r\nAccording to NASA, the In… [+4653 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "6745156c-ec87-4532-8714-1cfc70926682",
+    "source_id": "",
+    "source_channel": "ScienceAlert",
+    "source_url": "https://www.sciencealert.com/record-breaking-asteroid-spins-so-fast-it-should-tear-itself-apart",
+    "NewsItemRaw_id": "6745156c-ec87-4532-8714-1cfc70926682",
+    "published_at": "2026-01-09 21:01:42+00:00",
+    "fetched_at": "2026-01-11 23:54:14.476608",
+    "title": "转速破纪录的小行星快到本应自我撕裂 - ScienceAlert",
+    "abstract": "维拉·C·鲁宾天文台在其主要巡天调查开始前收集的数据，发现了一颗位于小行星主带的异常小行星。这颗小行星的旋转速度极快，理论上应导致其自身解体。这一发现挑战了现有对小行星物理特性的认知。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "ScienceAlert"
+        },
+        "author": "Michelle Starr",
+        "title": "Record-Breaking Asteroid Spins So Fast It Should Tear Itself Apart - ScienceAlert",
+        "description": "With data collected months before its main survey is due to begin, the Vera C.",
+        "url": "https://www.sciencealert.com/record-breaking-asteroid-spins-so-fast-it-should-tear-itself-apart",
+        "urlToImage": "https://www.sciencealert.com/images/2026/01/2025-mn45.jpg",
+        "publishedAt": "2026-01-09T21:01:42Z",
+        "content": "With data collected months before its main survey is due to begin, the Vera C. Rubin Observatory is already upending what we thought we knew about asteroids.\r\nIn the Main Belt of asteroids between th… [+5345 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "82107c8b-39c1-4434-8b4e-6083232d88a8",
+    "source_id": "",
+    "source_channel": "Space.com",
+    "source_url": "https://www.space.com/astronomy/galaxies/strange-cosmic-objects-spotted-by-the-james-webb-space-telescope-may-be-baby-platypus-galaxies-or-something-entirely-new",
+    "NewsItemRaw_id": "82107c8b-39c1-4434-8b4e-6083232d88a8",
+    "published_at": "2026-01-09 21:00:00+00:00",
+    "fetched_at": "2026-01-11 23:54:15.850407",
+    "title": "詹姆斯·韦伯太空望远镜发现的奇特宇宙天体可能是“鸭嘴兽”星系宝宝——或是某种全新的东西 - Space",
+    "abstract": "美国国家航空航天局的詹姆斯·韦伯太空望远镜观测到一些奇特的宇宙天体。这些天体同时呈现出恒星和星系的特征，令天文学家感到困惑。研究人员正在分析这些观测结果，以确定其性质。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Space.com"
+        },
+        "author": "Nola Taylor Tillman",
+        "title": "Strange cosmic objects spotted by the James Webb Space Telescope may be baby 'platypus' galaxies — or something entirely new - Space",
+        "description": "\"These nine objects are special.\"",
+        "url": "https://www.space.com/astronomy/galaxies/strange-cosmic-objects-spotted-by-the-james-webb-space-telescope-may-be-baby-platypus-galaxies-or-something-entirely-new",
+        "urlToImage": "https://cdn.mos.cms.futurecdn.net/EqL2WAvBVCSYAeBWVvTSWY-1920-80.jpg",
+        "publishedAt": "2026-01-09T21:00:00Z",
+        "content": "Strange cosmic objects spotted by NASA's James Webb Space Telescope (JWST) are presently puzzling astronomers. The odd observations show features of both stars and galaxies, leading to researchers re… [+4537 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "3462f258-c214-4f51-9262-ce8c0d8d4637",
+    "source_id": "",
+    "source_channel": "Medium",
+    "source_url": "https://avi-loeb.medium.com/the-near-transits-of-the-inner-planets-across-the-face-of-the-sun-from-the-vantage-point-of-9f04280bd855",
+    "NewsItemRaw_id": "3462f258-c214-4f51-9262-ce8c0d8d4637",
+    "published_at": "2026-01-09 20:31:11+00:00",
+    "fetched_at": "2026-01-11 23:54:17.149516",
+    "title": "从……的有利位置观察内行星在太阳表面的近距凌日 - Avi Loeb – Medium",
+    "abstract": "根据NASA/JPL Horizons的数据，彗星3I/ATLAS的预计轨迹将于2026年1月22日与地球凌日的路径几乎对齐。届时，从特定有利位置观察，该彗星将从太阳盘面前方经过。这一凌日事件将导致太阳的亮度出现可探测的略微下降。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Medium"
+        },
+        "author": "Avi Loeb",
+        "title": "The Near Transits of the Inner Planets Across the Face of the Sun from the Vantage Point of… - Avi Loeb – Medium",
+        "description": "When a planet transits in front of the disk of its host star, it blocks some of the starlight and reduces slightly the brightness of the…",
+        "url": "https://avi-loeb.medium.com/the-near-transits-of-the-inner-planets-across-the-face-of-the-sun-from-the-vantage-point-of-9f04280bd855",
+        "urlToImage": "https://miro.medium.com/v2/resize:fit:1200/1*MgfPew7-P_GolZbOzTVYjg.png",
+        "publishedAt": "2026-01-09T20:31:11Z",
+        "content": "The expected trajectory of 3I/ATLAS will nearly align with a transit of the Earth across the face of the Sun on January 22, 2026. (Image credit: NASA/JPL Horizons)\r\nWhen a planet transits in front of… [+4740 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "d71a7300-1ac5-4655-a358-c7dca421af82",
+    "source_id": "",
+    "source_channel": "BBC News",
+    "source_url": "https://www.bbc.com/news/articles/c0q4w3l0wdvo",
+    "NewsItemRaw_id": "d71a7300-1ac5-4655-a358-c7dca421af82",
+    "published_at": "2026-01-09 19:52:26+00:00",
+    "fetched_at": "2026-01-11 23:54:18.631271",
+    "title": "NASA月球任务何时发射？阿尔忒弥斯二号宇航员都有谁？- BBC",
+    "abstract": "美国国家航空航天局（NASA）的阿尔忒弥斯二号载人绕月飞行任务计划于2024年2月发射。该任务机组由指令长里德·怀斯曼、飞行员维克多·格洛弗、任务专家克里斯蒂娜·科赫和杰里米·汉森组成。此次任务是自阿波罗计划以来，首次将宇航员送往月球附近，旨在为未来的阿尔忒弥斯三号载人登月任务做准备。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "BBC News"
+        },
+        "author": null,
+        "title": "When does the Nasa Moon mission launch and who are the Artemis II crew? - BBC",
+        "description": "The first crewed Moon mission in 50 years could launch in February, preparing the way for a future landing.",
+        "url": "https://www.bbc.com/news/articles/c0q4w3l0wdvo",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1a00/live/e35f0660-ed44-11f0-8cc8-8329494b82ad.png",
+        "publishedAt": "2026-01-09T19:52:26Z",
+        "content": "Pallab Ghosh,Science Correspondentand\r\nArtemis II Crew: left Christina Koch, back Victor Glover (pilot), front Reid Wiseman (commander), right Jeremy Hansen\r\nThe first crewed Moon mission in more tha… [+4526 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "5ecd3536-a3da-4589-be8c-49cc4885be62",
+    "source_id": "",
+    "source_channel": "Phys.Org",
+    "source_url": "https://phys.org/news/2026-01-age-fishes-began-mass-death.html",
+    "NewsItemRaw_id": "5ecd3536-a3da-4589-be8c-49cc4885be62",
+    "published_at": "2026-01-09 19:00:05+00:00",
+    "fetched_at": "2026-01-11 23:54:18.155190",
+    "title": "化石数据库揭示：“鱼类时代”始于大规模死亡 - Phys.org",
+    "abstract": "一项新的化石数据库研究揭示，大约4.45亿年前，地球经历了一次重大转变。冰川在超级大陆冈瓦纳大陆上形成，导致许多浅海干涸，并引发了“冰室气候”。这一事件标志着“鱼类时代”的开始，其开端与大规模物种死亡事件相关联。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Phys.Org"
+        },
+        "author": "Okinawa Institute of Science and Technology",
+        "title": "The 'Age of Fishes' began with mass death, fossil database reveals - Phys.org",
+        "description": "Some 445 million years ago, life on Earth was forever changed. During the geological blink of an eye, glaciers formed over the supercontinent Gondwana, drying out many of the vast, shallow seas like a sponge and giving an \"icehouse climate\" that, together wit…",
+        "url": "https://phys.org/news/2026-01-age-fishes-began-mass-death.html",
+        "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2026/the-age-of-fishes-bega.jpg",
+        "publishedAt": "2026-01-09T19:00:05Z",
+        "content": "Some 445 million years ago, life on Earth was forever changed. During the geological blink of an eye, glaciers formed over the supercontinent Gondwana, drying out many of the vast, shallow seas like … [+7420 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "0c11ebf4-83b9-453b-aa53-01af3cc47cc9",
+    "source_id": "",
+    "source_channel": "Phys.Org",
+    "source_url": "https://phys.org/news/2026-01-important-source-oxidation-atmosphere.html",
+    "NewsItemRaw_id": "0c11ebf4-83b9-453b-aa53-01af3cc47cc9",
+    "published_at": "2026-01-09 19:00:03+00:00",
+    "fetched_at": "2026-01-11 23:54:17.821207",
+    "title": "大气中发现新的重要氧化源 - Phys.org",
+    "abstract": "一个国际研究团队发现，大气中存在一种新的重要氢过氧化物生成途径。这项研究由莱布尼茨对流层研究所等机构参与。氢过氧化物是强氧化剂，对大气化学过程有显著影响。该发现增进了对大气氧化能力的科学理解。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Phys.Org"
+        },
+        "author": "Tilo Arnhold",
+        "title": "Important new source of oxidation in the atmosphere found - Phys.org",
+        "description": "Hydroperoxides are strong oxidants that have a significant influence on chemical processes in the atmosphere. Now, an international research team involving the Leibniz Institute for Tropospheric Research (TROPOS) has shown that these substances also form from…",
+        "url": "https://phys.org/news/2026-01-important-source-oxidation-atmosphere.html",
+        "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2026/important-new-source-o.jpg",
+        "publishedAt": "2026-01-09T19:00:03Z",
+        "content": "Hydroperoxides are strong oxidants that have a significant influence on chemical processes in the atmosphere. Now, an international research team involving the Leibniz Institute for Tropospheric Rese… [+5104 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "e7d83e6d-26f6-425c-88bf-6d6cabe0ee6c",
+    "source_id": "",
+    "source_channel": "Northeastern.edu",
+    "source_url": "https://news.northeastern.edu/2026/01/09/crumb-rubber-health-risks/",
+    "NewsItemRaw_id": "e7d83e6d-26f6-425c-88bf-6d6cabe0ee6c",
+    "published_at": "2026-01-09 18:52:30+00:00",
+    "fetched_at": "2026-01-11 23:54:19.375440",
+    "title": "轮胎橡胶会分解成潜在的危险化学混合物 - 东北环球新闻",
+    "abstract": "一项新研究指出，用作人造草坪填充材料的碎橡胶会释放出复杂且可能有害的化学混合物。该研究聚焦于碎橡胶作为填充材料在众多场地中的使用情况。研究旨在揭示这些化学物质的性质及其潜在风险。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Northeastern.edu"
+        },
+        "author": "Noah Lloyd",
+        "title": "Tire rubber decays into a potentially dangerous chemical cocktail - Northeastern Global News",
+        "description": "Crumb rubber, used as a fill material in many artificial turf fields, contains a complex and potentially dangerous miasma of chemicals.",
+        "url": "https://news.northeastern.edu/2026/01/09/crumb-rubber-health-risks/",
+        "urlToImage": "https://news.northeastern.edu/wp-content/uploads/2025/12/121825_MM_rubber_research_005.jpg",
+        "publishedAt": "2026-01-09T18:52:30Z",
+        "content": "New research examines the complex and potentially dangerous miasma of chemicals released by crumb rubber, a fill material used in many artificial turf fields.\r\nCrumb rubber, used in many artificial t… [+6345 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "65a7b0af-586f-41a8-b9a6-8424b3b42ff3",
+    "source_id": "",
+    "source_channel": "Nature.com",
+    "source_url": "https://www.nature.com/articles/d41586-026-00062-5",
+    "NewsItemRaw_id": "65a7b0af-586f-41a8-b9a6-8424b3b42ff3",
+    "published_at": "2026-01-09 18:45:17+00:00",
+    "fetched_at": "2026-01-11 23:54:20.341526",
+    "title": "缺乏动力？这个大脑回路或许能解释原因——而且它可以被关闭 - 《自然》",
+    "abstract": "科学家在《自然》杂志发表研究，发现猴子大脑中存在一个抑制动机的特定神经回路。该回路连接与风险和奖赏相关的脑区，可能阻碍个体启动困难任务。研究人员通过操控手段成功关闭了这一回路。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Nature.com"
+        },
+        "author": null,
+        "title": "Can’t get motivated? This brain circuit might explain why — and it can be turned off - Nature",
+        "description": "Scientists have uncovered a way to manipulate the pathway in monkey brains that puts the brakes on motivation.",
+        "url": "https://www.nature.com/articles/d41586-026-00062-5",
+        "urlToImage": "https://media.nature.com/lw1200/magazine-assets/d41586-026-00062-5/d41586-026-00062-5_51926636.jpg",
+        "publishedAt": "2026-01-09T18:45:17Z",
+        "content": "A neural circuit connecting brain areas related to risk and reward can makes it hard to start a difficult task. Credit: Plume Creative/Getty\r\nSometimes the hardest part of doing an unpleasant task is… [+3140 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "ae6295f4-7946-4f3d-806a-bb975b0bd0bf",
+    "source_id": "",
+    "source_channel": "The Daily Galaxy --Great Discoveries Channel",
+    "source_url": "https://dailygalaxy.com/2026/01/scientists-found-microbes-build-homes-mars/",
+    "NewsItemRaw_id": "ae6295f4-7946-4f3d-806a-bb975b0bd0bf",
+    "published_at": "2026-01-09 18:45:00+00:00",
+    "fetched_at": "2026-01-11 23:54:20.680015",
+    "title": "科学家刚刚发现可能有助于在火星上建造家园的微生物 - The Daily Galaxy",
+    "abstract": "研究人员正在探索利用地球上的坚韧微生物，将火星土壤转化为建筑材料。这项研究旨在为未来在火星上建造人类栖息地提供潜在方案。相关报道由The Daily Galaxy发布。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "The Daily Galaxy --Great Discoveries Channel"
+        },
+        "author": "Sarah Jones",
+        "title": "Scientists Just Discovered Microbes That Could Help Build Homes on Mars - The Daily Galaxy",
+        "description": "Mars habitats made from Martian soil? These microbes could make it happen.",
+        "url": "https://dailygalaxy.com/2026/01/scientists-found-microbes-build-homes-mars/",
+        "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2026/01/Scientists-Just-Discovered-Microbes-That-Could-Help-Build-Homes-on-Mars-How-scaled.jpg",
+        "publishedAt": "2026-01-09T18:45:00Z",
+        "content": "Researchers are considering an unusual but promising ally for building the first human habitats on Mars: Earth’s toughest microbes. These microorganisms could transform Martian soil into a concrete-l… [+3094 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "413930f4-347c-4c81-afca-8b7cca529900",
+    "source_id": "",
+    "source_channel": "Newsnationnow.com",
+    "source_url": "https://www.newsnationnow.com/climate/massive-iceberg-days-away-disintegration-nasa/",
+    "NewsItemRaw_id": "413930f4-347c-4c81-afca-8b7cca529900",
+    "published_at": "2026-01-09 18:44:00+00:00",
+    "fetched_at": "2026-01-11 23:54:21.298708",
+    "title": "NASA：巨型冰山可能在数日内\"完全崩解\" - NewsNation",
+    "abstract": "美国国家航空航天局（NASA）宣布，巨型冰山A-23A可能在数日或数周内完全解体。该冰山是目前世界上最大的冰山之一，其表面已布满蓝色融水。这一评估基于NASA的观测数据。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Newsnationnow.com"
+        },
+        "author": "Zach Kaplan",
+        "title": "Massive iceberg could be days away from ‘complete disintegration’: NASA - NewsNation",
+        "description": "NASA revealed that iceberg A-23A could be just days or weeks away from disintegrating fully.",
+        "url": "https://www.newsnationnow.com/climate/massive-iceberg-days-away-disintegration-nasa/",
+        "urlToImage": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2026/01/ISS074-E-8943.jpg?w=1280",
+        "publishedAt": "2026-01-09T18:44:00Z",
+        "content": "(NewsNation) A massive iceberg is “sopping with blue meltwater and on the verge of complete disintegration,” NASA announced Thursday.\r\nIn a news release, NASA revealed that iceberg A-23A, among the l… [+1008 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "973f8735-0dcb-44fe-b943-5cec6f423ffe",
+    "source_id": "",
+    "source_channel": "NASA",
+    "source_url": "https://www.nasa.gov/missions/dragonfly/flight-engineers-give-nasas-dragonfly-lift/",
+    "NewsItemRaw_id": "973f8735-0dcb-44fe-b943-5cec6f423ffe",
+    "published_at": "2026-01-09 18:17:30+00:00",
+    "fetched_at": "2026-01-11 23:54:21.922231",
+    "title": "飞行工程师为NASA的“蜻蜓”号提供升力 - NASA (.gov)",
+    "abstract": "美国宇航局（NASA）的“蜻蜓”任务计划向土星的卫星泰坦派遣一辆汽车大小的旋翼飞行器。该任务旨在对泰坦进行探索，以期实现前所未有的科学发现。飞行工程师团队正为此次任务提供技术支持。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "NASA"
+        },
+        "author": "Erin Morton",
+        "title": "Flight Engineers Give NASA’s Dragonfly Lift - NASA (.gov)",
+        "description": "In sending a car-sized rotorcraft to explore Saturn’s moon Titan, NASA’s Dragonfly mission will undertake an unprecedented voyage of scientific discovery. And",
+        "url": "https://www.nasa.gov/missions/dragonfly/flight-engineers-give-nasas-dragonfly-lift/",
+        "urlToImage": "https://www.nasa.gov/wp-content/uploads/2026/01/dragonfly-tdt-setup-092025.jpg",
+        "publishedAt": "2026-01-09T18:17:30Z",
+        "content": "In sending a car-sized rotorcraft to explore Saturns moon Titan, NASAs Dragonfly mission will undertake an unprecedented voyage of scientific discovery. And the work to ensure that this first-of-its-… [+6625 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "3a141042-ea2a-4dfa-b00a-3f2f8f5713cf",
+    "source_id": "",
+    "source_channel": "Phys.Org",
+    "source_url": "https://phys.org/news/2026-01-cold-neutral-gas-early-universe.html",
+    "NewsItemRaw_id": "3a141042-ea2a-4dfa-b00a-3f2f8f5713cf",
+    "published_at": "2026-01-09 17:49:07+00:00",
+    "fetched_at": "2026-01-11 23:54:23.347676",
+    "title": "早期宇宙中的冷中性气体促使重新思考星系团演化 - Phys.org",
+    "abstract": "哥本哈根大学尼尔斯·玻尔研究所宇宙黎明中心的研究人员，通过对一个早期巨大星系团的观测，发现了大量冷中性气体。这一发现表明，星系团在演化早期阶段可能含有比先前预期更多的冷气体。该发现促使天文学家重新思考星系团这类宇宙最大结构的形成与演化模型。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Phys.Org"
+        },
+        "author": "University of Copenhagen",
+        "title": "Cold neutral gas in early universe prompts rethink of galaxy cluster evolution - Phys.org",
+        "description": "A small group of young researchers at the Cosmic Dawn Center, Niels Bohr Institute, University of Copenhagen, have, through observations of the early stages of an extremely large galaxy cluster's evolution, shown that the largest structures we know have a dif…",
+        "url": "https://phys.org/news/2026-01-cold-neutral-gas-early-universe.html",
+        "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2026/development-history-of.jpg",
+        "publishedAt": "2026-01-09T17:49:07Z",
+        "content": "A small group of young researchers at the Cosmic Dawn Center, Niels Bohr Institute, University of Copenhagen, have, through observations of the early stages of an extremely large galaxy cluster's evo… [+4546 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "67cb56c2-5d19-4b7d-a63f-e3d4cc198cba",
+    "source_id": "",
+    "source_channel": "The Daily Galaxy --Great Discoveries Channel",
+    "source_url": "https://dailygalaxy.com/2026/01/apollo-16-astronaut-family-photo-on-moon/",
+    "NewsItemRaw_id": "67cb56c2-5d19-4b7d-a63f-e3d4cc198cba",
+    "published_at": "2026-01-09 17:45:00+00:00",
+    "fetched_at": "2026-01-11 23:54:23.523024",
+    "title": "1972年，一位阿波罗16号宇航员在月球上留下了一套个人物品，原因令人惊讶！——每日银河",
+    "abstract": "1972年4月20日，阿波罗16号宇航员查尔斯·杜克在执行任务期间，在月球表面留下了一张家庭照片。这一行为是出于个人情感原因，旨在留下一个私人的纪念品。该物品至今仍留在月球上。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "The Daily Galaxy --Great Discoveries Channel"
+        },
+        "author": "Lydia Amazouz",
+        "title": "In 1972, An Apollo 16 Astronaut Left a Set of Personal Objects on the Moon for a Surprising Reason! - The Daily Galaxy",
+        "description": "In 1972, an Apollo 16 astronaut left a family photo on the Moon, a surprising and personal memento that still sparks curiosity today.",
+        "url": "https://dailygalaxy.com/2026/01/apollo-16-astronaut-family-photo-on-moon/",
+        "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2026/01/Apollo-16-Astronaut-Left-a-Set-of-Personal-Objects-on-the-Moon-for-a-Surprising-Reason-scaled.png",
+        "publishedAt": "2026-01-09T17:45:00Z",
+        "content": "On April 20, 1972, Apollo 16 astronaut Charles Duke made history not only for his scientific contributions to the mission but also for the emotional legacy he left behind on the Moon. Amidst the exci… [+3222 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "00023ef8-097e-4d8d-a117-c17e0607d34d",
+    "source_id": "",
+    "source_channel": "Phys.Org",
+    "source_url": "https://phys.org/news/2026-01-laser-pulse-sculpting-particle.html",
+    "NewsItemRaw_id": "00023ef8-097e-4d8d-a117-c17e0607d34d",
+    "published_at": "2026-01-09 17:39:24+00:00",
+    "fetched_at": "2026-01-11 23:54:23.446167",
+    "title": "激光脉冲“雕刻”技术为粒子加速开启新控制方式 - Phys.org",
+    "abstract": "一项新的激光脉冲“雕刻”技术为粒子加速提供了新的控制方式。该技术通过精确控制激光脉冲的时空特性，实现对粒子加速过程的调控。这项研究由物理学家团队完成，旨在提升激光-物质相互作用的效率。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Phys.Org"
+        },
+        "author": "Eli Alps",
+        "title": "Laser pulse 'sculpting' unlocks new control over particle acceleration - Phys.org",
+        "description": "In high-intensity laser–matter interactions, including laser-induced particle acceleration, physicists generally want to work with the highest possible focused laser peak power, which is the ratio of energy per unit area to pulse duration. Therefore, for the …",
+        "url": "https://phys.org/news/2026-01-laser-pulse-sculpting-particle.html",
+        "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2026/performance-enhancemen.jpg",
+        "publishedAt": "2026-01-09T17:39:24Z",
+        "content": "In high-intensity lasermatter interactions, including laser-induced particle acceleration, physicists generally want to work with the highest possible focused laser peak power, which is the ratio of … [+3721 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "3e147e54-784d-431a-a176-16791d3cb456",
+    "source_id": "",
+    "source_channel": "Android Authority",
+    "source_url": "https://www.androidauthority.com/google-photos-vs-immich-3628122/",
+    "NewsItemRaw_id": "3e147e54-784d-431a-a176-16791d3cb456",
+    "published_at": "2026-01-10 12:34:06+00:00",
+    "fetched_at": "2026-01-11 23:54:24.404049",
+    "title": "我（终于）弃用谷歌相册，改用自托管方案；过程如下 - Android Authority",
+    "abstract": "一位用户从谷歌相册转向了自托管方案。该用户在自己的NAS上安装了开源软件Immich作为替代品。此举旨在减少对订阅服务的依赖并掌控个人数据。用户表示可能不会回归谷歌相册。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Android Authority"
+        },
+        "author": null,
+        "title": "I (finally) ditched Google Photos for self-hosted; here's how it went - Android Authority",
+        "description": "Can you really self-host a viable Google Photos alternative? I gave Immich a go on my NAS and I don't think I'll ever go back.",
+        "url": "https://www.androidauthority.com/google-photos-vs-immich-3628122/",
+        "urlToImage": "https://www.androidauthority.com/wp-content/uploads/2025/12/Immich-App-Gallery.jpg",
+        "publishedAt": "2026-01-10T12:34:06Z",
+        "content": "I love Google Photos; its ease of use and feature set are unrivaled in my opinion. However, Im an even bigger fan of self-hosting I use my DIY NAS to replace a considerable range of overpriced subscr… [+10175 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "516c3e2c-32fd-4a88-8457-2d7db715d789",
+    "source_id": "",
+    "source_channel": "Business Insider",
+    "source_url": "https://www.businessinsider.com/ground-breaking-and-quirky-products-from-the-2026-ces-2026-1",
+    "NewsItemRaw_id": "516c3e2c-32fd-4a88-8457-2d7db715d789",
+    "published_at": "2026-01-10 11:06:00+00:00",
+    "fetched_at": "2026-01-11 23:54:25.737810",
+    "title": "2026年国际消费电子展上你或许很快就能买到的5款突破性（且奇特）产品 - Business Insider",
+    "abstract": "中国初创公司Takway AI在2026年美国国际消费电子展上首次展示了一款名为Sweekar的新型AI宠物。与虚拟AI伴侣不同，Sweekar是一款具备物理形态的电子宠物。该产品是本届展会展示的众多创新科技产品之一。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "business-insider",
+          "name": "Business Insider"
+        },
+        "author": "Katherine Li",
+        "title": "5 ground-breaking (and strange) products you could soon buy from the 2026 Consumer Electronics Show - Business Insider",
+        "description": "From a lollipop that lets you taste sound to a Tamagotchi style AI pet that physically grows, here are the coolest tech you could get your hands on.",
+        "url": "https://www.businessinsider.com/ground-breaking-and-quirky-products-from-the-2026-ces-2026-1",
+        "urlToImage": "https://i.insider.com/695ec58964858d02d217f172?width=1200&format=jpeg",
+        "publishedAt": "2026-01-10T11:06:00Z",
+        "content": "The Tamagotchi of the AI era is here.\r\nA new AI pet from Chinese startup Takway AI, called Sweekar, debuted in the US at CES. Unlike most AI companions that exist entirely virtually, this creature ha… [+911 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "a61fa60e-73d0-470c-b8e1-64131fa9b6d6",
+    "source_id": "",
+    "source_channel": "WTOP",
+    "source_url": "https://wtop.com/tech/2026/01/roborock-introduces-worlds-first-automated-vacuum-that-actually-cleans-as-it-climbs/",
+    "NewsItemRaw_id": "a61fa60e-73d0-470c-b8e1-64131fa9b6d6",
+    "published_at": "2026-01-10 10:43:38+00:00",
+    "fetched_at": "2026-01-11 23:54:26.786727",
+    "title": "Roborock推出全球首款真正边爬边清洁的自动吸尘器 - WTOP",
+    "abstract": "中国公司Roborock在CES 2026上展示了一款新型自主吸尘器。该产品是全球首款能够主动攀爬并清洁楼梯的自动化吸尘器。这款设备不仅能避开楼梯，还能在楼梯上进行清洁作业。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "WTOP"
+        },
+        "author": "No Author",
+        "title": "Roborock introduces world’s first automated vacuum that actually cleans as it climbs - WTOP",
+        "description": "Chinese company Roborock offered a sneak peek at CES 2026 of an autonomous vacuum cleaner that doesn’t just avoid stairs, but actively climbs and cleans them.",
+        "url": "https://wtop.com/tech/2026/01/roborock-introduces-worlds-first-automated-vacuum-that-actually-cleans-as-it-climbs/",
+        "urlToImage": "https://wtop.com/wp-content/uploads/2026/01/roborock-vacuum-e1767965681612.jpg",
+        "publishedAt": "2026-01-10T10:43:38Z",
+        "content": "This page contains a video which is being blocked by your ad blocker.In order to view the video you must disable your ad blocker.\r\nRoborock introduces worlds first automated vacuum that actually clea… [+5015 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "90118c10-ad99-4a4d-a5ca-583214a43f04",
+    "source_id": "",
+    "source_channel": "Mashable",
+    "source_url": "https://mashable.com/article/hurdle-hints-answers-january-10-2026",
+    "NewsItemRaw_id": "90118c10-ad99-4a4d-a5ca-583214a43f04",
+    "published_at": "2026-01-10 05:00:00+00:00",
+    "fetched_at": "2026-01-11 23:54:26.162339",
+    "title": "2026年1月10日《Mashable》今日Hurdle游戏提示与答案",
+    "abstract": "《Mashable》于2026年1月10日发布了当日“Hurdle”游戏的提示与答案。该文章旨在为玩家提供赢得游戏所需的信息。内容聚焦于游戏的具体提示和对应的解决方案。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "mashable",
+          "name": "Mashable"
+        },
+        "author": "Mashable Team",
+        "title": "Today's Hurdle hints and answers for January 10, 2026 - Mashable",
+        "description": "Everything you need to win.",
+        "url": "https://mashable.com/article/hurdle-hints-answers-january-10-2026",
+        "urlToImage": "https://helios-i.mashable.com/imagery/articles/07t6ihv1AbNxU2VZpldHwle/hero-image.fill.size_1200x675.v1767821389.jpg",
+        "publishedAt": "2026-01-10T05:00:00Z",
+        "content": null
+      }
+    }
+  },
+  {
+    "unique_id": "44f53ced-b963-446b-9a44-cc12445a1330",
+    "source_id": "",
+    "source_channel": "Mashable",
+    "source_url": "https://mashable.com/article/jan-9-magic-the-gathering-deal",
+    "NewsItemRaw_id": "44f53ced-b963-446b-9a44-cc12445a1330",
+    "published_at": "2026-01-10 03:00:00+00:00",
+    "fetched_at": "2026-01-11 23:54:27.285848",
+    "title": "MTG 依尼翠重制版优惠：亚马逊限时 28% 折扣 - Mashable",
+    "abstract": "亚马逊正在对《万智牌：依尼翠重制版》卡牌提供限时折扣。该优惠使36包卡牌的价格降至70美元，折扣幅度为28%。此次促销活动由Mashable报道，产品主题为哥特恐怖题材的再版卡牌。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "mashable",
+          "name": "Mashable"
+        },
+        "author": "Tabitha Britt",
+        "title": "MTG Innistrad Remastered deal: 28% off at Amazon - Mashable",
+        "description": "Snag 36 packs of gothic horror reprints for $70 off the list price.",
+        "url": "https://mashable.com/article/jan-9-magic-the-gathering-deal",
+        "urlToImage": "https://helios-i.mashable.com/imagery/articles/00ag9ibWEMnJTd3X4Fa3V6g/hero-image.fill.size_1200x675.v1767972088.png",
+        "publishedAt": "2026-01-10T03:00:00Z",
+        "content": null
+      }
+    }
+  },
+  {
+    "unique_id": "f3484430-0c75-4965-b32c-0816f0f2ddb9",
+    "source_id": "",
+    "source_channel": "9to5google.com",
+    "source_url": "http://9to5google.com/2026/01/09/google-maps-settings-redesign/",
+    "NewsItemRaw_id": "f3484430-0c75-4965-b32c-0816f0f2ddb9",
+    "published_at": "2026-01-09 23:30:00+00:00",
+    "fetched_at": "2026-01-11 23:54:26.914177",
+    "title": "Google Maps 终于在 Android 上重新设计了设置界面 - 9to5Google",
+    "abstract": "谷歌地图已对其安卓版应用的设置界面进行了重新设计。此次更新旨在改进此前被广泛认为不佳的用户设置体验。新的设计替换了已沿用多年的旧版设置列表。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "9to5google.com"
+        },
+        "author": "Abner Li",
+        "title": "Google Maps finally redesigns settings on Android - 9to5Google",
+        "description": "Of all the first-party apps, Google Maps probably offered the worst settings experience, but a redesign is finally cleaning things up.",
+        "url": "http://9to5google.com/2026/01/09/google-maps-settings-redesign/",
+        "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2023/03/google-maps-logo-circle-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+        "publishedAt": "2026-01-09T23:30:00Z",
+        "content": "Of all the first-party apps, Google Maps probably offered the worst settings experience, but a redesign is finally cleaning things up.\r\nThe previous settings list was years old, with Google continuou… [+1246 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "2984a1b1-aa3c-4ef4-a92c-0388105cf07e",
+    "source_id": "",
+    "source_channel": "The Verge",
+    "source_url": "https://www.theverge.com/tech/860010/atitan-bluetooth-auracast-transceiver-ces-2026",
+    "NewsItemRaw_id": "2984a1b1-aa3c-4ef4-a92c-0388105cf07e",
+    "published_at": "2026-01-09 22:56:41+00:00",
+    "fetched_at": "2026-01-11 23:54:28.123139",
+    "title": "很快你就能轻松为iPhone添加蓝牙Auracast功能 - The Verge",
+    "abstract": "苹果公司尚未为iPhone提供蓝牙Auracast功能。第三方公司Atitan推出了一款收发器设备。该设备使用户能够自行将蓝牙Auracast功能添加到iPhone上。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "the-verge",
+          "name": "The Verge"
+        },
+        "author": "John Higgins",
+        "title": "Soon you can easily add Bluetooth Auracast to iPhones - The Verge",
+        "description": "Apple has been silent on Bluetooth Auracast implementation, but with this transceiver coming from Atitan, you’ll be able to add it on your own.",
+        "url": "https://www.theverge.com/tech/860010/atitan-bluetooth-auracast-transceiver-ces-2026",
+        "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/atitan-auracast-transceiver-ces.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+        "publishedAt": "2026-01-09T22:56:41Z",
+        "content": "<ul><li></li><li></li><li></li></ul>\r\nWith Apple staying quiet on the Bluetooth feature, this solution adds the functionality to the iPhone.\r\nWith Apple staying quiet on the Bluetooth feature, this s… [+3958 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "6e54cb9d-59ff-47d1-b876-35ae9e02523f",
+    "source_id": "",
+    "source_channel": "Nofilmschool.com",
+    "source_url": "https://nofilmschool.com/simple-way-get-better-cinematography",
+    "NewsItemRaw_id": "6e54cb9d-59ff-47d1-b876-35ae9e02523f",
+    "published_at": "2026-01-09 22:45:26+00:00",
+    "fetched_at": "2026-01-11 23:54:29.284574",
+    "title": "一个提升电影摄影技巧的简单方法 - 无电影学院",
+    "abstract": "一篇来自无电影学院的文章提出，分析自己和他人的作品是提升电影摄影技巧的有效方法。文章指出，这一练习看似简单，实则是一个深入的过程。该方法旨在通过客观审视作品来促进摄影师的技能进步。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Nofilmschool.com"
+        },
+        "author": "Jo Light",
+        "title": "One Simple Way to Get Better at Cinematography - No Film School",
+        "description": "And resources to make it happen.",
+        "url": "https://nofilmschool.com/simple-way-get-better-cinematography",
+        "urlToImage": "https://nofilmschool.com/media-library/image.jpg?id=62681654&width=1200&height=600&coordinates=0%2C165%2C0%2C165",
+        "publishedAt": "2026-01-09T22:45:26Z",
+        "content": "If you want to improve as a cinematographer, there's one practice that can help you get better. \r\nAnd that is... analyzing your work and others.\r\nIt sounds easy, but it's actually an in-depth process… [+6491 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "6c9de6b9-8bf3-4658-80f7-1f1757d5bdba",
+    "source_id": "",
+    "source_channel": "Tom's Guide",
+    "source_url": "https://www.tomsguide.com/gaming/steam-machine-pricing-may-have-just-leaked-by-retailer-and-its-not-cheap",
+    "NewsItemRaw_id": "6c9de6b9-8bf3-4658-80f7-1f1757d5bdba",
+    "published_at": "2026-01-09 22:23:08+00:00",
+    "fetched_at": "2026-01-11 23:54:30.616641",
+    "title": "Steam Machine价格可能已通过零售商泄露——而且并不便宜 - Tom's Guide",
+    "abstract": "根据捷克零售商Alza.cz的列表信息，Valve公司计划于2025年推出的Steam Machine和Steam Frame的价格可能已被泄露。泄露信息显示，Steam Machine的起售价为699欧元，而Steam Frame的起售价为999欧元。Valve此前并未公布这两款设备的官方定价。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Tom's Guide"
+        },
+        "author": "Scott Younker",
+        "title": "Steam Machine pricing may have just leaked by retailer — and it's not cheap - Tom's Guide",
+        "description": "If true, the Machine will not be friendly to your wallet.",
+        "url": "https://www.tomsguide.com/gaming/steam-machine-pricing-may-have-just-leaked-by-retailer-and-its-not-cheap",
+        "urlToImage": "https://cdn.mos.cms.futurecdn.net/EWEFvfXcTi2HKWLY5zAAck-2560-80.jpg",
+        "publishedAt": "2026-01-09T22:23:08Z",
+        "content": "When Valve announced the Steam Machine and Steam Frame in November 2025, the company declined to share pricing for either device. But we may have an idea of pricing thanks to a Czech retailer and som… [+2601 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "8fdc2533-cca1-46f0-83dd-95b165a35d99",
+    "source_id": "",
+    "source_channel": "PetaPixel",
+    "source_url": "https://petapixel.com/2026/01/09/photographer-transformed-a-panasonic-lumix-g9-ii-into-a-leica-look-alike/",
+    "NewsItemRaw_id": "8fdc2533-cca1-46f0-83dd-95b165a35d99",
+    "published_at": "2026-01-09 22:00:06+00:00",
+    "fetched_at": "2026-01-11 23:54:31.109384",
+    "title": "摄影师将松下Lumix G9 II改装成徕卡外观 - PetaPixel",
+    "abstract": "摄影师克里斯蒂安·布鲁将一台松下Lumix G9 II相机改装为徕卡风格的外观。他因在市场上找不到符合自己特定需求的相机而决定进行此次改装。该定制过程涉及将松下相机的内部组件整合到新的机身中。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "PetaPixel"
+        },
+        "author": "Jeremy Gray",
+        "title": "Photographer Transformed a Panasonic Lumix G9 II Into a Leica Look-Alike - PetaPixel",
+        "description": "This custom Panasonic Lumix G9 II now looks like a Leica.",
+        "url": "https://petapixel.com/2026/01/09/photographer-transformed-a-panasonic-lumix-g9-ii-into-a-leica-look-alike/",
+        "urlToImage": "https://petapixel.com/assets/uploads/2026/01/leica-g9-ii-diy-build-11.jpg",
+        "publishedAt": "2026-01-09T22:00:06Z",
+        "content": "“Programmer by day, photographer by weekend” Cristian Blu could not find the precise camera he wanted in the market, so he made it himself. Blu expertly took the internal components from the Panasoni… [+5267 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "c43e1b70-fdbd-411b-8894-d1fff9a76a3b",
+    "source_id": "",
+    "source_channel": "CNET",
+    "source_url": "https://www.cnet.com/tech/computing/xtool-announces-uv-printer/",
+    "NewsItemRaw_id": "c43e1b70-fdbd-411b-8894-d1fff9a76a3b",
+    "published_at": "2026-01-09 20:52:00+00:00",
+    "fetched_at": "2026-01-11 23:54:30.173594",
+    "title": "我在CES 2026上测试了一款新的UV打印机。我对未来的发展感到兴奋 - CNET",
+    "abstract": "根据CNET在CES 2026上的报道，一款新的消费级UV打印机被展示和测试。报道预测，UV打印技术将在2026年迎来显著发展。文章指出，xTool公司可能在这一技术趋势中处于引领地位。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "CNET"
+        },
+        "author": "See full bio",
+        "title": "I Tested a New UV Printer at CES 2026. I’m Excited for What’s to Come - CNET",
+        "description": "UV printing is going to be big in 2026, and xTool could lead the charge.",
+        "url": "https://www.cnet.com/tech/computing/xtool-announces-uv-printer/",
+        "urlToImage": "https://www.cnet.com/a/img/resize/10c3cb83103850f3a00655fc56ae4a2760b2e0a4/hub/2026/01/08/a45b9a8f-012a-4ca9-a651-b5338377ae7e/pxl-20260107-185021205.jpg?auto=webp&fit=crop&height=675&width=1200",
+        "publishedAt": "2026-01-09T20:52:00Z",
+        "content": "I recently wrote about my predictions for makers in 2026 and where I think we will see the most growth. One of my top predictions was the rise of the consumer UV printer. Currently, there is only one… [+1913 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "3f75c56e-c141-4edb-a751-0f872033eb6f",
+    "source_id": "",
+    "source_channel": "The Verge",
+    "source_url": "https://www.theverge.com/news/859865/gmail-emoji-reaction-workspace-rollout-default",
+    "NewsItemRaw_id": "3f75c56e-c141-4edb-a751-0f872033eb6f",
+    "published_at": "2026-01-09 20:42:48+00:00",
+    "fetched_at": "2026-01-11 23:54:31.711547",
+    "title": "你知道Gmail有表情符号回复功能吗？ - The Verge",
+    "abstract": "谷歌正在扩大Gmail中的表情符号回复功能。该功能将于本月起，默认为企业级Workspace账户启用。此前，该功能已在个人Gmail中提供超过两年。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "the-verge",
+          "name": "The Verge"
+        },
+        "author": "Emma Roth",
+        "title": "Did you know that Gmail has emoji reactions? - The Verge",
+        "description": "Google is expanding emoji reactions in Gmail, by turning them on by default for work accounts this month.",
+        "url": "https://www.theverge.com/news/859865/gmail-emoji-reaction-workspace-rollout-default",
+        "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/emoji-reactions.png?quality=90&strip=all&crop=0%2C4.0232527399268%2C100%2C91.953494520146&w=1200",
+        "publishedAt": "2026-01-09T20:42:48Z",
+        "content": "<ul><li></li><li></li><li></li></ul>\r\nEmoji reactions have been hiding at the bottom of your personal Gmail messages for over two years, and now theyre coming to Workspace by default.\r\nEmoji reaction… [+2732 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "66863ff6-46b2-4406-ac79-1658436d1af4",
+    "source_id": "",
+    "source_channel": "Ars Technica",
+    "source_url": "https://arstechnica.com/google/2026/01/google-dont-make-bite-sized-content-for-llms-if-you-care-about-search-rank/",
+    "NewsItemRaw_id": "66863ff6-46b2-4406-ac79-1658436d1af4",
+    "published_at": "2026-01-09 20:27:34+00:00",
+    "fetched_at": "2026-01-11 23:54:32.483108",
+    "title": "谷歌：若在意搜索排名，就别为大型语言模型制作\"碎片化\"内容 - Ars Technica",
+    "abstract": "谷歌表示，网站若为大型语言模型制作“碎片化”内容，可能会影响其在谷歌搜索中的排名。该公司建议，为人类而非机器人创作内容是最佳长期策略。这一声明旨在引导网站所有者专注于提供高质量、以用户为中心的内容。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "ars-technica",
+          "name": "Ars Technica"
+        },
+        "author": "Ryan Whitwam",
+        "title": "Google: Don’t make “bite-sized” content for LLMs if you care about search rank - Ars Technica",
+        "description": "Google says creating for people rather than robots is the best long-term strategy.",
+        "url": "https://arstechnica.com/google/2026/01/google-dont-make-bite-sized-content-for-llms-if-you-care-about-search-rank/",
+        "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2025/05/Google-sign-IO-1152x648.jpg",
+        "publishedAt": "2026-01-09T20:27:34Z",
+        "content": null
+      }
+    }
+  },
+  {
+    "unique_id": "a85d2615-5cc3-4622-b20e-f3797b0854cd",
+    "source_id": "",
+    "source_channel": "Pinkbike.com",
+    "source_url": "https://www.pinkbike.com/news/bosch-vs-avinox-final-challenge-e-bike-field-test.html",
+    "NewsItemRaw_id": "a85d2615-5cc3-4622-b20e-f3797b0854cd",
+    "published_at": "2026-01-09 20:01:00+00:00",
+    "fetched_at": "2026-01-11 23:54:33.768963",
+    "title": "博世 vs. 阿维诺克斯终极对决 & 我们的实地测试电动山地车排行榜 - Pinkbike",
+    "abstract": "斯蒂芬和达里奥在阿肯色州本顿维尔进行了一场蒙眼骑行挑战，他们需依靠各自的电动山地自行车寻找回家的路。这项活动是Pinkbike网站电动山地车实地测试的一部分。测试旨在评估不同车型的性能，并最终决出优胜者。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Pinkbike.com"
+        },
+        "author": "Dario DiGiulio",
+        "title": "A Bosch vs. Avinox Final Challenge & Our Field Test E-Bike Rankings - Pinkbike",
+        "description": "Stephane and Dario are blindfolded and dropped far from home, left with only their e-bikes to find their way back before crowning a champion.",
+        "url": "https://www.pinkbike.com/news/bosch-vs-avinox-final-challenge-e-bike-field-test.html",
+        "urlToImage": "https://ep1.pinkbike.org/p4pb29051233/p4pb29051233.jpg",
+        "publishedAt": "2026-01-09T20:01:00Z",
+        "content": "Towards the end of our two weeks in Bentonville we'd winnowed down our list of to-dos, completed the challenges, and put plenty of mileage on each of the bikes on test. Two items remained on the chec… [+9059 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "2944fa94-c232-4632-be46-ddf214d58ce6",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-09/amazon-has-big-hopes-for-wearable-ai-starting-with-this-50-gadget",
+    "NewsItemRaw_id": "2944fa94-c232-4632-be46-ddf214d58ce6",
+    "published_at": "2026-01-09 19:48:05+00:00",
+    "fetched_at": "2026-01-11 23:54:33.573168",
+    "title": "亚马逊对可穿戴AI寄予厚望——从这款50美元的小设备开始 - Bloomberg.com",
+    "abstract": "亚马逊公司正致力于提升其售价50美元、始终处于监听状态的可穿戴AI设备的功能，使其更具主动性。此举是在该公司收购人工智能硬件初创公司Bee数月后进行的。亚马逊还暗示，未来可能对该设备进行更大规模的改版。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": "Chris Welch",
+        "title": "Amazon Has Big Hopes for Wearable AI — Starting With This $50 Gadget - Bloomberg.com",
+        "description": "Several months after Amazon.com Inc. bought artificial intelligence hardware startup Bee, the company said it’s working to make its $50 always-listening wearable more proactive, and indicated a larger revamp is in store.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-09/amazon-has-big-hopes-for-wearable-ai-starting-with-this-50-gadget",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7DwuMq9JX3A/v1/1200x765.jpg",
+        "publishedAt": "2026-01-09T19:48:05Z",
+        "content": "Several months after Amazon.com Inc.bought artificial intelligence hardware startup Bee, the company said its working to make its $50 always-listening wearable more proactive, and indicated a larger … [+255 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "8f9b5f7b-0e0f-4706-839f-1958210546df",
+    "source_id": "",
+    "source_channel": "9to5Mac",
+    "source_url": "https://9to5mac.com/2026/01/09/flic-brings-physical-button-control-to-your-matter-environment/",
+    "NewsItemRaw_id": "8f9b5f7b-0e0f-4706-839f-1958210546df",
+    "published_at": "2026-01-09 19:43:00+00:00",
+    "fetched_at": "2026-01-11 23:54:33.829552",
+    "title": "HomeKit 每周：Flic 为您的 Matter 环境带来实体按钮控制 - 9to5Mac",
+    "abstract": "Flic公司推出了Flic Hub LR和新的Duo按钮。这些产品旨在为Matter智能家居环境提供实体按钮控制。该解决方案能够桥接HomeKit与Matter生态系统，以实现更便捷的Apple Home设置。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "9to5Mac"
+        },
+        "author": "Bradley C",
+        "title": "HomeKit Weekly: Flic brings physical button control to your Matter environment - 9to5Mac",
+        "description": "Flic’s Hub LR brings physical control to Matter. Learn how the new Duo buttons bridge HomeKit and Matter for a seamless Apple Home setup.",
+        "url": "https://9to5mac.com/2026/01/09/flic-brings-physical-button-control-to-your-matter-environment/",
+        "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2025/12/Flic-Duo.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+        "publishedAt": "2026-01-09T19:43:00Z",
+        "content": "I love the idea of a fully automated smart home setup where my lights turn on exactly when I need them, and the thermostat adjusts itself without me even thinking about it. In practice, however, ther… [+4501 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "53b70137-2499-4156-9979-ad0aa22c736d",
+    "source_id": "",
+    "source_channel": "Gizmodo.com",
+    "source_url": "https://gizmodo.com/ikea-smartened-up-some-of-its-artsy-fartsy-lights-2000708087",
+    "NewsItemRaw_id": "53b70137-2499-4156-9979-ad0aa22c736d",
+    "published_at": "2026-01-09 19:40:41+00:00",
+    "fetched_at": "2026-01-11 23:54:34.833005",
+    "title": "宜家为其部分艺术感十足的灯具增添了智能功能 - Gizmodo",
+    "abstract": "宜家在2026年国际消费电子展上首次亮相，展示了一系列新产品。其发布的新品包括具有艺术感的灯具，例如RGB甜甜圈形状的灯和可弯曲调光吊灯。这些灯具新增了智能家居功能，并兼容Matter协议。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Gizmodo.com"
+        },
+        "author": "Wes Davis",
+        "title": "Ikea Smartened Up Some of Its Artsy-Fartsy Lights - Gizmodo",
+        "description": "The Swedish meatball restaurant now sells RGB donut-shaped lamps and bendy dimmable pendant lamps with smart home functionality.",
+        "url": "https://gizmodo.com/ikea-smartened-up-some-of-its-artsy-fartsy-lights-2000708087",
+        "urlToImage": "https://gizmodo.com/app/uploads/2026/01/Varmblixt-closeup-blue-1200x675.jpg",
+        "publishedAt": "2026-01-09T19:40:41Z",
+        "content": "Ikea came out swinging in its debut appearance at CES 2026, showcasing an array of new (hello, Kallsup!) and recently released speakers and Matter-compatible smart home devices. That includes the ann… [+2086 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "36baceec-d504-4995-afdf-d04dc3a051d1",
+    "source_id": "",
+    "source_channel": "Earth.com",
+    "source_url": "https://www.earth.com/news/humans-can-detect-buried-objects-using-remote-touch/",
+    "NewsItemRaw_id": "36baceec-d504-4995-afdf-d04dc3a051d1",
+    "published_at": "2026-01-09 19:04:40+00:00",
+    "fetched_at": "2026-01-11 23:54:35.820060",
+    "title": "人类无需接触即可探测到埋藏物体 - Earth.com",
+    "abstract": "伦敦的研究团队通过实验发现，人类能够在不直接接触的情况下感知到沙子下隐藏的物体。这种被称为“远程触觉”的感知能力，其有效作用距离约为2.76英寸（7厘米）。该研究展示了人类感官此前未被充分认识的一种能力。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Earth.com"
+        },
+        "author": null,
+        "title": "Humans can detect buried objects without touching them - Earth.com",
+        "description": "Humans can ‘feel’ hidden objects under sand from 2.76 inches away, revealing the surprising power of remote touch.",
+        "url": "https://www.earth.com/news/humans-can-detect-buried-objects-using-remote-touch/",
+        "urlToImage": "https://cff2.earth.com/uploads/2025/12/15034435/detect-buried-objects-without-touching.jpg",
+        "publishedAt": "2026-01-09T19:04:40Z",
+        "content": "People can use remote touch to sense a hidden object buried under sand. The effect extends nearly 2.76 inches (7 centimeters) from the target.\r\nA London team ran precise experiments showing this remo… [+4888 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "52dc0dba-1fab-4c2c-805c-007bead474df",
+    "source_id": "",
+    "source_channel": "9to5google.com",
+    "source_url": "http://9to5google.com/2026/01/09/gmail-gemini-side-panel-2/",
+    "NewsItemRaw_id": "52dc0dba-1fab-4c2c-805c-007bead474df",
+    "published_at": "2026-01-09 18:14:00+00:00",
+    "fetched_at": "2026-01-11 23:54:37.006821",
+    "title": "新Gmail人工智能功能为部分用户取代Gemini侧边栏 - 9to5Google",
+    "abstract": "谷歌宣布，随着Gmail推出内嵌式AI体验，将取消美国AI Pro和Ultra订阅用户的Gemini侧边栏功能。这一变化已于昨日在网页端生效。该调整旨在将AI功能直接整合至邮件界面。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "9to5google.com"
+        },
+        "author": "Abner Li",
+        "title": "New Gmail AI features replacing Gemini side panel for some - 9to5Google",
+        "description": "With the launch of “in-line AI experiences” in Gmail, Google has shared that the Gemini side panel is going away for AI Pro and Ultra...",
+        "url": "http://9to5google.com/2026/01/09/gmail-gemini-side-panel-2/",
+        "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2026/01/Gmail-Gemini-side-panel-1.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+        "publishedAt": "2026-01-09T18:14:00Z",
+        "content": "With the launch of in-line AI experiences in Gmail yesterday, Google has shared that the Gemini side panel is going away for AI Pro and Ultra subscribers in the US.\r\nOn the web, this side panel was a… [+1408 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "3905f8df-e3ab-460e-82da-e9655eed89ad",
+    "source_id": "",
+    "source_channel": "Gizmodo.com",
+    "source_url": "https://gizmodo.com/this-ludicrously-light-headset-restored-my-passion-for-vr-2000708053",
+    "NewsItemRaw_id": "3905f8df-e3ab-460e-82da-e9655eed89ad",
+    "published_at": "2026-01-09 18:10:01+00:00",
+    "fetched_at": "2026-01-11 23:54:37.221936",
+    "title": "这款轻得离谱的头显，重燃了我对VR的热情 - Gizmodo",
+    "abstract": "在2026年国际消费电子展上，Pimax展示了其新款头显Dream Air。该设备以极轻的重量和配备8K分辨率的micro OLED显示屏为特点。这一产品展示了头显设备在硬件性能上的持续发展。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": null,
+          "name": "Gizmodo.com"
+        },
+        "author": "James Pero",
+        "title": "This Ludicrously Light Headset Restored My Passion for VR - Gizmodo",
+        "description": "Pimax's Dream Air weighs less than my iPhone 17 and somehow has a micro OLED display with an 8K resolution.",
+        "url": "https://gizmodo.com/this-ludicrously-light-headset-restored-my-passion-for-vr-2000708053",
+        "urlToImage": "https://gizmodo.com/app/uploads/2026/01/Untitled-design-2-1200x675.jpg",
+        "publishedAt": "2026-01-09T18:10:01Z",
+        "content": "Meta might be turning its back on VR to prioritize smart glasses, but if Pimax is any indication, headsets are about to be more mind-blowing than they ever were.\r\nAt CES 2026, I got a chance to try o… [+3721 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "e4c46a10-9700-4fbb-b910-defff6ed0cd5",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-10/maduro-s-fall-defuses-border-conflict-risk-for-oil-rich-guyana",
+    "NewsItemRaw_id": "e4c46a10-9700-4fbb-b910-defff6ed0cd5",
+    "published_at": "2026-01-10 15:00:02+00:00",
+    "fetched_at": "2026-01-11 23:54:36.698636",
+    "title": "马杜罗倒台缓解了石油富国圭亚那的边境冲突风险",
+    "abstract": "圭亚那因近期发现大型石油资源，面临与委内瑞拉的边境争端风险。美国总统特朗普采取行动推翻委内瑞拉总统马杜罗的政权。这一政治变动被认为可能缓解圭亚那面临的边境冲突压力。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": "Kevin Crowley",
+        "title": "Maduro’s Fall Defuses Border-Conflict Risk for Oil-Rich Guyana",
+        "description": "Guyana, home to the world’s biggest oil discovery in decades, appears to be an early beneficiary of US President Donald Trump’s ouster of Venezuelan strongman Nicolas Maduro.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-10/maduro-s-fall-defuses-border-conflict-risk-for-oil-rich-guyana",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iZsjPIDr_vZY/v0/1200x675.jpg",
+        "publishedAt": "2026-01-10T15:00:02+00:00",
+        "content": "Guyana, home to the worlds biggest oil discovery in decades, appears to be an early beneficiary of US President Donald Trumps ouster of Venezuelan strongman Nicolas Maduro.\r\nThe overnight raid by US … [+144 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "c22235e0-1cdd-4150-9e80-0ae71e247179",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-10/ceos-on-guard-as-trump-rattles-companies-with-series-of-edicts",
+    "NewsItemRaw_id": "c22235e0-1cdd-4150-9e80-0ae71e247179",
+    "published_at": "2026-01-10 15:00:00+00:00",
+    "fetched_at": "2026-01-11 23:54:38.102360",
+    "title": "特朗普连发政令震动企业界，CEO们保持警惕",
+    "abstract": "美国前总统特朗普近期发布的一系列行政命令引起了企业界的关注。这些政策将传统的放松管制措施与针对大企业的国家干预相结合。美国企业首席执行官们因此对未来的商业环境保持警惕。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": "Ted Mann",
+        "title": "CEOs on Guard as Trump Rattles Companies With Series of Edicts",
+        "description": "For American CEOs, reaping the rewards of a Donald Trump presidency is a little more complicated the second time around, in an administration that increasingly pairs conventional conservative deregulation with populist state intervention in big business.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-10/ceos-on-guard-as-trump-rattles-companies-with-series-of-edicts",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i1nev30pmDlE/v1/1200x800.jpg",
+        "publishedAt": "2026-01-10T15:00:00+00:00",
+        "content": "For American CEOs, reaping the rewards of a Donald Trump presidency is a little more complicated the second time around, in an administration that increasingly pairs conventional conservative deregul… [+234 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "7d207f05-14ad-452c-8328-8ecb094e413f",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-10/trump-s-call-for-10-credit-card-cap-aims-at-banks-crown-jewels",
+    "NewsItemRaw_id": "7d207f05-14ad-452c-8328-8ecb094e413f",
+    "published_at": "2026-01-10 14:30:14+00:00",
+    "fetched_at": "2026-01-11 23:54:38.261994",
+    "title": "特朗普呼吁对信用卡设定10%利率上限，直指银行核心利润来源",
+    "abstract": "唐纳德·特朗普总统呼吁信用卡贷款机构将利率上限设定为10%，为期一年。此举直接针对银行业的核心利润来源之一。该要求旨在限制信用卡利率。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": "Paige Smith",
+        "title": "Trump’s Call for 10% Credit-Card Cap Aims at Banks’ Crown Jewels",
+        "description": "President Donald Trump’s demand that credit-card lenders cap interest rates at 10% for a year takes aim at one of the banking industry’s crown jewels — a business line they guard doggedly.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-10/trump-s-call-for-10-credit-card-cap-aims-at-banks-crown-jewels",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7tiABHrf6Yw/v1/1200x810.jpg",
+        "publishedAt": "2026-01-10T14:30:14+00:00",
+        "content": "President Donald Trumps demand that credit-card lenders cap interest rates at 10% for a year takes aim at one of the banking industrys crown jewels a business line they guard doggedly.\r\nAfter a week … [+364 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "671b52fe-ac9c-4da5-a590-48c21b0dcbe2",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-10/china-ai-leaders-warn-of-widening-gap-with-us-after-1b-ipo-week",
+    "NewsItemRaw_id": "671b52fe-ac9c-4da5-a590-48c21b0dcbe2",
+    "published_at": "2026-01-10 14:05:56+00:00",
+    "fetched_at": "2026-01-11 23:54:39.780512",
+    "title": "中国AI领军企业警告：十亿美元IPO周后与美国的差距正在扩大",
+    "abstract": "中国生成式人工智能领域的顶尖人物警告称，该国短期内不太可能超越美国，在全球人工智能竞赛中取得领先地位。这一警告是在一家中国AI领军企业进行十亿美元首次公开募股约一周后发出的。相关人士指出，中美在人工智能领域的差距正在扩大。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": null,
+        "title": "China AI Leaders Warn of Widening Gap With US After $1B IPO Week",
+        "description": "Some of China’s most prominent figures in generative artificial intelligence warned that the Asian nation is unlikely to eclipse the US in the global AI race anytime soon.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-10/china-ai-leaders-warn-of-widening-gap-with-us-after-1b-ipo-week",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ikMht3vNIoow/v1/1200x800.jpg",
+        "publishedAt": "2026-01-10T14:05:56+00:00",
+        "content": "Some of Chinas most prominent figures in generative artificial intelligence warned that the Asian nation is unlikely to eclipse the US in the global AI race anytime soon.\r\nJustin Lin, head of Alibaba… [+392 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "27dc4413-5a99-4e02-ac76-e91458ae5086",
+    "source_id": "",
+    "source_channel": "Associated Press",
+    "source_url": "https://apnews.com/article/immigration-customs-enforcement-democrats-noem-impeachment-funding-03095f6a4041bef063afe22becf1a788",
+    "NewsItemRaw_id": "27dc4413-5a99-4e02-ac76-e91458ae5086",
+    "published_at": "2026-01-10 14:05:40+00:00",
+    "fetched_at": "2026-01-11 23:54:40.594735",
+    "title": "国会考虑ICE在蕾妮·古德遇害后的后果",
+    "abstract": "一名美国移民和海关执法局（ICE）官员在明尼苏达州开枪打死了蕾妮·古德。这一事件正在美国国会引发震动，两党议员均誓言将采取行动。国会目前正在考虑ICE乃至国土安全部长克里斯蒂·诺姆可能因此事面临的后果。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "associated-press",
+          "name": "Associated Press"
+        },
+        "author": "Matt Brown, Lisa Mascaro",
+        "title": "Congress considers the consequences for ICE after Renee Good's killing",
+        "description": "Members of Congress are considering the possible consequences for Immigration and Customs Enforcement and even Homeland Security Secretary Kristi Noem after an ICE officer shot Renee Good to death in Minnesota. Her killing is reverberating across Capitol Hill…",
+        "url": "https://apnews.com/article/immigration-customs-enforcement-democrats-noem-impeachment-funding-03095f6a4041bef063afe22becf1a788",
+        "urlToImage": "https://dims.apnews.com/dims4/default/f133be3/2147483647/strip/true/crop/4860x2734+0+253/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F82%2F52%2F426ce96512aa2dfc4281d12b7ad5%2F49107d635f2b4597826ef17f27804316",
+        "publishedAt": "2026-01-10T14:05:40Z",
+        "content": "WASHINGTON (AP) The killing of a Minnesota woman by an Immigration and Customs Enforcement officer is reverberating across Capitol Hill where Democrats, and certain Republicans, are vowing an asserti… [+6362 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "87a48863-d3eb-41e3-b39b-864335baf008",
+    "source_id": "",
+    "source_channel": "Associated Press",
+    "source_url": "https://apnews.com/article/nfl-allpro-team-86b72f1cb4283f16c9ae6b6908418d21",
+    "NewsItemRaw_id": "87a48863-d3eb-41e3-b39b-864335baf008",
+    "published_at": "2026-01-10 14:01:15+00:00",
+    "fetched_at": "2026-01-11 23:54:41.387000",
+    "title": "美联社全明星队包括一致选择加勒特、纳库阿和史密斯-恩吉格巴",
+    "abstract": "2025年美联社NFL全职业阵容公布，迈尔斯·加勒特、普卡·纳库阿和贾克森·史密斯-恩吉巴获得一致入选。马修·斯塔福德在四分卫位置上击败德雷克·梅耶入选。比扬·罗宾逊入选一队跑卫。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "associated-press",
+          "name": "Associated Press"
+        },
+        "author": "Rob Maaddi",
+        "title": "AP All-Pro team includes unanimous choices Garrett, Nacua and Smith-Njigba",
+        "description": "Matthew Stafford beat out Drake Maye while Myles Garrett, Puka Nacua and Jaxon Smith-Njigba were unanimous choices for the 2025 Associated Press NFL All-Pro Team. Bijan Robinson is the first-team running back while Christian McCaffrey earned the All-Purpose s…",
+        "url": "https://apnews.com/article/nfl-allpro-team-86b72f1cb4283f16c9ae6b6908418d21",
+        "urlToImage": "https://dims.apnews.com/dims4/default/9db4be4/2147483647/strip/true/crop/5106x2872+0+266/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F76%2Fce%2Fddf4df9bd034b4e34cf97e3bdb4e%2Fbe0ba85c23ca44ada47d1e78284b4861",
+        "publishedAt": "2026-01-10T14:01:15Z",
+        "content": "Matthew Stafford beat out Drake Maye, while Myles Garrett, Puka Nacua and Jaxon Smith-Njigba were unanimous choices for the 2025 Associated Press NFL All-Pro Team.\r\nBijan Robinson is the running back… [+3705 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "640ad174-2879-4adb-884a-e2ed19682193",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-10/a-trader-s-guide-to-venezuela-as-trump-takes-over-oil-industry",
+    "NewsItemRaw_id": "640ad174-2879-4adb-884a-e2ed19682193",
+    "published_at": "2026-01-10 14:00:00+00:00",
+    "fetched_at": "2026-01-11 23:54:40.936811",
+    "title": "特朗普接管石油产业之际：交易员委内瑞拉指南",
+    "abstract": "美国总统唐纳德·特朗普承诺，其对委内瑞拉石油行业的收购将激励美国能源公司进行数十亿美元投资。他表示此举旨在使委内瑞拉人民富裕起来。该承诺涉及对委内瑞拉石油产业的接管。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": "Natalia Kniazhevich, Monique Mulima",
+        "title": "A Trader’s Guide to Venezuela as Trump Takes Over Oil Industry",
+        "description": "President Donald Trump promises his hostile takeover of Venezuela’s oil industry will inspire billions of dollars of investment from American energy companies, and it will make the people of the South American nation rich.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-10/a-trader-s-guide-to-venezuela-as-trump-takes-over-oil-industry",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iwtNMtwftYvI/v0/1200x800.jpg",
+        "publishedAt": "2026-01-10T14:00:00+00:00",
+        "content": "President Donald Trump promises his hostile takeover of Venezuelas oil industry will inspire billions of dollars of investment from American energy companies, and it will make the people of the South… [+144 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "7eeea7c7-ca36-4c38-9eb8-cd63d57f5912",
+    "source_id": "",
+    "source_channel": "Associated Press",
+    "source_url": "https://apnews.com/article/vaccines-rfk-shared-decision-making-pediatrician-70cf2dad36ca9934e033edd71025ea63",
+    "NewsItemRaw_id": "7eeea7c7-ca36-4c38-9eb8-cd63d57f5912",
+    "published_at": "2026-01-10 13:17:07+00:00",
+    "fetched_at": "2026-01-11 23:54:41.119649",
+    "title": "美国疫苗建议的修改正引发困惑，并可能损害儿童健康",
+    "abstract": "美国联邦疫苗建议本周进行了前所未有的修改。医生们担心这些修改令人困惑，可能加剧公众对疫苗的犹豫。这给儿科医生和家长带来了挑战，并可能导致更多儿童患病。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "associated-press",
+          "name": "Associated Press"
+        },
+        "author": "Laura Ungar",
+        "title": "Changes to the US vaccine recommendations are sowing confusion and could harm kids",
+        "description": "Doctors fear this week’s unprecedented changes to federal vaccine recommendations will stoke vaccine hesitancy even more, pose challenges for pediatricians and parents and ultimately lead to more illness and death among children. The Trump administration cut …",
+        "url": "https://apnews.com/article/vaccines-rfk-shared-decision-making-pediatrician-70cf2dad36ca9934e033edd71025ea63",
+        "urlToImage": "https://dims.apnews.com/dims4/default/d0a9016/2147483647/strip/true/crop/2389x1344+0+125/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fd5%2Fa6%2F5c7fc27ca043d0360108b44673f5%2F79ab53d1d0444e029619d8b977d18c04",
+        "publishedAt": "2026-01-10T13:17:07Z",
+        "content": "Dr. Molly OShea has noticed growing skepticism about vaccines at both of her Michigan pediatric offices and says this weeks unprecedented and confusing changes to federal vaccine guidance will only m… [+6621 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "8b44d90a-18f4-4081-b9f2-d2669c7ca897",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-10/ramaphosa-concedes-party-failings-as-south-africa-elections-near",
+    "NewsItemRaw_id": "8b44d90a-18f4-4081-b9f2-d2669c7ca897",
+    "published_at": "2026-01-10 13:09:08+00:00",
+    "fetched_at": "2026-01-11 23:54:42.346739",
+    "title": "拉马福萨承认政党失误，南非大选临近",
+    "abstract": "南非总统西里尔·拉马福萨承认其领导的非洲人国民大会党未能满足许多民众的基本需求。这一批评是在该党准备迎接明年关键的地方选举之际提出的。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": "Antony Sguazzin",
+        "title": "Ramaphosa Concedes Party Failings as South Africa Elections Near",
+        "description": "President Cyril Ramaphosa lectured his African National Congress Party for failing to meet the basic needs of many South Africans as it prepares to face crucial municipal elections within the next year.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-10/ramaphosa-concedes-party-failings-as-south-africa-elections-near",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ii5vTZoTPpvM/v1/1200x800.jpg",
+        "publishedAt": "2026-01-10T13:09:08+00:00",
+        "content": "President Cyril Ramaphosa lectured his African National Congress Party for failing to meet the basic needs of many South Africans as it prepares to face crucial municipal elections within the next ye… [+443 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "b1d0009c-a40c-4661-b9ae-ed21ce995d41",
+    "source_id": "",
+    "source_channel": "Associated Press",
+    "source_url": "https://apnews.com/article/thomas-paine-memorial-common-sense-america-250-2b02db3670ee5ea2d299784019eb0c86",
+    "NewsItemRaw_id": "b1d0009c-a40c-4661-b9ae-ed21ce995d41",
+    "published_at": "2026-01-10 13:02:42+00:00",
+    "fetched_at": "2026-01-11 23:54:43.899715",
+    "title": "托马斯·潘恩曾帮助激励美国独立。他至今在华盛顿特区仍无纪念碑。",
+    "abstract": "托马斯·潘恩是帮助激励美国独立的《常识》一书的作者。尽管其贡献重大，华盛顿特区至今没有他的正式纪念碑。目前，一项在华盛顿建立潘恩纪念碑的提案已获国会授权，相关工作正在进行中。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "associated-press",
+          "name": "Associated Press"
+        },
+        "author": "Hillel Italie",
+        "title": "Thomas Paine helped inspire US independence. He still has no DC memorial",
+        "description": "British-born Thomas Paine helped inspire the 13 English colonies to declare independence and form the United States of America. Yet there's no formal tribute to the author of “Common Sense” from his adopted country. A Washington memorial to Paine was authoriz…",
+        "url": "https://apnews.com/article/thomas-paine-memorial-common-sense-america-250-2b02db3670ee5ea2d299784019eb0c86",
+        "urlToImage": "https://dims.apnews.com/dims4/default/f349da8/2147483647/strip/true/crop/3000x1688+0+156/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fd6%2Fed%2Faf41152cc4e6f2b74d4e4de9d6ed%2F10e3e1b0dd8e44438b4826a6c7739f3e",
+        "publishedAt": "2026-01-10T13:02:42Z",
+        "content": "NEW YORK (AP) Some 250 years after Common Sense helped inspire the 13 colonies to declare independence, Thomas Paine might receive a long-anticipated tribute from his adopted country.\r\nA Paine memori… [+7576 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "70713711-20eb-4f37-bfb6-9e91325645da",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-10/trump-s-venezuela-greenland-threats-make-canada-fear-it-s-next",
+    "NewsItemRaw_id": "70713711-20eb-4f37-bfb6-9e91325645da",
+    "published_at": "2026-01-10 13:00:21+00:00",
+    "fetched_at": "2026-01-11 23:54:44.535040",
+    "title": "特朗普对委内瑞拉和格陵兰岛的威胁让加拿大担心自己会是下一个",
+    "abstract": "唐纳德·特朗普总统过去关于吞并加拿大的言论，因其近期对委内瑞拉和格陵兰岛的威胁而重新引发关注。这导致部分加拿大人担忧美国可能将类似主张延伸至加拿大。目前，这种担忧主要基于对特朗普过往言论及其近期外交动向的观察。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": "Thomas Seal, Derek Decloet",
+        "title": "Trump’s Venezuela, Greenland Threats Make Canada Fear It's Next",
+        "description": "The president’s past talk about annexing Canada has taken on new, chilling resonance.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-10/trump-s-venezuela-greenland-threats-make-canada-fear-it-s-next",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i7el7kLVocPg/v2/1200x800.jpg",
+        "publishedAt": "2026-01-10T13:00:21+00:00",
+        "content": "For months, many Canadians hoped Donald Trump had lost interest in making their country the 51st US state his plate full with turning Washington and the global trading system upside down.\r\nThose hope… [+12 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "97de4629-6ba2-4bc6-858f-396e6900ec76",
+    "source_id": "",
+    "source_channel": "Associated Press",
+    "source_url": "https://apnews.com/article/mississippi-shooting-deaths-west-point-e7fcceb607e0e830c0215c4ae560e1c1",
+    "NewsItemRaw_id": "97de4629-6ba2-4bc6-858f-396e6900ec76",
+    "published_at": "2026-01-10 12:42:15+00:00",
+    "fetched_at": "2026-01-11 23:54:44.911971",
+    "title": "密西西比州六人遇害，嫌疑人已被拘留",
+    "abstract": "周六，美国密西西比州东部发生一系列相关枪击事件，造成六人死亡。克莱县当局表示，一名嫌疑人已被拘留。警长称事件导致“多名无辜者丧生”。目前调查仍在进行中。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "associated-press",
+          "name": "Associated Press"
+        },
+        "author": null,
+        "title": "Six killed in Mississippi, suspect in custody",
+        "description": "Authorities say a person was in custody Saturday after six people were killed in a series of related shootings in eastern Mississippi. Clay County Sheriff Eddie Scott said in a Facebook post that “multiple innocent lives” were lost “due to violence” in the to…",
+        "url": "https://apnews.com/article/mississippi-shooting-deaths-west-point-e7fcceb607e0e830c0215c4ae560e1c1",
+        "urlToImage": "https://dims.apnews.com/dims4/default/dcac1a4/2147483647/strip/true/crop/700x394+0+28/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F90%2F29%2F4e3c1cc7446089a9101a7bdff4c8%2Fdefaultshareimage-copy.png",
+        "publishedAt": "2026-01-10T12:42:15Z",
+        "content": "WEST POINT, Miss. (AP) Authorities say a person was in custody Saturday after six people were killed in a series of related shootings in eastern Mississippi.\r\nClay County Sheriff Eddie Scott said in … [+563 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "3f56c86c-f4cd-41a5-8c7f-af2af753eb96",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-10/indian-insurer-s-worker-posts-draft-earnings-in-whatsapp-status",
+    "NewsItemRaw_id": "3f56c86c-f4cd-41a5-8c7f-af2af753eb96",
+    "published_at": "2026-01-10 12:22:19+00:00",
+    "fetched_at": "2026-01-11 23:54:44.048523",
+    "title": "印度保险公司员工在WhatsApp状态中发布收益草案",
+    "abstract": "印度ICICI Lombard General Insurance公司的一名员工，在第三季度收益报告正式发布前数日，将未公开的收益信息上传至其个人WhatsApp状态。该公司已确认此事。该事件涉及敏感财务信息的提前泄露。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": "Alex Gabriel Simon",
+        "title": "Indian Insurer’s Worker Posts Draft Earnings in WhatsApp Status",
+        "description": "ICICI Lombard General Insurance Co., a unit of India’s second-largest private lender, said an employee uploaded undisclosed information about third quarter earnings as a personal WhatsApp status, days ahead of the planned release.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-10/indian-insurer-s-worker-posts-draft-earnings-in-whatsapp-status",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifX51Xjf9OTM/v1/1200x698.jpg",
+        "publishedAt": "2026-01-10T12:22:19+00:00",
+        "content": "ICICI Lombard General Insurance Co., a unit of Indias second-largest private lender, said an employee uploaded undisclosed information about third quarter earnings as a personal WhatsApp status, days… [+310 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "cbda7dda-bd58-4cfd-8293-dbef964f9c2b",
+    "source_id": "",
+    "source_channel": "Associated Press",
+    "source_url": "https://apnews.com/article/russia-ukraine-war-oil-volgograd-011c41c7ae5f9027f6792e394a56d408",
+    "NewsItemRaw_id": "cbda7dda-bd58-4cfd-8293-dbef964f9c2b",
+    "published_at": "2026-01-10 12:10:55+00:00",
+    "fetched_at": "2026-01-11 23:54:44.826328",
+    "title": "乌克兰无人机袭击引发俄罗斯伏尔加格勒地区油库火灾",
+    "abstract": "乌克兰无人机袭击了俄罗斯伏尔加格勒地区的一处油库，引发火灾。事件发生于周六，地方当局报告暂无人员伤亡。此次袭击是乌克兰针对俄罗斯能源设施战略的一部分。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "associated-press",
+          "name": "Associated Press"
+        },
+        "author": null,
+        "title": "Ukrainian drone strike ignites fire at oil depot in Russia's Volgograd region",
+        "description": "A Ukrainian drone strike has sparked a fire at an oil depot in Russia's Volgograd region, according to regional authorities. There were no immediate reports of casualties on Saturday. The attack is part of Ukraine's strategy to target Russian energy sites and…",
+        "url": "https://apnews.com/article/russia-ukraine-war-oil-volgograd-011c41c7ae5f9027f6792e394a56d408",
+        "urlToImage": "https://dims.apnews.com/dims4/default/c8fc0ed/2147483647/strip/true/crop/7958x4476+0+414/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe3%2Ff6%2Fd940f101e5bd748e4d722fe94000%2F62f66b574b074f288bae9f757de1569a",
+        "publishedAt": "2026-01-10T12:10:55Z",
+        "content": "KYIV, Ukraine (AP) A Ukrainian drone strike sparked a fire at an oil depot in Russias southern Volgograd region, regional authorities said on Saturday.\r\nThere were no immediate reports of casualties,… [+1703 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "c1de8888-79a7-42b8-93e1-a392c8ac1a19",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-10/after-trump-attack-rtx-decides-that-winning-move-is-not-to-play",
+    "NewsItemRaw_id": "c1de8888-79a7-42b8-93e1-a392c8ac1a19",
+    "published_at": "2026-01-10 12:00:00+00:00",
+    "fetched_at": "2026-01-11 23:54:47.182101",
+    "title": "特朗普遇袭后，RTX决定最佳策略是退出游戏",
+    "abstract": "唐纳德·特朗普总统点名批评了RTX公司。此举导致该公司高管面临两个充满风险的选择：反击或保持沉默。RTX公司最终决定的最佳策略是退出相关争议。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": "Kiel Porter, Nicola M White",
+        "title": "After Trump Attack, RTX Decides That Winning Move Is Not to Play",
+        "description": "When RTX Corp. executives’ phones started buzzing with the news that President Donald Trump had singled out their company for criticism, they quickly realized they had two options, both fraught: push back or keep quiet.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-10/after-trump-attack-rtx-decides-that-winning-move-is-not-to-play",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iGTa3ti4bep0/v1/1200x800.jpg",
+        "publishedAt": "2026-01-10T12:00:00+00:00",
+        "content": "When RTX Corp. executives phones started buzzing with the news that President Donald Trump had singled out their company for criticism, they quickly realized they had two options, both fraught: push … [+305 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "50f43f35-5e84-4a67-9a74-01f23164cca3",
+    "source_id": "",
+    "source_channel": "Associated Press",
+    "source_url": "https://apnews.com/article/greenland-us-trump-denmark-61eeb97b7199548e3aa13ef9f5c9d545",
+    "NewsItemRaw_id": "50f43f35-5e84-4a67-9a74-01f23164cca3",
+    "published_at": "2026-01-10 09:56:30+00:00",
+    "fetched_at": "2026-01-11 23:54:46.860918",
+    "title": "格陵兰领导人拒绝特朗普让美国控制该岛的提议",
+    "abstract": "格陵兰政党领导人拒绝了美国总统特朗普关于美国接管该岛的提议。他们强调，格陵兰的未来应由其人民决定。特朗普于周五表达了收购该半自治地区的意愿。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "associated-press",
+          "name": "Associated Press"
+        },
+        "author": null,
+        "title": "Greenland's leaders reject Trump's bid for US control of island",
+        "description": "Greenland’s party leaders have rejected President Donald Trump’s calls for the U.S. to take control of the island. They insist that Greenland’s future must be decided by its people. Trump said on Friday he wants to acquire Greenland, a semiautonomous region o…",
+        "url": "https://apnews.com/article/greenland-us-trump-denmark-61eeb97b7199548e3aa13ef9f5c9d545",
+        "urlToImage": "https://dims.apnews.com/dims4/default/3993e89/2147483647/strip/true/crop/3240x1823+0+169/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F72%2F87%2F4c47f5fcbb5b90eb0e653147b71b%2Fada6cec9aaca454f9363d144a8db9642",
+        "publishedAt": "2026-01-10T09:56:30Z",
+        "content": "NUUK, Greenland (AP) Greenlands party leaders have rejected President Donald Trumps repeated calls for the U.S. to take control of the island, saying that Greenlands future must be decided by its peo… [+2099 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "91e41e61-0b3b-4f40-8423-5e7719574971",
+    "source_id": "",
+    "source_channel": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-01-10/elon-musk-s-grok-ai-blocked-in-indonesia-over-sexualized-content",
+    "NewsItemRaw_id": "91e41e61-0b3b-4f40-8423-5e7719574971",
+    "published_at": "2026-01-10 09:34:46+00:00",
+    "fetched_at": "2026-01-11 23:54:47.599062",
+    "title": "埃隆·马斯克的Grok AI因性内容在印度尼西亚被屏蔽",
+    "abstract": "印度尼西亚通信与数字事务部已屏蔽对埃隆·马斯克旗下人工智能系统Grok的访问。此举是在当局对Grok生成色情内容展开调查后实施的。目前，该部门正在执行一项临时封锁措施。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "bloomberg",
+          "name": "Bloomberg"
+        },
+        "author": "Soraya Permatasari",
+        "title": "Elon Musk’s Grok AI Blocked in Indonesia Over Sexualized Content",
+        "description": "Indonesia blocked access to Grok after an investigation into the artificial intelligence system’s generation of sexual content.",
+        "url": "https://www.bloomberg.com/news/articles/2026-01-10/elon-musk-s-grok-ai-blocked-in-indonesia-over-sexualized-content",
+        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVc2ZxA9S52o/v1/1200x805.jpg",
+        "publishedAt": "2026-01-10T09:34:46+00:00",
+        "content": "Indonesia blocked access to Grok after an investigation into the artificial intelligence systems generation of sexual content. \r\nThe Communications and Digital Affairs Ministry is imposing a temporar… [+307 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "28fa12cd-c123-46fa-ba56-31b9ae02bb40",
+    "source_id": "",
+    "source_channel": "Associated Press",
+    "source_url": "https://apnews.com/article/iran-protests-us-israel-war-nuclear-economy-c867cd53c99585cc5e0cd98eafe95d16",
+    "NewsItemRaw_id": "28fa12cd-c123-46fa-ba56-31b9ae02bb40",
+    "published_at": "2026-01-10 08:48:25+00:00",
+    "fetched_at": "2026-01-11 23:54:48.188189",
+    "title": "伊朗抗议活动接近两周，当局加强镇压",
+    "abstract": "伊朗的抗议活动已持续近两周，政府承认尽管镇压措施加剧，示威仍在继续。当局采取了网络中断和切断电话线路等措施，使得从外部评估局势变得困难。抗议活动席卷全国，起因是一名年轻女子在被道德警察拘留期间死亡。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "associated-press",
+          "name": "Associated Press"
+        },
+        "author": "Jon Gambrell",
+        "title": "Iran protests near 2-week mark as authorities crack down",
+        "description": "Protests in Iran have reached nearly two weeks, with the government acknowledging ongoing demonstrations despite an intensifying crackdown. The internet is down, and phone lines have been cut off, making it hard to gauge the situation from abroad. According t…",
+        "url": "https://apnews.com/article/iran-protests-us-israel-war-nuclear-economy-c867cd53c99585cc5e0cd98eafe95d16",
+        "urlToImage": "https://dims.apnews.com/dims4/default/15f0268/2147483647/strip/true/crop/5333x3000+0+278/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fca%2F27%2F0b59bad764f6dcd2efee768134d0%2F9e38e491b984439cb06561b4bc0b7bdc",
+        "publishedAt": "2026-01-10T08:48:25Z",
+        "content": "DUBAI, United Arab Emirates (AP) Protests sweeping across Iran neared the two-week mark Saturday, with the countrys government acknowledging the ongoing demonstrations despite an intensifying crackdo… [+4159 chars]"
+      }
+    }
+  },
+  {
+    "unique_id": "6415054c-5acf-4e2c-ac26-26efef140b31",
+    "source_id": "",
+    "source_channel": "Associated Press",
+    "source_url": "https://apnews.com/article/ice-protests-shootings-minneapolis-portland-a5922ea4b414afa485f324c0adf1d232",
+    "NewsItemRaw_id": "6415054c-5acf-4e2c-ac26-26efef140b31",
+    "published_at": "2026-01-10 05:40:14+00:00",
+    "fetched_at": "2026-01-11 23:54:47.539384",
+    "title": "美国明尼阿波利斯和俄勒冈州波特兰市枪击事件后，计划举行针对移民及海关执法局的抗议活动",
+    "abstract": "美国明尼阿波利斯和波特兰发生联邦执法人员开枪击伤多人的事件。此后，全国多个城镇计划于周六举行反对移民及海关执法局的抗议活动。这些示威活动是对近期枪击事件的直接回应。",
+    "evaluation_score": null,
+    "extra_data": {
+      "newsapi_raw": {
+        "source": {
+          "id": "associated-press",
+          "name": "Associated Press"
+        },
+        "author": "Rebecca Santana",
+        "title": "Protests against ICE planned in US after shootings in Minneapolis and Portland, Oregon",
+        "description": "Protests against immigration enforcement have been planned across the country after federal officers shot three people in Minneapolis and Portland. Saturday's demonstrations come as the U.S. Department of Homeland Security pushes forward in the Twin Cities wi…",
+        "url": "https://apnews.com/article/ice-protests-shootings-minneapolis-portland-a5922ea4b414afa485f324c0adf1d232",
+        "urlToImage": "https://dims.apnews.com/dims4/default/66bb1f9/2147483647/strip/true/crop/3000x1688+0+156/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fc0%2F61%2Fb0b12d35620bac4c6d10f70c3781%2F65e2852f75454d1c80b5310b769e6d69",
+        "publishedAt": "2026-01-10T05:40:14Z",
+        "content": "MINNEAPOLIS (AP) Protests against immigration enforcement are planned for cities and towns across the country on Saturday after one federal officer fatally shot a woman in Minneapolis and another sho… [+2128 chars]"
+      }
+    }
+  }
+]

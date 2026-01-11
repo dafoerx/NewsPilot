@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-07 22:40:42
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-10 17:52:12
+# LastEditTime: 2026-01-11 23:01:59
 # FilePath: \NewsPilot\src\data_acquisition\orchestrator.py
 # Description: 
 # 
@@ -75,10 +75,10 @@ class NewsProcessingService:
             summarizer_model=self.summarizer_model,
         )
 
-    async def run(self, news_list: List[NewsItemRawSchema]) -> List[NewsItemRefinedSchema]:
+    async def run(self, news_list: List[NewsItemRawSchema]) -> dict:
         
-        processed_news = await self.pipeline.process_async(news_list)
-        return processed_news
+        pipeline_result = await self.pipeline.process_async(news_list)
+        return pipeline_result
 
 
 
@@ -104,13 +104,13 @@ class NewsDataOrchestrator():
             summarizer_flag=self.summarizer_flag, summarizer_model=self.summarizer_model,
         )
 
-    async def run_async(self) -> List[NewsItemRefinedSchema]:
+    async def run_async(self) -> tuple[List[NewsItemRawSchema], dict]:
         news_items_raw = await self.news_acquisition_service.run()
-        news_items = await self.news_processing_service.run(news_items_raw)
+        pipeline_result = await self.news_processing_service.run(news_items_raw)
         
-        return news_items
+        return news_items_raw, pipeline_result
 
-    def run(self) -> List[NewsItemRefinedSchema]:
+    def run(self) -> tuple[List[NewsItemRawSchema], dict]:
         return asyncio.run(self.run_async())
 
 
@@ -128,14 +128,15 @@ if __name__ == "__main__":
 
 
     news_data_orchestrator = NewsDataOrchestrator(news_config=news_config)
-    news_items = news_data_orchestrator.run()
-    print(f"Fetched total {len(news_items)} news items.")
-    print(news_items[0])
+    news_items_raw, pipeline_result = news_data_orchestrator.run()
+    translated_items, summarized_items = pipeline_result["translated_items"], pipeline_result["summarized_items"]
+    print(f"Fetched total {len(summarized_items)} news items.")
+    print(summarized_items[0])
     from pathlib import Path
     save_path = Path(r"E:\code\NewsPilot\data\temp\news\refined_news_items.json")
     with open(save_path, "w", encoding="utf-8") as f:
         json.dump(
-            [item.dict() for item in news_items],
+            [item.dict() for item in summarized_items],
             f,
             ensure_ascii=False,
             indent=4,
