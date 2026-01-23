@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2025-12-23 21:59:45
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-07 22:08:13
+# LastEditTime: 2026-01-23 23:11:45
 # FilePath: \NewsPilot\src\data_acquisition\fetchers\newsapi_fetcher.py
 # Description: 
 # 
@@ -16,7 +16,9 @@ import uuid
 from newsapi import NewsApiClient
 
 from src.data_acquisition.fetchers.base_fetcher import BaseFetcher
-from core.news_schemas import NewsItemRawSchema, Attachment 
+from core.news_schemas import NewsItemRawSchema, Attachment
+
+from src.data_acquisition.module.get_article_from_url import fetch_full_article_by_url
 
 class NewsAPIFetcher(BaseFetcher):
     """
@@ -172,12 +174,22 @@ class NewsAPIFetcher(BaseFetcher):
         return normalized_list  
     
 
-    async def enrich_full_content(self, raw_list: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    async def enrich_full_content(self, raw_item: Dict[str, Any]) -> Dict[str, Any]:
         """
         使用 NewsAPI 以外的服务丰富新闻的完整内容。
         
         当前实现为占位符，直接返回原始数据。
         """
-        #TODO: 实现实际的内容丰富逻辑
-        return raw_list
+        if not raw_item.get("url"):
+            return raw_item
+
+        full_content_result = await fetch_full_article_by_url(raw_item["url"])
+        if full_content_result.get("success"):
+            raw_item["content"] = full_content_result.get("body") or raw_item.get("content")
+            raw_item["title"] = full_content_result.get("title") or raw_item.get("title")
+            raw_item["authors"] = full_content_result.get("authors") or raw_item.get("authors")
+            raw_item["publishedAt"] = full_content_result.get("published_at") or raw_item.get("publishedAt")
+        else:
+            print(f"无法丰富内容，URL: {raw_item['url']}，错误: {full_content_result.get('error')}")
+        return raw_item
 

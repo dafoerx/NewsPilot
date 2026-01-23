@@ -1,9 +1,6 @@
 
 #数据文件
-data/logs/
-data/temp/
-data/user_profile.json
-data/WorldState.json
+data/
 
 #密钥文件
 config/keys.py
