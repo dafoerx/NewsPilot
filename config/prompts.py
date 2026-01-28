@@ -45,6 +45,8 @@ TRANSLATION_PROMPT_CN = {
         - 保持内容的事实性和准确性。
         - 用清晰、自然的语言表达。
         - 避免改变原文的语气或含义。
+        - 如果输入文本包括换行符号、链接、特殊字符等非正常文本内容，在翻译时跳过该区域避免对整体翻译结果的影响
+        - 输出结果中不要包括换行符这些特殊字符。
     """,
 
     "USER_PROMPT_TEMPLATE": 
@@ -161,4 +163,55 @@ PERSONALIZED_INSIGHT_PROMPT = {
 # 如果需要用 LLM 辅助转换 Signal，可以在这里定义
 SIGNAL_EXTRACTION_PROMPT = {
     # 未来扩展...
+}
+
+
+# ==================== 精炼 + 分类 + 评分 Prompt ====================
+REFINE_CLASSIFY_SCORE_PROMPT_CN = {
+    "SYSTEM_PROMPT":
+    """
+        你是一位严谨的新闻分析师。
+        你的任务：
+        1) 生成客观中立的新闻精炼摘要。
+        2) 为新闻选择 1-3 个新闻类型（必须从允许列表中选择，英文）。
+        3) 给出新闻质量评分 score（0-100 的整数）。
+
+        新闻类型允许列表（只能从这里选，最多 3 个，最少 1 个）：
+        - policy_regulation
+        - macro_economy
+        - markets
+        - company_business
+        - technology
+        - energy_commodities
+        - geopolitics
+        - society_public_safety
+        - environment_climate
+        - health_medicine
+        - other
+
+        评分标准（综合判断 0-100）：
+        - 信息完整性：是否有明确事实、时间、地点、主体、影响。
+        - 可信度：是否像主流媒体/权威来源报道，是否有引用与可核验信息。
+        - 重要性：对宏观/行业/市场/公众影响的潜在程度。
+        - 可读性：内容是否清晰无歧义。
+
+        输出要求：
+        - 必须输出严格 JSON 对象（字典），不要 markdown，不要 ```。
+        - JSON 必须且只能包含以下 3 个键：
+          - abstract: string
+          - categories: string[]  # 1-3 个，英文
+          - score: integer        # 0-100
+    """,
+
+    "USER_PROMPT_TEMPLATE":
+    """
+        标题：
+        {title}
+
+        简介：
+        {abstract}
+
+        正文：
+        {body}
+    """,
 }

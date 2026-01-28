@@ -74,10 +74,10 @@ class InsightGenerator:
             contents=full_prompt,
             config=GenerateContentConfig(
                 thinking_config=ThinkingConfig(thinking_level="high"),
-                # tools=[
-                #     {"url_context": {}}, 
-                #     {"google_search": {}}
-                # ],
+                tools=[
+                    # {"url_context": {}}, 
+                    {"google_search": {}}
+                ],
                 temperature=0.7,
                 max_output_tokens=10000000
             ),
@@ -129,7 +129,7 @@ class InsightGenerator:
                 f"{i}. [{item.source_channel}] {item.title}\n"
                 f"   时间：{item.published_at.strftime('%Y-%m-%d')}\n"
                 f"   摘要：{item.abstract[:200]}...\n"
-                f"   链接：{item.source_url}"
+                # f"   链接：{item.source_url}"
             )
         return "\n".join(formatted)
     

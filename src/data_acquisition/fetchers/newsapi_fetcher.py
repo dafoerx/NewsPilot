@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2025-12-23 21:59:45
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-25 19:32:13
+# LastEditTime: 2026-01-29 00:07:18
 # FilePath: \NewsPilot\src\data_acquisition\fetchers\newsapi_fetcher.py
 # Description: 
 # 
@@ -18,7 +18,7 @@ from newsapi import NewsApiClient
 from src.data_acquisition.fetchers.base_fetcher import BaseFetcher
 from core.news_schemas import NewsItemRawSchema, Attachment
 
-from data_acquisition.module.get_content import enrich_full_content
+# from data_acquisition.module.get_content import enrich_full_content
 
 class NewsAPIFetcher(BaseFetcher):
     """
@@ -167,6 +167,6 @@ class NewsAPIFetcher(BaseFetcher):
             if normalized:
                 normalized_list.append(normalized)
 
-        enrich_full_content(normalized_list)
+        # enrich_full_content(normalized_list)
         
         return normalized_list  

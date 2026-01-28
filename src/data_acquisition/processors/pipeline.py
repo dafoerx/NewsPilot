@@ -101,7 +101,7 @@ if __name__ == "__main__":
     print(refined_items[0])
     with open(Path(save_path), "w", encoding="utf-8") as f:
         json.dump(
-            [item.dict() for item in refined_items],
+            [item.model_dump() for item in refined_items],
             f,
             ensure_ascii=False,
             indent=4,

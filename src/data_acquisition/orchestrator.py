@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-07 22:40:42
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-11 23:01:59
+# LastEditTime: 2026-01-29 00:55:27
 # FilePath: \NewsPilot\src\data_acquisition\orchestrator.py
 # Description: 
 # 
@@ -10,9 +10,10 @@
 import asyncio
 import json
 
-from typing import List, Optional
+from typing import List, Optional, Union, Iterable
 
 from src.data_acquisition.fetchers.newsapi_fetcher import NewsAPIFetcher
+from src.data_acquisition.fetchers.rsshub_fetcher import RSSHubFetcher
 from src.data_acquisition.processors.pipeline import NewsProcessingPipeline
 from core.news_schemas import NewsItemRawSchema, NewsItemRefinedSchema
 from config import keys
@@ -26,18 +27,34 @@ class NewsAcquisitionService:
 
     def __init__(
         self,
-        sources: Optional[List[str]] = None,
+        sources: Optional[Union[str, List[str]]] = None,
     ):
         """
         :param sources: 指定启用的新闻源，如 ["newsapi", "reuters"]
                         None 表示启用全部
         """
-        self.sources = set(sources) if sources else None
+        self.sources = self._normalize_sources(sources)
 
         self.fetchers = {
             "newsapi": NewsAPIFetcher(api_key=keys.newsapi_api),
+            "rsshub": RSSHubFetcher(),
             # "reuters": ReutersFetcher(...),
         }
+
+    def _normalize_sources(self, sources: Optional[Union[str, List[str]]]) -> Optional[set[str]]:
+        if not sources:
+            return None
+        if isinstance(sources, str):
+            return {sources}
+        flattened: List[str] = []
+        for item in sources:
+            if item is None:
+                continue
+            if isinstance(item, str):
+                flattened.append(item)
+            elif isinstance(item, Iterable):
+                flattened.extend([x for x in item if isinstance(x, str)])
+        return set(flattened) if flattened else None
 
     async def run(self) -> List[NewsItemRawSchema]:
         all_news: List[NewsItemRawSchema] = []
@@ -98,7 +115,7 @@ class NewsDataOrchestrator():
         self.summarizer_model = self.news_config.get('summarizer_model', 'deepseek')
 
 
-        self.news_acquisition_service = NewsAcquisitionService(sources=[self.source])
+        self.news_acquisition_service = NewsAcquisitionService(sources=self.source)
         self.news_processing_service = NewsProcessingService(
             translator_flag=self.translator_flag, translator_model=self.translator_model, target_language=self.target_language,
             summarizer_flag=self.summarizer_flag, summarizer_model=self.summarizer_model,
@@ -136,7 +153,7 @@ if __name__ == "__main__":
     save_path = Path(r"E:\code\NewsPilot\data\temp\news\refined_news_items.json")
     with open(save_path, "w", encoding="utf-8") as f:
         json.dump(
-            [item.dict() for item in summarized_items],
+            [item.model_dump() for item in summarized_items],
             f,
             ensure_ascii=False,
             indent=4,

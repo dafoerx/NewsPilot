@@ -50,9 +50,12 @@ class NewsItemRefinedSchema(BaseModel):
     title: str = Field(..., description="新闻标题。")
     abstract: Optional[str] = Field(None, description="新闻精炼后内容。")
 
+    # --- 关键元数据 ---
+    categories: List[str] = Field(default_factory=list, description="新闻分类标签（例如：'Finance', 'Technology', 'Macro'）。")
+
     # --- LLM 评估 ---
 
-    evaluation_score: Optional[float] = Field(None, description="经模型评估的新闻可信度/重要性评分（0.0-1.0）。")
+    evaluation_score: Optional[float] = Field(None, description="经模型评估的新闻可信度/重要性评分（0-100）。")
 
     # --- 扩展字段 ---
     
@@ -138,7 +141,7 @@ class NewsItemRawSchema(BaseModel):
     # --- LLM 评估与去重元数据  ---
     
     simhash: Optional[str] = Field(None, description="用于初步去重的内容哈希值（SimHash）。")
-    evaluation_score: Optional[float] = Field(None, description="经模型评估的新闻可信度/重要性评分（0.0-1.0）。")
+    evaluation_score: Optional[float] = Field(None, description="经模型评估的新闻可信度/重要性评分（0-100）。")
 
     # --- 扩展字段 ---
     

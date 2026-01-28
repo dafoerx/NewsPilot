@@ -14,6 +14,7 @@ from config.prompts import TRANSLATION_PROMPT_CN
 
 import asyncio
 from typing import List, Tuple
+from tqdm.asyncio import tqdm_asyncio
 
 class Translator:
     """
@@ -95,7 +96,11 @@ class Translator:
                     return await self.llm_translate_async(item, target_language)
 
         tasks = [safe_translate(item) for item in news_list]
-        return await asyncio.gather(*tasks)
+        return await tqdm_asyncio.gather(
+            *tasks,
+            desc="Translating news",
+            total=len(tasks)
+        )
     
     async def deepseek_translate(self, system_prompt: str, title_prompt: str, abstract_prompt: str, body_prompt: str, model_id: str) -> Tuple[str, str, str]:
         # 调用 LLM 异步接口

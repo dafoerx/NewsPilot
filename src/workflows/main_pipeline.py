@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-11 22:31:22
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-11 23:44:26
+# LastEditTime: 2026-01-29 01:44:52
 # FilePath: \NewsPilot\src\workflows\main_pipeline.py
 # Description: 
 # NewsPilot 主流程控制器
@@ -24,23 +24,28 @@ from core.news_schemas import NewsItemRefinedSchema, NewsItemRawSchema
 from pathlib import Path
 Path('data/logs').mkdir(parents=True, exist_ok=True)
 
+
+LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO,  # 你自己的默认级别
+    format=LOG_FORMAT,
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler('data/logs/pipeline.log', encoding='utf-8')
+        logging.FileHandler(
+            'data/logs/pipeline.log',
+            encoding='utf-8'
+        )
     ]
 )
+# 🔕 关闭第三方 HTTP 噪音
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("httpcore").setLevel(logging.WARNING)
 
-# 降低第三方库的日志级别，减少噪音
-# logging.getLogger("httpx").setLevel(logging.WARNING)
-# logging.getLogger("http.client").setLevel(logging.WARNING)
-# logging.getLogger("urllib3").setLevel(logging.WARNING)
-# logging.getLogger("requests").setLevel(logging.WARNING)
-# logging.getLogger("asyncio").setLevel(logging.WARNING)
-# logging.getLogger("google").setLevel(logging.WARNING)
-# logging.getLogger("openai").setLevel(logging.WARNING)
+# （可选）如果你用到了 aiohttp / urllib3
+logging.getLogger("aiohttp").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
+
 
 logger = logging.getLogger(__name__)
 
@@ -71,7 +76,7 @@ class NewsPilotPipeline:
         """
         # 新闻配置（如果未提供则使用默认值）
         self.news_config = news_config or {
-            'source': 'newsapi',
+            'source': ['newsapi', 'rsshub'],
             'translator_flag': True,
             'summarizer_flag': True,
             'target_language': 'zh',
@@ -134,6 +139,11 @@ class NewsPilotPipeline:
             
             # 使用可用的最终结果
             final_news = summarized_items if summarized_items else translated_items
+            final_news = sorted(
+                final_news,
+                key=lambda item: item.evaluation_score if item.evaluation_score is not None else 0,
+                reverse=True,
+            )
             logger.info(f"新闻处理完成 - 原始: {len(raw_news)}, 最终: {len(final_news)}")
             
             # 保存中间结果
@@ -161,6 +171,8 @@ class NewsPilotPipeline:
             logger.info(f"使用模型: {self.insight_model}")
             
             # 限制用于洞察生成的新闻数量
+            
+
             news_for_insight = (
                 final_news[:max_news_for_insight] 
                 if max_news_for_insight 
@@ -399,7 +411,7 @@ def main():
         
         # 配置（可以从命令行参数或配置文件读取）
         news_config = {
-            'source': 'newsapi',
+            'source': ['newsapi', 'rsshub'],
             'translator_flag': True,
             'summarizer_flag': True,
             'target_language': 'zh',
