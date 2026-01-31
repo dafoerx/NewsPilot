@@ -15,6 +15,7 @@ from typing import List
 from core.news_schemas import NewsItemRawSchema, NewsItemRefinedSchema
 from src.data_acquisition.processors.module.summarizer import Summarizer
 from src.data_acquisition.processors.module.translator import Translator
+from src.data_acquisition.processors.module.normalize import align_news_lists
 
 
 class NewsProcessingPipeline:
@@ -48,25 +49,31 @@ class NewsProcessingPipeline:
         2. 翻译标题、摘要、正文
         """
         translated_items, summarized_items = None, None
-        try:
-            if self.translotor_flag == True:
-                # 异步翻译
-                translated_items = await self.translator.translate_batch(
-                    news_list,
-                    target_language=self.target_language
-                )
-            if self.summarizer_flag == True:
-                # 异步生成摘要
-                summarized_items = await self.summarizer.summarize_batch(translated_items)
         
-            pipeline_result = {
-                "translated_items": translated_items,
-                "summarized_items": summarized_items
-            }
-            return pipeline_result
-        finally:
-            await self.translator.close()
-            await self.summarizer.close()
+        if self.translotor_flag == True:
+            # 异步翻译
+            translated_items = await self.translator.translate_batch(
+                news_list,
+                target_language=self.target_language
+            )
+        if self.summarizer_flag == True:
+            # 异步生成摘要
+            summarized_items = await self.summarizer.summarize_batch(translated_items)
+        
+        # 对齐翻译和摘要结果，确保顺序和数量一致, 返回的是(aligned_raw, aligned_refined)
+        translated_items, summarized_items = align_news_lists(translated_items, summarized_items)
+
+
+        pipeline_result = {
+            "translated_items": translated_items,
+            "summarized_items": summarized_items
+        }
+        return pipeline_result
+
+    async def close(self):
+        """显式关闭资源"""
+        await self.translator.close()
+        await self.summarizer.close()
 
     def run(self, news_list: List[NewsItemRawSchema]) -> dict:
         """

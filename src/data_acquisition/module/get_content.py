@@ -2,20 +2,19 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-25 19:35:19
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-25 20:17:21
+# LastEditTime: 2026-01-31 20:34:32
 # FilePath: \NewsPilot\src\data_acquisition\module\get_content.py
 # Description: 
 # 
 # Copyright (c) 2026 by , All Rights Reserved. 
 
-from typing import List, Dict, Any, Optional, Set, Tuple
-from urllib.parse import urlparse
+from typing import List, Dict, Any, Set, Tuple
+
 
 from core.news_schemas import NewsItemRawSchema
 
-
-from data_acquisition.module.get_article_from_url import fetch_full_article_by_url
-
+from src.data_acquisition.module.get_article_from_url import fetch_full_article_by_url
+from src.module.tools import extract_host
 
 def _enrich_single_item(
     raw_item: NewsItemRawSchema,
@@ -32,23 +31,7 @@ def _enrich_single_item(
     return raw_item
 
 
-def _extract_host(url: str) -> Optional[str]:
-    """从 URL 中提取 host。
 
-    - 支持标准 URL（带 scheme）
-    - 兼容裸域名/不带 scheme 的情况（如 example.com/path）
-    """
-
-    if not url:
-        return None
-
-    parsed = urlparse(url)
-    if parsed.netloc:
-        return parsed.netloc.lower()
-
-    # 兼容没有 scheme 的 URL：example.com/path
-    parsed2 = urlparse(f"http://{url}")
-    return parsed2.netloc.lower() if parsed2.netloc else None
 
 
 def _build_domain_batch(
@@ -67,7 +50,7 @@ def _build_domain_batch(
         if not url:
             continue
 
-        host = _extract_host(url)
+        host = extract_host(url)
         if not host:
             continue
 

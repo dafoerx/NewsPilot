@@ -2,19 +2,21 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-09 23:37:21
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-10 22:47:18
+# LastEditTime: 2026-01-31 20:58:58
 # FilePath: \NewsPilot\src\data_acquisition\processors\module\translator.py
 # Description: 
 # 
 # Copyright (c) 2026 by , All Rights Reserved. 
 
+import asyncio
+import json
+import re
+from typing import List, Tuple, Any
+from tqdm.asyncio import tqdm_asyncio
+
 from core.news_schemas import NewsItemRawSchema, NewsItemRefinedSchema
 from src.module.init_client import LLMClientFactory
-from config.prompts import TRANSLATION_PROMPT_CN
-
-import asyncio
-from typing import List, Tuple
-from tqdm.asyncio import tqdm_asyncio
+from config.prompts import  TRANSLATION_BATCH_PROMPT_CN
 
 class Translator:
     """
@@ -35,31 +37,24 @@ class Translator:
 
     async def llm_translate_async(self, news_item: NewsItemRawSchema, target_language: str = "zh") -> NewsItemRawSchema:
         """
-        异步翻译单条新闻的标题、摘要、正文
+        异步翻译单条新闻的标题、摘要、正文 (Batch Mode)
         """
-        system_prompt = TRANSLATION_PROMPT_CN["SYSTEM_PROMPT"]
-
-        # 分别翻译标题、摘要、正文
-        title_prompt = TRANSLATION_PROMPT_CN["USER_PROMPT_TEMPLATE"].format(
-            text=news_item.title or "",
-            target_language=target_language
-        )
-        abstract_prompt = TRANSLATION_PROMPT_CN["USER_PROMPT_TEMPLATE"].format(
-            text=news_item.abstract or "",
-            target_language=target_language
-        )
-        body_prompt = TRANSLATION_PROMPT_CN["USER_PROMPT_TEMPLATE"].format(
-            text=news_item.body or "",
-            target_language=target_language
+        system_prompt = TRANSLATION_BATCH_PROMPT_CN["SYSTEM_PROMPT"]
+        
+        user_prompt = TRANSLATION_BATCH_PROMPT_CN["USER_PROMPT_TEMPLATE"].format(
+            target_language=target_language,
+            title=news_item.title or "",
+            abstract=news_item.abstract or "",
+            body=news_item.body or ""
         )
 
+        translated_title, translated_abstract, translated_body = "", "", ""
         if self.model_name == 'deepseek':
+            model_id = "deepseek-chat"
             translated_title, translated_abstract, translated_body = await self.deepseek_translate(
                 system_prompt,
-                title_prompt,
-                abstract_prompt,
-                body_prompt,
-                model_id = "deepseek-chat"
+                user_prompt,
+                model_id = model_id
             )
         elif self.model_name == 'gemini':
             raise NotImplementedError("Gemini 翻译尚未实现")
@@ -68,6 +63,12 @@ class Translator:
         else:
             raise ValueError(f"Unsupported translation model: {self.model_name}")
 
+        if not translated_title :
+            translated_title = news_item.title or ""
+        if not translated_abstract:
+            translated_abstract = news_item.abstract or ""
+        if not translated_body:
+            translated_body = news_item.body or ""
         # 构建返回结果
         refined_item = NewsItemRawSchema(
             unique_id=news_item.unique_id,
@@ -75,10 +76,15 @@ class Translator:
             source_channel=news_item.source_channel,
             source_url=news_item.source_url,
             published_at=news_item.published_at,
+            fetched_at=news_item.fetched_at,
             title=translated_title,
             abstract=translated_abstract,
             body=translated_body,
+            authors=news_item.authors,
+            categories=news_item.categories,
             attachments=news_item.attachments,
+            supportingDocument_id=news_item.supportingDocument_id,
+            evaluation_score=news_item.evaluation_score,
             extra_data=news_item.extra_data,
         )
 
@@ -92,8 +98,12 @@ class Translator:
 
         async def safe_translate(item):
             async with semaphore:
-                if self.type == "llm":
-                    return await self.llm_translate_async(item, target_language)
+                try:
+                    if self.type == "llm":
+                        return await self.llm_translate_async(item, target_language)
+                except Exception as e:
+                    print(f"Translation failed for item {item.unique_id}: {e}")
+                    return item  # 失败时返回原文，保证流程不中断
 
         tasks = [safe_translate(item) for item in news_list]
         return await tqdm_asyncio.gather(
@@ -102,22 +112,70 @@ class Translator:
             total=len(tasks)
         )
     
-    async def deepseek_translate(self, system_prompt: str, title_prompt: str, abstract_prompt: str, body_prompt: str, model_id: str) -> Tuple[str, str, str]:
-        # 调用 LLM 异步接口
-        async def translate_text(prompt: str) -> str:
-            response = await self._client.chat.completions.create(
-                model=model_id,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": prompt},
-                ],
-                stream=False
-            )
-            return response.choices[0].message.content
+    def _extract_json_object(self, text: str) -> str:
+        if not text:
+            return ""
+        text = text.strip()
+        if text.startswith("{") and text.endswith("}"):
+            return text
+        match = re.search(r"\{[\s\S]*\}", text)
+        return match.group(0) if match else ""
 
-        translated_title, translated_abstract, translated_body = await asyncio.gather(
-            translate_text(title_prompt),
-            translate_text(abstract_prompt),
-            translate_text(body_prompt),
-        )
-        return translated_title, translated_abstract, translated_body
+    def _validate_payload(self, payload: Any) -> Tuple[bool, str]:
+        if not isinstance(payload, dict):
+            return False, "输出不是字典类型"
+        return True, ""
+
+    async def deepseek_translate(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        model_id: str = "deepseek-chat",
+    ) -> Tuple[str, str, str]:
+        last_content = ""
+        last_error = ""
+        for _ in range(2):
+            messages = [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ]
+            if last_error:
+                messages.append(
+                    {
+                        "role": "user",
+                        "content": f"上一条输出无效：{last_error}。请严格按要求重新输出 JSON 字典，包含 translated_title, translated_abstract, translated_body。",
+                    }
+                )
+            
+            try:
+                response = await self._client.chat.completions.create(
+                    model=model_id,
+                    messages=messages,
+                    temperature=0.1,
+                    # response_format={"type": "json_object"}
+                )
+                content = (response.choices[0].message.content or "").strip()
+                last_content = content
+
+                json_text = self._extract_json_object(content)
+                if not json_text:
+                    last_error = "未找到 JSON 对象"
+                    continue
+
+                data = json.loads(json_text)
+                
+                ok, err = self._validate_payload(data)
+                if not ok:
+                    last_error = err
+                    continue
+
+                return (
+                    str(data.get("translated_title", "") or ""),
+                    str(data.get("translated_abstract", "") or ""),
+                    str(data.get("translated_body", "") or "")
+                )
+            except Exception as e:
+                last_error = str(e)
+                continue
+
+        return "", "", ""

@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-09 21:40:37
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-29 00:50:44
+# LastEditTime: 2026-01-31 18:03:59
 # FilePath: \NewsPilot\src\data_acquisition\processors\module\summarizer.py
 # Description: 
 # 
@@ -17,11 +17,15 @@ import re
 from core.news_schemas import NewsItemRawSchema, NewsItemRefinedSchema
 from src.module.init_client import LLMClientFactory
 from config.prompts import REFINE_CLASSIFY_SCORE_PROMPT_CN
+from src.module.tools import generate_uuid7
     
 
 
 class Summarizer:
     def __init__(self, type: str = "llm", model_name: str = "deepseek"):
+        """
+        新闻摘要模块：异步生成摘要，分类，评分
+        """
         self.type = type
         self.model_name = model_name
 
@@ -49,19 +53,27 @@ class Summarizer:
                 user_prompt,
                 model_id=model_id,
             )
+        elif self.model_name == 'gemini':
+            raise NotImplementedError("Gemini 摘要尚未实现")
+        elif self.model_name == 'gpt':
+            raise NotImplementedError("GPT 摘要尚未实现")
+        else:
+            raise ValueError(f"Unsupported translation model: {self.model_name}")
+
 
         refined_item = NewsItemRefinedSchema(
-            unique_id=news_item.unique_id,
+            unique_id=str(generate_uuid7()),
             source_id=news_item.source_id,
             source_channel=news_item.source_channel,
             source_url=news_item.source_url,
             NewsItemRaw_id=news_item.unique_id,
             published_at=news_item.published_at,
+            fetched_at=news_item.fetched_at,
             title=news_item.title,
             abstract=abstract,
             categories=categories,
+            embedding=None, 
             evaluation_score=score,
-            attachments=getattr(news_item, "attachments", []) or [],
             extra_data=news_item.extra_data,
         )
         return refined_item
@@ -71,16 +83,21 @@ class Summarizer:
         semaphore = asyncio.BoundedSemaphore(5)
         async def safe_summarize(item):
             async with semaphore:
-                if self.type == "llm":
-                    return await self.llm_summarize_async(item)
-                
+                try:
+                    if self.type == "llm":
+                        return await self.llm_summarize_async(item)
+                except Exception as e:
+                    print(f"Summarization failed for item {item.unique_id}: {e}")
+                    return None  # 失败时返回 None，后续需要清洗掉
 
         tasks = [safe_summarize(item) for item in news_list]
-        return await tqdm_asyncio.gather(
+        results = await tqdm_asyncio.gather(
             *tasks,
             desc="Summarizing news",
             total=len(tasks)
         )
+        # 过滤掉失败的 None 结果
+        return [r for r in results if r is not None]
 
     def _extract_json_object(self, text: str) -> str:
         if not text:

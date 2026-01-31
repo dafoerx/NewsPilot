@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2025-12-23 21:59:45
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-29 00:07:18
+# LastEditTime: 2026-01-31 19:39:28
 # FilePath: \NewsPilot\src\data_acquisition\fetchers\newsapi_fetcher.py
 # Description: 
 # 
@@ -12,10 +12,10 @@ from typing import List, Dict, Any, Optional
 
 import asyncio
 from datetime import datetime, timezone
-import uuid
 from newsapi import NewsApiClient
 
 from src.data_acquisition.fetchers.base_fetcher import BaseFetcher
+from src.module.tools import generate_uuid7, extract_host
 from core.news_schemas import NewsItemRawSchema, Attachment
 
 # from data_acquisition.module.get_content import enrich_full_content
@@ -91,8 +91,10 @@ class NewsAPIFetcher(BaseFetcher):
         
         # --- Source 信息 ---
         source_info = raw_data.get("source", {})
-        source_channel = source_info.get("name", "Unknown")
-        
+        source_channel = source_info.get("name", None)
+        if not source_channel:
+            source_channel = extract_host(raw_data.get("url"))
+
         # --- 时间解析 ---
         published_at_str = raw_data.get("publishedAt")
         try:
@@ -121,8 +123,8 @@ class NewsAPIFetcher(BaseFetcher):
         # --- 构建 NewsItemRawSchema ---
         return NewsItemRawSchema(
             # 核心标识符
-            unique_id=str(uuid.uuid4()),
-            source_id='',
+            unique_id=str(generate_uuid7()),
+            source_id=raw_data.get("url"),
 
             # 溯源信息
             source_channel=source_channel,
@@ -146,7 +148,6 @@ class NewsAPIFetcher(BaseFetcher):
             supportingDocument_id=[],
 
             # 去重&评估
-            simhash=None,
             evaluation_score=None,
 
             # 扩展字段

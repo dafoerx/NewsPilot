@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2025-12-23 21:59:45
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-26 23:08:22
+# LastEditTime: 2026-01-31 23:46:44
 # FilePath: \NewsPilot\src\data_acquisition\fetchers\rsshub_fetcher.py
 # Description: 
 # 
@@ -13,13 +13,13 @@ from typing import List, Dict, Any, Optional, Callable, Awaitable
 import asyncio
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
-import traceback
-import uuid
+
 import aiohttp
 import feedparser
 
 
 from src.data_acquisition.fetchers.base_fetcher import BaseFetcher
+from src.module.tools import generate_uuid7
 from core.news_schemas import NewsItemRawSchema, Attachment
 
 # from data_acquisition.module.get_content import enrich_full_content
@@ -183,6 +183,7 @@ class RSSHubFetcher(BaseFetcher):
 
                     "author": item.get("author"),
                     "categories" : categories,
+                    "extra_data": {"rsshub": item}
                 }
             )
         
@@ -216,6 +217,7 @@ class RSSHubFetcher(BaseFetcher):
 
                     "author": item.get("author"),
                     "categories" : [],
+                    "extra_data": {"rsshub": item}
                 }
             )
 
@@ -247,7 +249,8 @@ class RSSHubFetcher(BaseFetcher):
                     "author": item.get("author"),
                     "categories" : [],
 
-                    "attachments": [item.get("link")]
+                    "attachments": [item.get("link")],
+                    "extra_data": {"rsshub": item}
                 }
             )
 
@@ -280,6 +283,7 @@ class RSSHubFetcher(BaseFetcher):
 
                     "author": item.get("author"),
                     "categories" : categories,
+                    "extra_data": {"rsshub": item}
                 }
             )
 
@@ -307,6 +311,7 @@ class RSSHubFetcher(BaseFetcher):
 
                     "author": item.get("author"),
                     "categories" : [],
+                    "extra_data": {"rsshub": item}
                 }
             )
 
@@ -335,6 +340,7 @@ class RSSHubFetcher(BaseFetcher):
 
                     "author": item.get("author"),
                     "categories" : [],
+                    "extra_data": {"rsshub": item}
                 }
             )
         # for i in range(5):
@@ -489,11 +495,12 @@ class RSSHubFetcher(BaseFetcher):
                         continue
                 elif isinstance(att, str) and att:
                     attachments.append(Attachment(type="file", url=att))
+        extra_data = raw_data.get("extra_data") or {}
 
         # --- 构建 NewsItemRawSchema ---
         return NewsItemRawSchema(
             # 核心标识符
-            unique_id=str(uuid.uuid4()),
+            unique_id=str(generate_uuid7()),
             source_id=str(raw_data.get("source_id") or ""),
 
             # 溯源信息
@@ -518,13 +525,10 @@ class RSSHubFetcher(BaseFetcher):
             supportingDocument_id=[],
 
             # 去重&评估
-            simhash=None,
             evaluation_score=None,
 
             # 扩展字段
-            extra_data={
-                "rsshub_raw": raw_data
-            },
+            extra_data=extra_data,
         )
     
     async def fetch_and_normalize(self) -> List[NewsItemRawSchema]:

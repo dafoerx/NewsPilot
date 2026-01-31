@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2025-12-18 21:15:42
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-07 22:54:13
+# LastEditTime: 2026-01-31 21:36:47
 # FilePath: \NewsPilot\core\news_schemas.py
 # Description: 
 # 
@@ -53,8 +53,8 @@ class NewsItemRefinedSchema(BaseModel):
     # --- 关键元数据 ---
     categories: List[str] = Field(default_factory=list, description="新闻分类标签（例如：'Finance', 'Technology', 'Macro'）。")
 
-    # --- LLM 评估 ---
-
+    # --- LLM 评估和编码 ---
+    embedding: Optional[List[float]] = Field(None, description="新闻内容的向量化表示（Embedding），用于语义去重或检索。")
     evaluation_score: Optional[float] = Field(None, description="经模型评估的新闻可信度/重要性评分（0-100）。")
 
     # --- 扩展字段 ---
@@ -135,12 +135,11 @@ class NewsItemRawSchema(BaseModel):
     
     attachments: List[Attachment] = Field(default_factory=list, description="新闻中的图片、视频等附件列表。")
     
-    supportingDocument_id: list[str] = Field(None, 
+    supportingDocument_id: List[str] = Field(default_factory=list, 
         description="指向 SupportingDocumentSchema 的链接ID。 如果新闻提及官方报告，该ID指向文档存储系统中的文件。")
     
-    # --- LLM 评估与去重元数据  ---
-    
-    simhash: Optional[str] = Field(None, description="用于初步去重的内容哈希值（SimHash）。")
+    # --- LLM 评估  ---
+        
     evaluation_score: Optional[float] = Field(None, description="经模型评估的新闻可信度/重要性评分（0-100）。")
 
     # --- 扩展字段 ---
