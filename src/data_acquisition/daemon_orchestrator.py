@@ -1,7 +1,7 @@
 #
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-31
-# FilePath: \NewsPilot\src\workflows\daemon_orchestrator.py
+# FilePath: \NewsPilot\src\data_acquisition\daemon_orchestrator.py
 # Description: 
 #   基于数据库状态的长期驻留编排器 (Daemon Orchestrator)。
 #   实现“抓取入库”与“异步处理”的解耦。
@@ -51,9 +51,11 @@ class DaemonOrchestrator:
         self.processing_service = NewsProcessingService(
             translator_flag=True,
             summarizer_flag=True,
+            embedding_flag=True,
             target_language='zh',
-            translator_model='deepseek',
-            summarizer_model='deepseek'
+            translator_model='qwen',
+            summarizer_model='deepseek',
+            embedding_model='qwen'
         )
 
     def _ensure_infrastructure(self):
@@ -187,8 +189,8 @@ class DaemonOrchestrator:
                 result_dict = await self.processing_service.run(raw_schemas)
                 
                 # 获取结果
-                raw_schemas: List[NewsItemRawSchema] = result_dict.get("translated_items", [])
-                refined_schemas: List[NewsItemRefinedSchema] = result_dict.get("summarized_items", [])
+                raw_schemas: List[NewsItemRawSchema] = result_dict.get("raw_items", [])
+                refined_schemas: List[NewsItemRefinedSchema] = result_dict.get("refined_items", [])
                 
                 # 建立翻译后数据的索引，方便查找
                 raw_map = {item.unique_id: item for item in raw_schemas}

@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-09 22:52:52
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-10 23:24:35
+# LastEditTime: 2026-02-06 01:48:21
 # FilePath: \NewsPilot\src\module\init_client.py
 # Description: 
 # 
@@ -22,6 +22,7 @@ class LLMClientFactory:
             "gpt": self._init_gpt,
             "deepseek": self._init_deepseek,
             "gemini": self._init_gemini,
+            "qwen": self._init_qwen,
         }
 
     def get_client(self, model_name: str) ->AsyncOpenAI:
@@ -41,3 +42,6 @@ class LLMClientFactory:
     
     def _init_gemini(self) -> genai.Client:
         return genai.Client(api_key=keys.gemini_api)
+    
+    def _init_qwen(self) -> AsyncOpenAI:
+        return AsyncOpenAI(api_key=keys.qwen_api, base_url="https://dashscope.aliyuncs.com/compatible-mode/v1")

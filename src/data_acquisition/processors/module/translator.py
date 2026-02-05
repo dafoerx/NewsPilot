@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-09 23:37:21
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-31 20:58:58
+# LastEditTime: 2026-02-06 02:35:47
 # FilePath: \NewsPilot\src\data_acquisition\processors\module\translator.py
 # Description: 
 # 
@@ -17,13 +17,14 @@ from tqdm.asyncio import tqdm_asyncio
 from core.news_schemas import NewsItemRawSchema, NewsItemRefinedSchema
 from src.module.init_client import LLMClientFactory
 from config.prompts import  TRANSLATION_BATCH_PROMPT_CN
+from src.module.tools import normalize_text
 
 class Translator:
     """
     新闻翻译模块：异步翻译标题、摘要、正文
     """
 
-    def __init__(self, type: str = "llm", model_name: str = "deepseek"):
+    def __init__(self, type: str = "llm", model_name: str = "qwen"):
         self.type = type
         self.model_name = model_name
 
@@ -43,9 +44,9 @@ class Translator:
         
         user_prompt = TRANSLATION_BATCH_PROMPT_CN["USER_PROMPT_TEMPLATE"].format(
             target_language=target_language,
-            title=news_item.title or "",
-            abstract=news_item.abstract or "",
-            body=news_item.body or ""
+            title=normalize_text(news_item.title or ""),
+            abstract=normalize_text(news_item.abstract or ""),
+            body=normalize_text(news_item.body or "")
         )
 
         translated_title, translated_abstract, translated_body = "", "", ""
@@ -60,8 +61,13 @@ class Translator:
             raise NotImplementedError("Gemini 翻译尚未实现")
         elif self.model_name == 'gpt':
             raise NotImplementedError("GPT 翻译尚未实现")
-        else:
-            raise ValueError(f"Unsupported translation model: {self.model_name}")
+        elif self.model_name == 'qwen':
+            model_id = 'qwen-flash'
+            translated_title, translated_abstract, translated_body = await self.deepseek_translate(
+                system_prompt,
+                user_prompt,
+                model_id = model_id
+            )
 
         if not translated_title :
             translated_title = news_item.title or ""
@@ -130,7 +136,7 @@ class Translator:
         self,
         system_prompt: str,
         user_prompt: str,
-        model_id: str = "deepseek-chat",
+        model_id: str ,
     ) -> Tuple[str, str, str]:
         last_content = ""
         last_error = ""

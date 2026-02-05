@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-07 22:40:42
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-29 00:55:27
+# LastEditTime: 2026-02-06 01:24:17
 # FilePath: \NewsPilot\src\data_acquisition\orchestrator.py
 # Description: 
 # 
@@ -76,8 +76,9 @@ class NewsProcessingService:
 
     def __init__(
             self, 
-            translator_flag: bool = True, translator_model: str = "deepseek", target_language: str = "zh",
+            translator_flag: bool = True, translator_model: str = "qwen", target_language: str = "zh",
             summarizer_flag: bool = True, summarizer_model: str = "deepseek",
+            embedding_flag: bool = True, embedding_model: str = "qwen",
         ):
         self.translator_flag = translator_flag
         self.summarizer_flag = summarizer_flag
@@ -90,6 +91,8 @@ class NewsProcessingService:
             translator_model=self.translator_model,
             target_language=self.target_language,
             summarizer_model=self.summarizer_model,
+            embedding_flag=embedding_flag,
+            embedding_model=embedding_model,
         )
 
     async def run(self, news_list: List[NewsItemRawSchema]) -> dict:
@@ -110,15 +113,18 @@ class NewsDataOrchestrator():
 
         self.translator_flag = self.news_config.get('translator_flag', True)
         self.summarizer_flag = self.news_config.get('summarizer_flag', True)
+        self.embedding_flag = self.news_config.get('embedding_flag', True)
         self.target_language = self.news_config.get('target_language', 'zh')
-        self.translator_model = self.news_config.get('translator_model', 'deepseek')
+        self.translator_model = self.news_config.get('translator_model', 'qwen')
         self.summarizer_model = self.news_config.get('summarizer_model', 'deepseek')
+        self.embedding_model = self.news_config.get('embedding_model', 'qwen')
 
 
         self.news_acquisition_service = NewsAcquisitionService(sources=self.source)
         self.news_processing_service = NewsProcessingService(
             translator_flag=self.translator_flag, translator_model=self.translator_model, target_language=self.target_language,
             summarizer_flag=self.summarizer_flag, summarizer_model=self.summarizer_model,
+            embedding_flag=self.embedding_flag, embedding_model=self.embedding_model,
         )
 
     async def run_async(self) -> tuple[List[NewsItemRawSchema], dict]:
@@ -138,22 +144,24 @@ if __name__ == "__main__":
 
         'translator_flag': True,
         'summarizer_flag': True,
+        'embedding_flag': True,
         'target_language': 'zh',
-        'translator_model': 'deepseek',
+        'translator_model': 'qwen',
         'summarizer_model': 'deepseek',
+        'embedding_model': 'qwen',
     }
 
 
     news_data_orchestrator = NewsDataOrchestrator(news_config=news_config)
     news_items_raw, pipeline_result = news_data_orchestrator.run()
-    translated_items, summarized_items = pipeline_result["translated_items"], pipeline_result["summarized_items"]
-    print(f"Fetched total {len(summarized_items)} news items.")
-    print(summarized_items[0])
+    raw_items, refined_items = pipeline_result["raw_items"], pipeline_result["refined_items"]
+    print(f"Fetched total {len(refined_items)} news items.")
+    print(refined_items[0])
     from pathlib import Path
     save_path = Path(r"E:\code\NewsPilot\data\temp\news\refined_news_items.json")
     with open(save_path, "w", encoding="utf-8") as f:
         json.dump(
-            [item.model_dump() for item in summarized_items],
+            [item.model_dump() for item in refined_items],
             f,
             ensure_ascii=False,
             indent=4,

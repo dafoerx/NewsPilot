@@ -8,6 +8,7 @@
 - ✅ **智能内容处理**：
   - 自动翻译（支持 DeepSeek/GPT 多模型切换）
   - 智能摘要（保留关键信息，去除冗余）
+  - 向量化编码（Embedding，支持 Qwen）
   - 异步批处理（5并发限流，高效处理大量新闻）
 - ✅ **个性化洞察引擎**：基于用户画像（职业、兴趣、资产配置等），使用 Gemini 深度思考模型生成可行性建议
 - ✅ **完整工作流程**：新闻采集 → 翻译 → 摘要 → 洞察生成 → Markdown 报告输出
@@ -65,6 +66,12 @@
         │
         └─► Summarization Pipeline ✅
             (DeepSeek 智能摘要)
+              │
+              ▼
+            ┌──────────────────┐
+            │ Embedding ✅      │
+            │ (Qwen Embedding) │
+            └──────────────────┘
                     │
                     ▼
             ┌──────────────────┐
@@ -102,6 +109,7 @@
 #### 2. 数据处理层 ✅
 - **Translator**：多模型翻译支持（DeepSeek/GPT/Gemini），异步批处理
 - **Summarizer**：智能摘要生成，保留关键信息
+- **EmbeddingGenerator**：文本向量化（Qwen Embedding）
 
 #### 3. 智能分析层 ✅
 - **InsightGenerator**：基于 Gemini 深度思考，生成个性化建议
@@ -143,7 +151,8 @@ NewsPilot/
 │   │       ├── pipeline.py          # 处理流水线 ✅
 │   │       └── module/
 │   │           ├── translator.py    # 翻译模块 ✅
-│   │           └── summarizer.py    # 摘要模块 ✅
+│   │           ├── summarizer.py    # 摘要模块 ✅
+│   │           └── embedding.py     # 向量化模块 ✅
 │   │
 │   ├── intelligence/            # 智能分析 ✅
 │   │   └── insight_generator.py # 洞察生成器 ✅
@@ -189,6 +198,7 @@ NewsPilot/
   - [NewsAPI](https://newsapi.org/) - 新闻数据源
   - [DeepSeek](https://www.deepseek.com/) - 翻译和摘要
   - [Google Gemini](https://ai.google.dev/) - 洞察生成
+  - [Qwen (DashScope)](https://dashscope.aliyuncs.com/) - 向量化
 
 ### 安装步骤
 
@@ -256,9 +266,11 @@ news_config = {
     'source': 'newsapi',              # 新闻源
     'translator_flag': True,          # 是否翻译
     'summarizer_flag': True,          # 是否摘要
+    'embedding_flag': True,           # 是否向量化
     'target_language': 'zh',          # 目标语言
     'translator_model': 'deepseek',   # 翻译模型
     'summarizer_model': 'deepseek',   # 摘要模型
+    'embedding_model': 'qwen',         # 向量化模型
 }
 
 pipeline = NewsPilotPipeline(
@@ -399,8 +411,9 @@ NewsPilot 适合以下用户：
 编辑主流程配置中的 `translator_model` 和 `summarizer_model`：
 ```python
 news_config = {
-    'translator_model': 'gpt',  # 可选: deepseek, gpt, gemini
-    'summarizer_model': 'gpt',  # 可选: deepseek, gpt, gemini
+  'translator_model': 'gpt',  # 可选: deepseek, gpt, gemini, qwen
+  'summarizer_model': 'gpt',  # 可选: deepseek, gpt, gemini
+  'embedding_model': 'qwen',  # 可选: qwen
 }
 ```
 

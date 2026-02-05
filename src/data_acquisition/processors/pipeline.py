@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2026-01-09 21:38:09
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-11 22:53:24
+# LastEditTime: 2026-02-06 01:11:40
 # FilePath: \NewsPilot\src\data_acquisition\processors\pipeline.py
 # Description: 
 # 
@@ -16,6 +16,7 @@ from core.news_schemas import NewsItemRawSchema, NewsItemRefinedSchema
 from src.data_acquisition.processors.module.summarizer import Summarizer
 from src.data_acquisition.processors.module.translator import Translator
 from src.data_acquisition.processors.module.normalize import align_news_lists
+from src.data_acquisition.processors.module.embedding import EmbeddingGenerator
 
 
 class NewsProcessingPipeline:
@@ -30,15 +31,19 @@ class NewsProcessingPipeline:
         self,
         translotor_flag: bool = True,
         summarizer_flag: bool = True,
-        translator_model: str = "deepseek",
+        embedding_flag: bool = True,
+        translator_model: str = "qwen",
         target_language: str = "zh",
         summarizer_model: str = "deepseek",
+        embedding_model: str = "qwen",
     ):
         self.translator = Translator(model_name=translator_model)
         self.summarizer = Summarizer(model_name=summarizer_model)
+        self.embedding = EmbeddingGenerator(model_name=embedding_model)
         self.target_language = target_language
         self.translotor_flag = translotor_flag
         self.summarizer_flag = summarizer_flag
+        self.embedding_flag = embedding_flag
 
     async def process_async(
         self, news_list: List[NewsItemRawSchema]
@@ -47,8 +52,10 @@ class NewsProcessingPipeline:
         异步批量处理新闻：
         1. 生成摘要
         2. 翻译标题、摘要、正文
+        3. 生成 Embedding
+        4. 返回处理结果
         """
-        translated_items, summarized_items = None, None
+        translated_items, summarized_items, embedded_items = None, None, None
         
         if self.translotor_flag == True:
             # 异步翻译
@@ -59,14 +66,18 @@ class NewsProcessingPipeline:
         if self.summarizer_flag == True:
             # 异步生成摘要
             summarized_items = await self.summarizer.summarize_batch(translated_items)
-        
+        if self.embedding_flag == True:
+            embedded_items = await self.embedding.embed_batch(summarized_items)
+        else:
+            embedded_items = summarized_items
+
         # 对齐翻译和摘要结果，确保顺序和数量一致, 返回的是(aligned_raw, aligned_refined)
-        translated_items, summarized_items = align_news_lists(translated_items, summarized_items)
+        raw_items, refined_items = align_news_lists(translated_items, embedded_items)
 
 
         pipeline_result = {
-            "translated_items": translated_items,
-            "summarized_items": summarized_items
+            "raw_items": raw_items,
+            "refined_items": refined_items,
         }
         return pipeline_result
 
@@ -74,6 +85,7 @@ class NewsProcessingPipeline:
         """显式关闭资源"""
         await self.translator.close()
         await self.summarizer.close()
+        await self.embedding.close()
 
     def run(self, news_list: List[NewsItemRawSchema]) -> dict:
         """
@@ -103,7 +115,7 @@ if __name__ == "__main__":
     news_items = [NewsItemRawSchema(**normalize_news_item(item)) for item in news_data]
     pipeline = NewsProcessingPipeline()
     result = pipeline.run(news_items[:10])  # 仅处理前10条以加快测试速度
-    refined_items = result["summarized_items"]
+    refined_items = result["refined_items"]
     print(f"Processed total {len(refined_items)} news items.")
     print(refined_items[0])
     with open(Path(save_path), "w", encoding="utf-8") as f:
