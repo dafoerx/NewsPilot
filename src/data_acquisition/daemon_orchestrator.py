@@ -11,19 +11,19 @@
 import asyncio
 import logging
 import time
-from typing import List, Dict, Any
-from sqlalchemy.orm import Session
-from sqlalchemy import select, update
+from typing import List
 
 # 项目内引用
-from src.storage import db_manager, RawNews, RefinedNews, RawNewsStaging
+from src.storage import db_manager, RawNews, RefinedNews, RawNewsStaging, StorageRepository
 from src.data_acquisition.orchestrator import NewsAcquisitionService, NewsProcessingService
 from core.news_schemas import NewsItemRawSchema, NewsItemRefinedSchema
-from src.data_acquisition.processors.module.normalize import align_news_lists
-from src.storage import models
 
 logger = logging.getLogger("DaemonOrchestrator")
 logger.setLevel(logging.INFO)
+logging.basicConfig(
+    format='[%(asctime)s] %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
 
 class DaemonOrchestrator:
     """
@@ -43,6 +43,7 @@ class DaemonOrchestrator:
         self.fetch_interval = fetch_interval
         self.process_interval = process_interval
         self.batch_size = batch_size
+        self.repo = StorageRepository()
 
         # 初始化服务组件
         self.acquisition_service = NewsAcquisitionService(sources=None)  
@@ -64,26 +65,18 @@ class DaemonOrchestrator:
 
     def _reset_stuck_tasks(self):
         """重置异常退出的任务状态"""
-        session = db_manager.get_session()
         try:
-            # 重置 processing, retry_later -> pending
-            count = session.query(RawNewsStaging).filter(
-                RawNewsStaging.processing_status.in_(['processing', 'retry_later'])
-            ).update({RawNewsStaging.processing_status: 'pending'}, synchronize_session=False)
-            
+            count = self.repo.reset_staging_statuses(['processing', 'retry_later'], to_status='pending')
             if count > 0:
-                session.commit()
                 logger.info(f"Reset {count} stuck tasks to pending.")
         except Exception as e:
             logger.error(f"Failed to reset stuck tasks: {e}")
-        finally:
-            session.close()
 
     async def run_acquisition_once(self):
         """
         一次完整的抓取任务：Fetcher -> 归一化 -> DB (RawNewsStaging)
         """
-        session: Session = db_manager.get_session()
+        session = db_manager.get_session()
         try:
             logger.info("[Acquisition] Start fetching news...")
             start_time = time.time()
@@ -91,17 +84,17 @@ class DaemonOrchestrator:
             # 1. 执行抓取
             raw_schemas = await self.acquisition_service.run()
             logger.info(f"[Acquisition] Fetched {len(raw_schemas)} raw items.")
-
             if not raw_schemas:
                 return
 
             # 2. 入库 (RawNewsStaging)
             new_count = 0
+            staging_items: List[RawNewsStaging] = []
             for item in raw_schemas:
                 # 检查 Staging 表去重 (确保当前队列里没有在这个 URL)
-                exists_staging = session.query(RawNewsStaging.unique_id).filter_by(source_url=item.source_url).first()
+                exists_staging = self.repo.exists_staging_by_source_url(item.source_url, session=session)
                 # 检查正式表去重 (确保历史没抓过)
-                exists_raw = session.query(RawNews.unique_id).filter_by(source_url=item.source_url).first()
+                exists_raw = self.repo.exists_raw_by_source_url(item.source_url, session=session)
                 
                 if not exists_staging and not exists_raw:
                     staging_item = RawNewsStaging(
@@ -121,13 +114,13 @@ class DaemonOrchestrator:
                         extra_data=item.extra_data,
                         processing_status='pending', # 初始状态
                     )
-                    session.add(staging_item)
+                    staging_items.append(staging_item)
                     new_count += 1
-            
-            session.commit()
+                    if staging_items:
+                        self.repo.add_raw_news_staging(staging_items, session=session)
+                        session.commit()
             duration = time.time() - start_time
             logger.info(f"[Acquisition] Job finished. New items staged: {new_count}. Duration: {duration:.2f}s")
-
         except Exception as e:
             session.rollback()
             logger.error(f"[Acquisition] Failed: {e}", exc_info=True)
@@ -141,13 +134,11 @@ class DaemonOrchestrator:
         """
         logger.info("[Processing] Worker started.")
         while True:
-            session: Session = db_manager.get_session()
             processing_ids = []
             try:
+                session = db_manager.get_session()
                 # 1. 拉取 Staging 表中 PENDING 任务
-                staging_orms = session.query(RawNewsStaging).filter(
-                    RawNewsStaging.processing_status == 'pending'
-                ).limit(self.batch_size).all()
+                staging_orms = self.repo.fetch_staging_pending(limit=self.batch_size, session=session)
 
                 if not staging_orms:
                     session.close()
@@ -158,8 +149,7 @@ class DaemonOrchestrator:
 
                 # 2. 锁定状态 -> processing
                 processing_ids = [r.unique_id for r in staging_orms]
-                for r in staging_orms:
-                    r.processing_status = 'processing'
+                self.repo.mark_staging_status(processing_ids, 'processing', session=session)
                 session.commit()
 
                 # 3. 构造 Schema 用于 Pipeline
@@ -200,6 +190,8 @@ class DaemonOrchestrator:
 
                 # 5. 归档逻辑：Staging -> RawNews(Translated) + RefinedNews
                 success_ids = []
+                raw_orms: List[RawNews] = []
+                refined_orms: List[RefinedNews] = []
                 
                 for refined_item in refined_schemas:
                     raw_id = refined_item.NewsItemRaw_id
@@ -211,7 +203,7 @@ class DaemonOrchestrator:
                         continue
 
                     # 5.2 写入永久 RawNews 表 (使用翻译后的内容)
-                    raw_orm = RawNews(
+                    raw_orms.append(RawNews(
                         unique_id=raw_item.unique_id,
                         source_id=raw_item.source_id,
                         source_channel=raw_item.source_channel,
@@ -227,10 +219,10 @@ class DaemonOrchestrator:
                         attachments=[a.model_dump() for a in raw_item.attachments] if raw_item.attachments else [],
                         supporting_document_ids=raw_item.supportingDocument_id,
                         extra_data=raw_item.extra_data,
-                    )
+                    ))
                     
                     # 5.3 保存 RefinedNews
-                    refined_orm = RefinedNews(
+                    refined_orms.append(RefinedNews(
                         unique_id=refined_item.unique_id,
                         source_id=refined_item.source_id,
                         source_channel=refined_item.source_channel,
@@ -244,33 +236,31 @@ class DaemonOrchestrator:
                         evaluation_score=refined_item.evaluation_score,
                         embedding=refined_item.embedding, 
                         extra_data=refined_item.extra_data
-                    )
-                    
-                    # 使用 merge 写入两个正式表 (防止重复或更新现有)
-                    session.merge(raw_orm)
-                    session.merge(refined_orm)
+                    ))
                     
                     # 标记为成功，稍后从 Staging 删除
                     success_ids.append(raw_id)
 
+                if raw_orms:
+                    self.repo.upsert_raw_news(raw_orms, session=session)
+                if refined_orms:
+                    self.repo.upsert_refined_news(refined_orms, session=session)
+
                 # 6. 清理 Staging 表
                 if success_ids:
                     # 成功的从 Staging 删除
-                    session.query(RawNewsStaging).filter(
-                        RawNewsStaging.unique_id.in_(success_ids)
-                    ).delete(synchronize_session=False)
+                    self.repo.delete_staging_by_ids(success_ids, session=session)
 
                 # 失败的(在处理批次中但不在结果中) 标记为 failed
                 failed_ids = set(processing_ids) - set(success_ids)
                 if failed_ids:
-                    session.query(RawNewsStaging).filter(
-                        RawNewsStaging.unique_id.in_(failed_ids)
-                    ).update({
-                        RawNewsStaging.processing_status: 'failed',
-                        RawNewsStaging.last_error: 'Pipeline processing failed'
-                    }, synchronize_session=False)
+                    self.repo.mark_staging_status(
+                        failed_ids,
+                        'failed',
+                        last_error='Pipeline processing failed',
+                        session=session,
+                    )
                     logger.warning(f"[Processing] {len(failed_ids)} items failed. Kept in staging with status=failed.")
-
                 session.commit()
                 logger.info(f"[Processing] Archive finished. {len(success_ids)} moved to RawNews/Refined.")
 
@@ -281,12 +271,7 @@ class DaemonOrchestrator:
                 # 恢复处理中的状态
                 if processing_ids:
                     try:
-                        rec_sess = db_manager.get_session()
-                        rec_sess.query(RawNewsStaging).filter(
-                             RawNewsStaging.unique_id.in_(processing_ids)
-                        ).update({RawNewsStaging.processing_status: 'pending'}, synchronize_session=False)
-                        rec_sess.commit()
-                        rec_sess.close()
+                        self.repo.mark_staging_status(processing_ids, 'pending')
                     except:
                         pass
                 await asyncio.sleep(10)
@@ -312,7 +297,7 @@ class DaemonOrchestrator:
         # task2: 处理循环 (高频/常驻)
         await asyncio.gather(
             acquisition_loop(),
-            self.run_processing_worker()
+            # self.run_processing_worker()
         )
 
 if __name__ == "__main__":

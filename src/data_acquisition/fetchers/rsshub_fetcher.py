@@ -2,7 +2,7 @@
 # Author: WangQiushuo 185886867@qq.com
 # Date: 2025-12-23 21:59:45
 # LastEditors: WangQiushuo 185886867@qq.com
-# LastEditTime: 2026-01-31 23:46:44
+# LastEditTime: 2026-02-07 23:11:44
 # FilePath: \NewsPilot\src\data_acquisition\fetchers\rsshub_fetcher.py
 # Description: 
 # 
@@ -196,7 +196,7 @@ class RSSHubFetcher(BaseFetcher):
         # Bloomberg 路由偶发较慢，单独提高超时到 60s
         items_list = await self._get_items_list("bloomberg", timeout=60)
         articles: List[Dict[str, Any]] = []
-        print(f"Bloomberg items count: {len(items_list)}")
+        # print(f"Bloomberg items count: {len(items_list)}")
 
         for item in items_list:
             published_at = self._parse_published_rfc822(item.get("published"))
@@ -438,7 +438,7 @@ class RSSHubFetcher(BaseFetcher):
         items_list: List[Dict[str, Any]] = []
         rss_urls = self._get_urls_list(source_name)
         for rss_url in rss_urls:
-            print(f"Fetching RSS from {rss_url} ...")
+            # print(f"Fetching RSS from {rss_url} ...")
             try:
                 items = await self.fetch_rss_items(rss_url, timeout=timeout)
             except Exception as e:
@@ -448,7 +448,7 @@ class RSSHubFetcher(BaseFetcher):
                     f"{type(e).__name__}: {e!r}; skipping"
                 )
                 continue
-            print(f"Fetched {len(items)} items from {rss_url}")
+            # print(f"Fetched {len(items)} items from {rss_url}")
             items_list.extend(items)
         
         return items_list
