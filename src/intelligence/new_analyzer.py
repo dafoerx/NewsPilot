@@ -12,7 +12,7 @@ import asyncio
 import json
 import re
 from typing import List, Dict, Any, Optional
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from google import genai
 from google.genai import types
@@ -25,7 +25,7 @@ from src.storage.repository import StorageRepository
 from src.storage.models import RefinedNews
 
 class NewsAnalyzer:
-    def __init__(self, model_name: str = "deepseek"):
+    def __init__(self, model_name: str = "gemini"):
         self.factory = LLMClientFactory()
         self.repo = StorageRepository()
         self.model_name = model_name
@@ -46,18 +46,27 @@ class NewsAnalyzer:
 
     async def generate_all_daily_reports(
         self, 
-        target_date: datetime.date, 
-        save_path: Optional[str] = None
+        target_date: Optional[datetime.date] = None, 
+        save_path: Optional[str] = None,
+        time_range: Optional[tuple[datetime, datetime]] = None
     ) -> Dict[str, Dict[str, str]]:
         """
-        [Function A] 核心入口
+        核心入口
+        :param target_date: 报告归属日期（用于文件名和默认的时间范围 00:00-23:59）
+        :param save_path: 保存路径
+        :param time_range: (start_time, end_time) 自定义抓取时间范围。如果提供，将忽略 target_date 的默认范围。
         """
-        print(f"[*] 开始生成 {target_date} 日报，使用模型: {self.model_name}")
+        if not target_date and not time_range:
+             target_date = datetime.now().date()
+             
+        display_date = target_date if target_date else time_range[1].date()
+        
+        print(f"[*] 开始生成 {display_date} 日报，使用模型: {self.model_name}")
         
         # 1. 准备数据
-        news_items = self._fetch_news(target_date)
+        news_items = self._fetch_news(target_date, time_range)
         if not news_items:
-            print(f"[!] {target_date} 无新闻数据")
+            print(f"[!] {display_date} (范围: {time_range}) 无新闻数据")
             return {}
             
         categorized_news = self._classify_news(news_items)
@@ -72,7 +81,7 @@ class NewsAnalyzer:
                 continue
             
             # task 直接使用 self.client，无需传递 model_name
-            task = self._generate_single_category_content(category, items, target_date)
+            task = self._generate_single_category_content(category, items, display_date)
             tasks.append((category, task))
             
         if not tasks:
@@ -87,22 +96,29 @@ class NewsAnalyzer:
         
         # 3. 处理结果
         for category, content in zip(cat_keys, analysis_contents):
-            md_content = self._construct_md_report(category, content, target_date)
+            md_content = self._construct_md_report(category, content, display_date)
             results[category] = {
                 "llm_output": content,
                 "md_content": md_content
             }
             if save_path:
-                self._save_md_file(save_path, target_date, category, md_content)
+                self._save_md_file(save_path, display_date, category, md_content)
                 
         print(f"[*] 所有报告生成完毕。")
         return results
 
     # ... _fetch_news 和 _classify_news 保持不变 ...
-    def _fetch_news(self, target_date: datetime.date) -> List[RefinedNews]:
-        """辅助：从数据库拉取当日 RefinedNews"""
-        date_from = datetime.combine(target_date, datetime.min.time())
-        date_to = datetime.combine(target_date, datetime.max.time())
+    def _fetch_news(self, target_date: Optional[datetime.date], time_range: Optional[tuple[datetime, datetime]] = None) -> List[RefinedNews]:
+        """辅助：从数据库拉取 RefinedNews"""
+        if time_range:
+            date_from, date_to = time_range
+        elif target_date:
+            date_from = datetime.combine(target_date, datetime.min.time())
+            date_to = datetime.combine(target_date, datetime.max.time())
+        else:
+             return []
+
+        print(f"   [-] Fetching news from {date_from} to {date_to}")
         return self.repo.list_refined_news(
             date_from=date_from, 
             date_to=date_to, 
@@ -128,7 +144,7 @@ class NewsAnalyzer:
         date: datetime.date
     ) -> str:
         """
-        [Function B] 单个领域的分析逻辑
+        单个领域的分析逻辑
         """
         # 1. 提取指令
         instruction = CATEGORY_DAILY_REPORT_PROMPT["CATEGORY_INSTRUCTIONS"].get(category, "综合分析行业动态。")
@@ -233,14 +249,34 @@ class NewsAnalyzer:
                 if sources:
                     md_lines.append(f"*   <small style='color:grey'>来源: {', '.join(sources)}</small>")
 
-                # 反应层 & 研判层 (使用引用块区分)
+                # 反应层
                 md_lines.append("")
                 if reactions and reactions != "未观察到显著反应":
                      md_lines.append(f"> 📢 **各方反应**: {reactions}")
-                if analysis:
-                     # 增加免责声明
-                     md_lines.append(f"> 🧠 **系统研判**: {analysis} <sub style='color:darkgrey'>(AI生成分析，仅供参考)</sub>")
                 
+                # 研判层 (专家模型研判)
+                outlook = event.get("expert_outlook", {})
+                # 兼容旧字段 system_analysis
+                sys_analysis = event.get("system_analysis", "")
+                
+                if outlook or sys_analysis:
+                     md_lines.append(f"> 🧠 **专家模型研判**")
+                     
+                     if sys_analysis: # Fallback for old data
+                         md_lines.append(f"> *   **分析**: {sys_analysis}")
+                     
+                     if outlook:
+                         eval_text = outlook.get("evaluation", "")
+                         pred_text = outlook.get("prediction", "")
+                         counter_text = outlook.get("counterfactual_analysis", "")
+                         
+                         if eval_text:
+                            md_lines.append(f"> *   **评价**: {eval_text}")
+                         if pred_text:
+                            md_lines.append(f"> *   **预测**: {pred_text}")
+                         if counter_text:
+                            md_lines.append(f"> *   **反向推演**: {counter_text}")
+
                 md_lines.append("---")
         
         # B. 行业扫描 (Industry Scan)
@@ -331,7 +367,7 @@ class NewsAnalyzer:
     def _save_md_file(self, base_path: str, date: datetime.date, category: str, content: str):
         """保存文件"""
         date_subfolder = date.strftime("%Y-%m-%d")
-        folder = os.path.join(base_path, "reports", date_subfolder)
+        folder = os.path.join(base_path, date_subfolder)
         os.makedirs(folder, exist_ok=True)
         filename = f"{category}.md"
         full_path = os.path.join(folder, filename)
@@ -344,18 +380,32 @@ class NewsAnalyzer:
 
 if __name__ == "__main__":
     async def main():
-        TEST_DATE = datetime(2026, 1, 29).date()
-        MODEL = "gemini" 
-        SAVE_DIR = "e:\\code\\NewsPilot\\data\\data_new" 
-        
-        # 在初始化时传入模型
+        MODEL = "gemini"
+        SAVE_DIR = r"E:\code\NewsPilot\data\daily_reports"
         analyzer = NewsAnalyzer(model_name=MODEL)
+
+        # 模式1: 聚合分析 (生成一份包含 1月1日-1月30日 信息的综合报告)
+        start_time = datetime(2026, 1, 28, 0, 0, 0)
+        end_time = datetime(2026, 1, 30, 23, 59, 59)
         
-        print(f"--- 启动测试: 生成 {TEST_DATE} 日报 ---")
-        results = await analyzer.generate_all_daily_reports(
-            target_date=TEST_DATE,
+        print(f"--- 模式1: 启动长周期聚合分析 ({start_time.date()} ~ {end_time.date()}) ---")
+        await analyzer.generate_all_daily_reports(
+            time_range=(start_time, end_time),
             save_path=SAVE_DIR
         )
+
+        # 模式2 (可选): 逐日回溯 (每天生成一份日报)
+        # print(f"\n--- 模式2: 启动逐日历史回溯 ---")
+        # current = start_time
+        # while current <= end_time:
+        #     print(f">>> 生成日报: {current.date()}")
+        #     await analyzer.generate_all_daily_reports(
+        #         target_date=current.date(),
+        #         save_path=SAVE_DIR
+        #     )
+        #     current += timedelta(days=1)
+        #     await asyncio.sleep(2) # 避免限流
+
         print("\n--- 任务完成 ---")
 
     asyncio.run(main())

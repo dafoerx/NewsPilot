@@ -1,13 +1,12 @@
 
 #数据文件
-data/
+tools/
 .history/
-save/
-logs/
-test.ipynb
 
 #密钥文件
 config/keys.py
+#用户画像
+config/user_profile.json
 
 *.pyc
 __pycache__/

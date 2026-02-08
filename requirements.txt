@@ -15,9 +15,9 @@ beautifulsoup4 == 4.14.3
 readability-lxml == 0.8.4.1
 lxml>=4.9.3 
 html5lib>=1.1
-newsapi_python = 0.2.7
+newsapi_python == 0.2.7
 SQLAlchemy>=2.0.0
-psycopg2-binary>=2.9.9
+psycopg[binary]>=3.1.0
 pydantic>=2.0.0
 python-dateutil>=2.8.2
 tqdm>=4.66.0

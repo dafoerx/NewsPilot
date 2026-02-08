@@ -297,14 +297,14 @@ class DaemonOrchestrator:
         # task2: 处理循环 (高频/常驻)
         await asyncio.gather(
             acquisition_loop(),
-            # self.run_processing_worker()
+            self.run_processing_worker()
         )
 
 if __name__ == "__main__":
     orchestrator = DaemonOrchestrator(
-        fetch_interval=60*30, # 30分钟
-        process_interval=10,   # 10秒轮询
-        batch_size=10         # 每次处理10条
+        fetch_interval=60*60, # 60分钟
+        process_interval=60,   # 60秒轮询
+        batch_size=20         # 每次处理20条
     )
     
     # Windows 下 asyncio 特殊处理
