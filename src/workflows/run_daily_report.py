@@ -54,6 +54,32 @@ async def main(save_dir: str, model_name: str = "gemini", report_time: time = ti
     except Exception as e:
         print(f"\n❌ Error: {e}")
 
+async def scheduler(save_dir: str, model_name: str = "gemini", report_time: time = time(8, 0)):
+    """
+    定时调度任务：每天指定时间运行
+    """
+    print(f"\n🔁 Starting Scheduler Mode. Target time: {report_time} daily")
+    
+    while True:
+        now = datetime.now()
+        target_time = datetime.combine(now.date(), report_time)
+        
+        # If today's target time has passed, schedule for tomorrow
+        if now.time() > report_time:
+             target_time += timedelta(days=1)
+        
+        wait_seconds = (target_time - now).total_seconds()
+        print(f"⏳ Sleeping for {wait_seconds:.0f}s (until {target_time})...")
+        
+        await asyncio.sleep(wait_seconds)
+        
+        # Run the task
+        print(f"\n⏰ Waking up for scheduled run at {datetime.now()}")
+        await main(save_dir, model_name, report_time)
+        
+        # Wait a bit to prevent re-triggering immediately
+        await asyncio.sleep(60)
+
 if __name__ == "__main__":
     if sys.platform.startswith('win'):
         # 解决 Windows 上 EventLoop 关闭时的 RuntimeError
@@ -63,10 +89,14 @@ if __name__ == "__main__":
         # Default Configuration: Output to project_root/data/reports/...
         DEFAULT_SAVE_DIR = os.path.join(project_root, "data", 'daily_reports')
         
-        asyncio.run(main(
+        #如果想生成昨天的报表，可以取消下面这行注释，并注释掉scheduler的调用
+        # asyncio.run(main(save_dir=DEFAULT_SAVE_DIR, model_name="gemini", report_time=time(8, 0)))
+
+        # 启动定时调度器
+        asyncio.run(scheduler(
             save_dir=DEFAULT_SAVE_DIR,
             model_name="gemini",
             report_time=time(8, 0)
         ))
     except KeyboardInterrupt:
-        print("\n👋 Task Cancelled.")
+        print("\n👋 Scheduler Stopped.")
